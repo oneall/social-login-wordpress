@@ -1127,17 +1127,17 @@ function oa_social_login_request_email ()
 							<div class="oa_social_login_modal_inner">
 			 					<div class="oa_social_login_modal_title">
 			 						<?php
-										 printf (__ ('You have successfully connected with %s!', 'oa_social_login'), '<strong>' . $oa_social_login_identity_provider . '</strong>');
+													 printf (__ ('You have successfully connected with %s!', 'oa_social_login'), '<strong>' . $oa_social_login_identity_provider . '</strong>');
 									 ?>
 			 					</div>
 			 					<?php
-									 if (strlen (trim ($caption)) > 0)
-									 {
+												 if (strlen (trim ($caption)) > 0)
+												 {
 								 ?>
-			 							<div class="oa_social_login_modal_notice"><?php echo str_replace ('%s', $oa_social_login_identity_provider, $caption); ?></div>
-			 							<?php
-											 }
-										?>
+			 									<div class="oa_social_login_modal_notice"><?php echo str_replace ('%s', $oa_social_login_identity_provider, $caption); ?></div>
+			 								<?php
+															 }
+											 ?>
 			 					<div class="oa_social_login_modal_body">
 				 					<div class="oa_social_login_modal_subtitle">
 				 						<?php _e ('Please enter your email address', 'oa_social_login'); ?>:
