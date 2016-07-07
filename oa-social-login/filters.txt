@@ -1,0 +1,188 @@
+The codes in the following examples have to be added to the end of the functions.php file of your WordPress theme.
+By doing so your changes will not be overwritten when you install a new version of Social Login.
+
+You can find this file in your WordPress administration area: 
+
+	Appearance \ Editor \ Theme Functions (functions.php)
+
+
+
+//*******************************************************************************
+// Social Login: Use your own CSS to customize the icons
+//*******************************************************************************
+ function oa_social_login_set_custom_css($css_theme_uri)
+ {
+ 	//Replace the URL by an URL to your own CSS Stylesheet
+	$css_theme_uri = 'http://public.oneallcdn.com/css/api/socialize/themes/buildin/connect/large-v1.css';
+	
+	//Done
+	return $css_theme_uri;
+ }
+ 
+ add_filter('oa_social_login_default_css', 'oa_social_login_set_custom_css');
+ add_filter('oa_social_login_widget_css', 'oa_social_login_set_custom_css');
+ add_filter('oa_social_login_link_css', 'oa_social_login_set_custom_css');
+
+
+
+//*******************************************************************************
+// Social Login: Restrict access and allow only email addresses of a specific domain
+//*******************************************************************************
+function oa_social_login_filter_new_user_email ($user_email)
+{
+	//Only users with social network accounts having an email address ending in @gmail.com may register
+	if ( ! preg_match ('/@gmail\.com$/i', trim ($user_email)))
+	{
+		trigger_error ('This email address may not be used to register', E_USER_ERROR);
+	}
+	return $user_email;
+}
+add_filter('oa_social_login_filter_new_user_email', 'oa_social_login_filter_new_user_email');
+
+
+
+//*******************************************************************************
+// Social Login: Change the default password for users created by Social Login
+//*******************************************************************************
+function oa_social_login_set_new_user_password ($user_password)
+{
+	//This the the default behavior
+	$user_password = wp_generate_password ();
+	
+	//This is an example for a custom setting
+	$user_password = substr(str_shuffle('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789') , 0 , 10);
+
+	//The new user will be assigned this password
+	return $user_password;
+}
+add_filter('oa_social_login_filter_new_user_password', 'oa_social_login_set_new_user_password');
+
+
+
+//*******************************************************************************
+// Social Login: Change the default role for new users
+//*******************************************************************************
+function oa_social_login_set_new_user_role ($user_role)
+{
+	//This the the default behavior, usually the default role is subscriber
+	$user_role = get_option('default_role');
+
+	//This is an example for a custom setting with two roles
+	$user_role = 'author editor';
+
+	//The new user will be assigned this role
+	return $user_role;
+}
+add_filter('oa_social_login_filter_new_user_role', 'oa_social_login_set_new_user_role');
+	
+	
+	
+//*******************************************************************************
+// Social Login: Custom redirections
+//*******************************************************************************
+
+//Redirection for new users
+function oa_social_login_set_redirect_url_new_users ($url, $user_data)
+{
+	//Force the url to something else
+	$url = 'http://my-website.com/welcome-new-user/';
+
+	//New users will be redirected here
+	return $url;
+}
+add_filter('oa_social_login_filter_registration_redirect_url', 'oa_social_login_set_redirect_url_new_users', 10, 2);
+
+
+//Redirection for existing users
+function oa_social_login_set_redirect_url_existing_users ($url, $user_data)
+{
+	//Force the url to something else
+	$url = 'http://my-website.com/welcome-back/';
+	
+	//Returning users will be redirected here
+	return $url;
+}
+add_filter('oa_social_login_filter_login_redirect_url', 'oa_social_login_set_redirect_url_existing_users', 10, 2);
+
+
+
+//*******************************************************************************
+// Social Login: Action called before adding a new user
+//*******************************************************************************
+
+//This function will be called before Social Login adds a new user
+function oa_social_login_do_before_user_insert ($user_data, $identity)
+{
+	//These are the fields for the WordPress database
+	print_r($user_data);
+	
+	//This is the full social network profile of this user
+	print_r($identity);
+}
+add_action ('oa_social_login_action_before_user_insert', 'oa_social_login_do_before_user_insert', 10, 2);
+	
+	
+	
+//*******************************************************************************
+// Social Login: Action called after having added a new user
+//*******************************************************************************
+
+//This function will be called after Social Login has added a new user
+function oa_social_login_do_after_user_insert ($user_data, $identity)
+{
+	//These are the fields from the WordPress database
+	print_r($user_data);
+	
+	//This is the full social network profile of this user
+	print_r($identity);
+}
+add_action ('oa_social_login_action_after_user_insert', 'oa_social_login_do_after_user_insert', 10, 2);
+	
+	
+	
+//*******************************************************************************
+// Social Login: Action called before logging in the user
+//*******************************************************************************
+
+//This function will be called before Social Login logs the the user in
+function oa_social_login_do_before_user_login ($user_data, $identity, $new_registration)
+{
+	//true for new and false for returning users
+	if ($new_registration)
+	{
+		echo "I am a new user";
+	}
+	else
+	{
+		echo "I am a returning user";
+	}
+
+	//These are the fields from the WordPress database
+	print_r($user_data);
+	
+	//This is the full social network profile of this user
+	print_r($identity);
+}
+add_action ('oa_social_login_action_before_user_login', 'oa_social_login_do_before_user_login', 10, 3);
+	
+	
+	
+//*******************************************************************************
+// Social Login: Action called before redirecting the user
+//*******************************************************************************
+
+//This function will be called before Social Login redirects the user
+function oa_social_login_do_before_user_redirect ($user_data, $identity, $redirect_to)
+{
+	echo "User will be redirected to ".$redirect_to;
+
+	//These are the fields from the WordPress database
+	print_r($user_data);
+	
+	//This is the full social network profile of this user
+	print_r($identity);
+}
+add_action ('oa_social_login_action_before_user_redirect', 'oa_social_login_do_before_user_redirect', 10, 3);
+	
+	
+	

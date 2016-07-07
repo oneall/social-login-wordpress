@@ -1,0 +1,828 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Social Login v4.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-06 11:41+0100\n"
+"PO-Revision-Date: 2014-05-06 11:41+0100\n"
+"Last-Translator: Claude Schlesser <cschlesser@oneall.com>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ oa_social_login
+#: oa-social-login.php:24
+#, php-format
+msgid "This plugin requires WordPress %s or newer. Please update your WordPress installation to activate this plugin."
+msgstr "Cette extension nécessite WordPress %s ou plus récent. SVP mettre à jour votre installation de WordPress pour activer cette extension."
+
+# @ oa_social_login
+#: oa-social-login.php:46
+#: includes/admin.php:59
+#: includes/admin.php:70
+#: includes/admin.php:593
+#: includes/admin.php:866
+msgid "Setup"
+msgstr "Installation"
+
+# @ oa_social_login
+#: includes/admin.php:14
+msgid "Registration"
+msgstr "Inscription"
+
+# @ oa_social_login
+#: includes/admin.php:47
+msgid "Registration Form"
+msgstr "Formulaire d’inscription"
+
+# @ oa_social_login
+#: includes/admin.php:63
+#: includes/admin.php:594
+#: includes/admin.php:867
+msgid "Settings"
+msgstr "Paramètres"
+
+# @ oa_social_login
+#: includes/admin.php:116
+msgid "Thank you for using Social Login!"
+msgstr "Merci d’utiliser Social Login!"
+
+# @ oa_social_login
+#: includes/admin.php:116
+#, php-format
+msgid "Please complete the <strong><a href=\"%s\">Social Login Setup</a></strong> to enable the plugin."
+msgstr "Vous devez compléter le <a href=\"%s\"><strong>programme d’installation Social Login</strong></a> pour activer l’extension."
+
+# @ oa_social_login
+#: includes/admin.php:308
+msgid "Contacting API - please wait this may take a few minutes ..."
+msgstr "Contacter API - Veuillez patienter, cela peut prendre quelques minutes..."
+
+# @ oa_social_login
+#: includes/admin.php:309
+msgid "The settings are correct - do not forget to save your changes!"
+msgstr "Les paramètres sont corrects - n’oubliez pas d’enregistrer vos changements!"
+
+# @ oa_social_login
+#: includes/admin.php:310
+msgid "Please fill out each of the fields above."
+msgstr "Veuillez remplir chacun des champs ci-dessus."
+
+# @ oa_social_login
+#: includes/admin.php:311
+msgid "The subdomain does not exist. Have you filled it out correctly?"
+msgstr "Le sous-domaine n’existe pas. Avez-vous rempli correctement?"
+
+# @ oa_social_login
+#: includes/admin.php:312
+msgid "The subdomain has a wrong syntax!"
+msgstr "Le sous-domaine a une syntaxe incorrecte!"
+
+# @ oa_social_login
+#: includes/admin.php:313
+msgid "Could not contact API. Are outbound requests on port 443 allowed?"
+msgstr "Impossible de contacter API. Les demandes sortantes sur le port 443 sont-elles permises?"
+
+# @ oa_social_login
+#: includes/admin.php:314
+msgid "The API subdomain is correct, but one or both keys are invalid"
+msgstr "Le sous-domaine de l’API est correcte, mais une ou deux clés ne sont pas valides"
+
+# @ oa_social_login
+#: includes/admin.php:315
+msgid "Connection handler does not work, try using the Autodetection"
+msgstr "Gestionnaire de connexion ne fonctionne pas, essayez d’utiliser la détection automatique"
+
+# @ oa_social_login
+#: includes/admin.php:316
+msgid "Detected CURL on Port 443 - do not forget to save your changes!"
+msgstr "CURL détecté sur le port 443 - n’oubliez pas d’enregistrer vos changements!"
+
+# @ oa_social_login
+#: includes/admin.php:317
+msgid "Detected CURL on Port 80 - do not forget to save your changes!"
+msgstr "CURL détecté sur le port 80 - n’oubliez pas d’enregistrer vos changements!"
+
+#: includes/admin.php:318
+msgid "CURL is available but both ports (80, 443) are blocked for outbound requests"
+msgstr "CURL est disponible, mais votre pare-feu bloque les connexions sortantes sur les ports 80 et 443."
+
+# @ oa_social_login
+#: includes/admin.php:319
+msgid "Detected FSOCKOPEN on Port 443 - do not forget to save your changes!"
+msgstr "Détecté fsockopen sur le port 443 - n’oubliez pas d’enregistrer vos changements!"
+
+# @ oa_social_login
+#: includes/admin.php:320
+msgid "Detected FSOCKOPEN on Port 80 - do not forget to save your changes!"
+msgstr "Détecté FSOCKOPEN sur le port 80 - n’oubliez pas d’enregistrer vos changements!"
+
+#: includes/admin.php:321
+msgid "FSOCKOPEN is available but both ports (80, 443) are blocked for outbound requests"
+msgstr "FSOCKOPEN est disponible, mais votre pare-feu bloque les connexions sortantes sur les ports 80 et 443."
+
+# @ oa_social_login
+#: includes/admin.php:322
+#, php-format
+msgid "Autodetection Error - our <a href=\"%s\" target=\"_blank\">documentation</a> helps you fix this issue."
+msgstr "Auto-détection d’erreur - notre <a href=\"%s\" target=\"_blank\">documentation</a> vous aide à résoudre ce problème."
+
+# @ oa_social_login
+#: includes/admin.php:601
+msgid "Allow your visitors to comment, login and register with 20+ Social Networks like for example Twitter, Facebook, LinkedIn, Instagram, VKontakte, Google or Yahoo."
+msgstr "Permettez à vos visiteurs de commenter, de s’identifier et de s’enregistrer avec plus de 20 réseaux sociaux comme par exemple Twitter, Facebook, LinkedIn, Instagram, Google ou Yahoo."
+
+# @ oa_social_login
+#: includes/admin.php:602
+msgid "Draw a larger audience and increase your user engagement in a  few simple steps."
+msgstr "Attirez un public plus large et augmenter l’engagement de vos utilisateurs en quelques étapes simples."
+
+# @ oa_social_login
+#: includes/admin.php:606
+msgid "Get Started!"
+msgstr "Commencez!"
+
+# @ oa_social_login
+#: includes/admin.php:609
+#, php-format
+msgid "To be able to use this plugin you first of all need to create a free account at %s and setup a Site."
+msgstr "Pour pouvoir utiliser cette extension, vous devez tout d’abord créer un compte gratuitement sur %s et configurer votre site."
+
+# @ oa_social_login
+#: includes/admin.php:610
+msgid "After having created your account and setup your Site, please enter the Site settings in the form below."
+msgstr "Après avoir créé votre compte et la configuration de votre site, SVP entrer les paramètres du site dans le formulaire ci-dessous."
+
+# @ oa_social_login
+#: includes/admin.php:611
+msgid "Don't worry the setup takes only a couple of minutes!"
+msgstr "Ne vous inquiétez pas, de la configuration ne prend que quelques minutes!"
+
+# @ oa_social_login
+#: includes/admin.php:614
+msgid "Click here to setup your free account"
+msgstr "Cliquez ici pour configurer votre compte gratuit"
+
+# @ oa_social_login
+#: includes/admin.php:617
+#, php-format
+msgid "You are in good company! This plugin is used on more than %s websites!"
+msgstr "Vous êtes en bonne compagnie! Cette extension est utilisée sur plus de %s sites Web!"
+
+# @ oa_social_login
+#: includes/admin.php:628
+msgid "Your API Account is setup correctly"
+msgstr "Votre compte API est configuré correctement"
+
+# @ oa_social_login
+#: includes/admin.php:631
+msgid "Login to your account to manage your providers and access your Social Insights."
+msgstr "Connectez-vous à votre compte pour gérer vos fournisseurs et accéder à vos Social Insights."
+
+# @ oa_social_login
+#: includes/admin.php:632
+msgid "Determine which social networks are popular amongst your users and tailor your registration experience to increase your users' engagement."
+msgstr "Déterminer quels réseaux sociaux sont les plus populaires parmi les utilisateurs et adapter leur expérience d’enregistrement pour augmenter l’engagement des utilisateurs."
+
+# @ oa_social_login
+#: includes/admin.php:635
+msgid "Click here to login to your account"
+msgstr "Cliquez ici pour vous connecter à votre compte"
+
+# @ oa_social_login
+#: includes/admin.php:643
+msgid "Help, Updates &amp; Documentation"
+msgstr "Aide, Mises à jour et documentation"
+
+# @ oa_social_login
+#: includes/admin.php:646
+#, php-format
+msgid "<a target=\"_blank\" href=\"%s\">Follow us on Twitter</a> to stay informed about updates"
+msgstr "<a target=\"_blank\" href=\"%s\">Suivez-nous sur Twitter</a> pour rester informé des mises à jour"
+
+# @ oa_social_login
+#: includes/admin.php:647
+#, php-format
+msgid "<a target=\"_blank\" href=\"%s\">Read the online documentation</a> for more information about this plugin"
+msgstr "<a target=\"_blank\" href=\"%s\">Lire la documentation en ligne</a> pour plus d’informations sur cette extension"
+
+# @ oa_social_login
+#: includes/admin.php:648
+#, php-format
+msgid "<a target=\"_blank\" href=\"%s\">Contact us</a> if you have feedback or need assistance"
+msgstr "<a target=\"_blank\" href=\"%s\">Contactez-nous</a> si vous avez des commentaires ou besoin de support"
+
+# @ oa_social_login
+#: includes/admin.php:649
+#, php-format
+msgid "We also have <a target=\"_blank\" href=\"%s\">turnkey plugins</a> for Drupal, PrestaShop, Joomla, phpBB andy many others ..."
+msgstr "Nous avons aussi des <a target=\"_blank\" href=\"%s\">extensions clés en main</a> pour Drupal, PrestaShop, Joomla, phpBB and bien d’autres..."
+
+# @ oa_social_login
+#: includes/admin.php:658
+#: includes/admin.php:891
+msgid "Your modifications have been saved successfully!"
+msgstr "Vos modifications ont bien été enregistrées!"
+
+# @ oa_social_login
+#: includes/admin.php:670
+#: includes/admin.php:678
+msgid "API Connection Handler"
+msgstr "Gestion de connexion avec l’API"
+
+# @ oa_social_login
+#: includes/admin.php:682
+msgid "Use PHP CURL to communicate with the API"
+msgstr "Utilisez PHP CURL pour communiquer avec l’API"
+
+# @ oa_social_login
+#: includes/admin.php:682
+#: includes/admin.php:702
+#: includes/admin.php:800
+#: includes/admin.php:925
+#: includes/admin.php:940
+#: includes/admin.php:953
+#: includes/admin.php:974
+#: includes/admin.php:990
+#: includes/admin.php:1004
+#: includes/admin.php:1026
+#: includes/admin.php:1041
+#: includes/admin.php:1056
+#: includes/admin.php:1079
+#: includes/admin.php:1100
+#: includes/admin.php:1116
+#: includes/admin.php:1139
+#: includes/admin.php:1156
+#: includes/admin.php:1179
+#: includes/admin.php:1197
+msgid "Default"
+msgstr "Par défaut"
+
+# @ oa_social_login
+#: includes/admin.php:683
+msgid "Using CURL is recommended but it might be disabled on some servers."
+msgstr "Utilisation de CURL est recommandé, mais il peut être désactivée sur certains serveurs."
+
+# @ oa_social_login
+#: includes/admin.php:689
+msgid "Use PHP FSOCKOPEN to communicate with the API"
+msgstr "Utilisez PHP FSOCKOPEN pour communiquer avec l’API"
+
+# @ oa_social_login
+#: includes/admin.php:690
+msgid "Try using FSOCKOPEN if you encounter any problems with CURL."
+msgstr "Essayez d’utiliser FSOCKOPEN si vous rencontrez des problèmes avec CURL."
+
+# @ oa_social_login
+#: includes/admin.php:698
+msgid "API Connection Port"
+msgstr "Port de connexion de l’API"
+
+# @ oa_social_login
+#: includes/admin.php:702
+msgid "Communication via HTTPS on port 443"
+msgstr "Communication via le protocole HTTPS sur le port 443"
+
+# @ oa_social_login
+#: includes/admin.php:703
+msgid "Using port 443 is secure but you might need OpenSSL"
+msgstr "Utiliser le port 443 est augmente la sécurité, mais vous pourriez avoir besoin OpenSSL"
+
+# @ oa_social_login
+#: includes/admin.php:709
+msgid "Communication via HTTP on port 80"
+msgstr "Communication via le protocole HTTP sur le port 80"
+
+# @ oa_social_login
+#: includes/admin.php:710
+msgid "Using port 80 is a bit faster, doesn't need OpenSSL but is less secure"
+msgstr "Utiliser le port 80 est un peu plus rapide, n’a pas besoin de OpenSSL, mais est moins sécure"
+
+# @ oa_social_login
+#: includes/admin.php:715
+msgid "Autodetect API Connection"
+msgstr "Détection automatique de connexion API"
+
+# @ oa_social_login
+#: includes/admin.php:725
+msgid "API Settings"
+msgstr "Paramètres de l’API"
+
+# @ oa_social_login
+#: includes/admin.php:727
+msgid "Click here to create and view your API Credentials"
+msgstr "Cliquez ici pour créer et afficher vos informations d’authentification API"
+
+# @ oa_social_login
+#: includes/admin.php:732
+msgid "API Subdomain"
+msgstr "Sous-domaine API"
+
+# @ oa_social_login
+#: includes/admin.php:740
+msgid "API Public Key"
+msgstr "Clé publique API"
+
+# @ oa_social_login
+#: includes/admin.php:748
+msgid "API Private Key"
+msgstr "Clé privée API"
+
+# @ oa_social_login
+#: includes/admin.php:756
+msgid "Verify API Settings"
+msgstr "Vérifier les paramètres de l’API"
+
+# @ oa_social_login
+#: includes/admin.php:766
+msgid "JavaScript Settings"
+msgstr "Paramètres JavaScript"
+
+#: includes/admin.php:796
+msgid "JavaScript Usage"
+msgstr "Utilisations du JavaScript"
+
+#: includes/admin.php:800
+msgid "Asynchronous JavaScript"
+msgstr "JavaScript asynchrone"
+
+#: includes/admin.php:801
+msgid "Background loading without interfering with the display and behavior of the existing page."
+msgstr "Chargement en arrière-plan pour accélerer l'affichage des pages"
+
+#: includes/admin.php:807
+msgid "Synchronous JavaScript"
+msgstr "JavaScript synchrone"
+
+#: includes/admin.php:808
+msgid "Real-time loading when the page is being rendered by the browser."
+msgstr "Chargement en temps réel, lors du chargement des pages"
+
+# @ oa_social_login
+#: includes/admin.php:816
+msgid "Enable the social networks/identity providers of your choice"
+msgstr "Activer les réseaux sociaux/fournisseur d’identité de votre choix "
+
+# @ oa_social_login
+#: includes/admin.php:836
+#, php-format
+msgid "To enable cyrillic usernames, you might need <a target=\"_blank\" href=\"%s\">this plugin</a>"
+msgstr "Pour permettre les caractères cyrilliques dans les noms d’utilisateur, vous pourriez avoir besoin <a target=\"_blank\" href=\"%s\">de cette extension</a>"
+
+# @ oa_social_login
+#: includes/admin.php:847
+#: includes/admin.php:1207
+msgid "Save Changes"
+msgstr "Enregistrer les modifications"
+
+# @ oa_social_login
+#: includes/admin.php:877
+msgid "Logout to see the plugin in action!"
+msgstr "Déconnectez-vous pour voir l’extension en action!"
+
+# @ oa_social_login
+#: includes/admin.php:881
+msgid "Social Login is a plugin that allows your users to comment, login and register with their existing Social Network accounts. If a user is already logged in, the plugin will not be displayed. There is no need to give the user the possibility to connect with a social network if he is already connected."
+msgstr "Social Login est une extension qui permet à vos utilisateurs de commenter, s’identifier et s’enregistrer avec leurs comptes de réseaux sociaux existants. Si un utilisateur est déjà connecté, l’extension ne sera pas affichée. Il n’est pas nécessaire de donner à l’utilisateur la possibilité de se connecter avec un réseau social s’il est déjà connecté."
+
+# @ oa_social_login
+#: includes/admin.php:883
+msgid "You therefore have to logout to see the plugin in action."
+msgstr "Vous devez donc vous déconnecter pour voir l’extension en action."
+
+# @ oa_social_login
+#: includes/admin.php:899
+msgid "General Settings"
+msgstr "Paramètres généraux"
+
+# @ oa_social_login
+#: includes/admin.php:904
+msgid "Enter the description to be displayed above the Social Login buttons (leave empty for none):"
+msgstr "Entrez la description à afficher au-dessus des boutons Social Login (laisser vide pour aucun):"
+
+# @ oa_social_login
+#: includes/admin.php:910
+msgid "Connect with:"
+msgstr "Connectez-vous avec:"
+
+# @ oa_social_login
+#: includes/admin.php:917
+msgid "Do you want to use the default or the small social network buttons?"
+msgstr "Voulez-vous utiliser les petits boutons de réseaux sociaux ou par défaut?"
+
+# @ oa_social_login
+#: includes/admin.php:925
+#, php-format
+msgid "Use the default social network buttons (%s)"
+msgstr "Utilisez les boutons de réseaux sociaux par défaut (%s)"
+
+# @ oa_social_login
+#: includes/admin.php:926
+#, php-format
+msgid "Use the small social network buttons (%s)"
+msgstr "Utilisez les petits boutons de réseaux sociaux (%s)"
+
+# @ oa_social_login
+#: includes/admin.php:931
+msgid "Do you want to display the social networks used to connect in the user list of the administration area ?"
+msgstr "Voulez-vous voir les réseaux sociaux utilisés pour se connecter dans la liste des utilisateurs de l’espace d’administration?"
+
+# @ oa_social_login
+#: includes/admin.php:939
+msgid "Yes, add a new column to the user list and display the social network that the user connected with"
+msgstr "Oui, ajouter une nouvelle colonne à la liste des utilisateurs et afficher le réseau social que l’utilisateur utilise"
+
+# @ oa_social_login
+#: includes/admin.php:940
+msgid "No, no not display the social networks in the user list"
+msgstr "Non, ne pas afficher les réseaux sociaux dans la liste des utilisateurs"
+
+# @ oa_social_login
+#: includes/admin.php:945
+msgid "Do you want to receive an email whenever a new user registers with Social Login ?"
+msgstr "Voulez-vous recevoir un courriel à chaque fois qu’un nouvel utilisateur s’enregistre avec Social Login?"
+
+# @ oa_social_login
+#: includes/admin.php:953
+msgid "Yes, send me an email whenever a new user registers with Social Login"
+msgstr "Oui, envoyez-moi un courriel à chaque fois qu’un nouvel utilisateur s’enregistre avec Social Login"
+
+# @ oa_social_login
+#: includes/admin.php:954
+msgid "No, do not send me any emails"
+msgstr "Non, ne m’envoyez pas de courriels"
+
+# @ oa_social_login
+#: includes/admin.php:961
+msgid "User Settings"
+msgstr "Paramètres de l’utilisateur"
+
+# @ oa_social_login
+#: includes/admin.php:966
+msgid "If the user's social network profile has no email address, should we ask the user to enter it manually?"
+msgstr "Si le profil de réseau social de l’utilisateur n’a pas d’adresse courriel, nous devrions demander à l’utilisateur de saisir manuellement?"
+
+# @ oa_social_login
+#: includes/admin.php:974
+msgid "No, simplify the registration by automatically creating a placeholder email"
+msgstr "Non, simplifier l’enregistrement en créant automatiquement un courriel fictif"
+
+# @ oa_social_login
+#: includes/admin.php:975
+msgid "Yes, require the user to enter his email address manually and display this message:"
+msgstr "Oui, demander à l’utilisateur d’entrer son adresse courriel manuellement et afficher ce message:"
+
+# @ oa_social_login
+#: includes/admin.php:976
+#: includes/user_interface.php:1078
+#, php-format
+msgid "<strong>We unfortunately could not retrieve your email address from %s.</strong> Please enter your email address in the form below in order to continue."
+msgstr "<strong>Nous n’avons malheureusement pas pu récupérer votre adresse courriel de %s.</strong> SVP, entrez votre adresse courriel dans le formulaire ci-dessous pour continuer."
+
+# @ oa_social_login
+#: includes/admin.php:977
+#, php-format
+msgid "HTML is allowed, the placeholder %s is replaced by the name of the social network used to connect."
+msgstr "Le HTML est autorisé, l’espace réservé %s est remplacé par le nom du réseau social utilisé pour se connecter."
+
+# @ oa_social_login
+#: includes/admin.php:982
+msgid "If the user's social network profile has a verified email, should we try to link it to an existing account?"
+msgstr "Si le profil de réseau social de l’utilisateur dispose d’un courriel vérifiée, nous devrions essayer de le lier à un compte existant?"
+
+# @ oa_social_login
+#: includes/admin.php:990
+msgid "Yes, try to link verified social network profiles to existing blog accounts"
+msgstr "Oui, essayez de relier profils de réseaux sociaux vérifiées aux comptes utilisateurs WP existantes"
+
+# @ oa_social_login
+#: includes/admin.php:991
+msgid "No, disable account linking"
+msgstr "Non, désactiver compte de liaison"
+
+# @ oa_social_login
+#: includes/admin.php:996
+msgid "If the user's social network profile has an avatar, should this avatar be used as default avatar for the user?"
+msgstr "Si le profil de réseau social de l’utilisateur dispose d’un avatar, cet avatar doit-il être utilisé comme avatar pour l’utilisateur?"
+
+# @ oa_social_login
+#: includes/admin.php:1004
+msgid "No, do not use avatars from social networks"
+msgstr "Non, ne pas utiliser d’avatars de réseaux sociaux"
+
+# @ oa_social_login
+#: includes/admin.php:1005
+msgid "Yes, use small avatars from social networks if available"
+msgstr "Oui, utiliser de petits avatars de réseaux sociaux si disponible"
+
+# @ oa_social_login
+#: includes/admin.php:1006
+msgid "Yes, use large avatars from social networks if available"
+msgstr "Oui, utiliser de grands avatars de réseaux sociaux si disponible"
+
+# @ oa_social_login
+#: includes/admin.php:1013
+msgid "Comment Settings"
+msgstr "Paramètres Commentaire"
+
+# @ oa_social_login
+#: includes/admin.php:1018
+msgid "Show the Social Login buttons in the comment area?"
+msgstr "Afficher les boutons Social Login dans la zone commentaire?"
+
+# @ oa_social_login
+#: includes/admin.php:1026
+#: includes/admin.php:1041
+msgid "Yes, show the Social Login buttons"
+msgstr "Oui, afficher les boutons Social Login"
+
+# @ oa_social_login
+#: includes/admin.php:1027
+#: includes/admin.php:1042
+msgid "No, do not show the Social Login buttons"
+msgstr "Non, ne pas afficher les boutons Social Login"
+
+# @ oa_social_login
+#: includes/admin.php:1032
+msgid "Show the Social Login buttons in the comment area if comments are disabled for guests?"
+msgstr "Afficher les boutons Social Login dans la zone de commentaires si les commentaires sont désactivés pour les invités?"
+
+# @ oa_social_login
+#: includes/admin.php:1040
+msgid "The buttons will be displayed below the \"You must be logged in to leave a comment\" notice."
+msgstr "Les boutons seront affichés sous le message «Vous devez être connecté pour laisser un commentaire»."
+
+# @ oa_social_login
+#: includes/admin.php:1047
+msgid "Automatically approve comments left by users that connected by using Social Login?"
+msgstr "Approuver automatiquement les commentaires laissés par les utilisateurs qui se sont connectés à l’aide de Social Login?"
+
+# @ oa_social_login
+#: includes/admin.php:1055
+msgid "Yes, automatically approve comments made by users that connected with Social Login"
+msgstr "Oui, approuver automatiquement les commentaires faits par les utilisateurs connectés avec Social Login"
+
+# @ oa_social_login
+#: includes/admin.php:1056
+msgid "No, do not automatically approve"
+msgstr "Non, n’approuvent pas automatiquement"
+
+# @ oa_social_login
+#: includes/admin.php:1065
+msgid "Profile Settings"
+msgstr "Paramètres du profil"
+
+# @ oa_social_login
+#: includes/admin.php:1070
+msgid "Show the Social Link buttons in the user profile?"
+msgstr "Afficher les boutons Social Login dans le profil de l’utilisateur?"
+
+# @ oa_social_login
+#: includes/admin.php:1075
+msgid "Keep this option enabled to allow each user to connect multiple social networks to his own profile."
+msgstr "Laissez cette option activée pour permettre à chaque utilisateur de connecter plusieurs réseaux sociaux à son propre profil."
+
+# @ oa_social_login
+#: includes/admin.php:1079
+msgid "Yes, show the Social Link buttons"
+msgstr "Oui, afficher les boutons de Social Login"
+
+# @ oa_social_login
+#: includes/admin.php:1080
+msgid "No, do not show the Social Link buttons"
+msgstr "Non, ne pas afficher les boutons de Social Login"
+
+# @ oa_social_login
+#: includes/admin.php:1087
+msgid "Login Page Settings"
+msgstr "Paramètres de la page de connexion"
+
+# @ oa_social_login
+#: includes/admin.php:1092
+msgid "Do you want to display Social Login on the login form of your blog?"
+msgstr "Voulez-vous afficher Connexion social sur le formulaire de connexion de votre blogue?"
+
+# @ oa_social_login
+#: includes/admin.php:1100
+msgid "Yes, display the social network buttons below the login form"
+msgstr "Oui, afficher les boutons de réseaux sociaux sous le formulaire de connexion"
+
+# @ oa_social_login
+#: includes/admin.php:1101
+msgid "No, disable social network buttons in the login form"
+msgstr "Non, désactiver les boutons de réseaux sociaux dans le formulaire de connexion"
+
+# @ oa_social_login
+#: includes/admin.php:1106
+msgid "Where should users be redirected to after having logged in with Social Login on the login page?"
+msgstr "Où les utilisateurs doivent être redirigés vers après avoir connecté avec Social Login sur la page de connexion?"
+
+# @ oa_social_login
+#: includes/admin.php:1115
+#: includes/admin.php:1154
+#: includes/admin.php:1179
+#: includes/admin.php:1197
+msgid "Redirect users back to the current page"
+msgstr "Rediriger les utilisateurs vers la page courante"
+
+# @ oa_social_login
+#: includes/admin.php:1116
+#: includes/admin.php:1155
+#: includes/admin.php:1180
+#: includes/admin.php:1198
+msgid "Redirect users to the homepage of my blog"
+msgstr "Rediriger les utilisateurs vers la page d’accueil de mon blogue"
+
+# @ oa_social_login
+#: includes/admin.php:1117
+#: includes/admin.php:1156
+#: includes/admin.php:1181
+#: includes/admin.php:1199
+msgid "Redirect users to their account dashboard"
+msgstr "Rediriger les utilisateurs au tableau de bord de leur compte"
+
+# @ oa_social_login
+#: includes/admin.php:1118
+#: includes/admin.php:1157
+#: includes/admin.php:1182
+#: includes/admin.php:1200
+msgid "Redirect users to the following url"
+msgstr "Rediriger les utilisateurs vers l’adresse suivante"
+
+# @ oa_social_login
+#: includes/admin.php:1126
+msgid "Registration Page Settings"
+msgstr "Paramètres de la page d’inscription"
+
+# @ oa_social_login
+#: includes/admin.php:1131
+msgid "Do you want to display Social Login on the registration form of your blog?"
+msgstr "Voulez-vous afficher Social Login sur le formulaire d’inscription de votre blogue?"
+
+# @ oa_social_login
+#: includes/admin.php:1139
+msgid "Yes, display the social network buttons below the registration form"
+msgstr "Oui, afficher les boutons de réseaux sociaux sous le formulaire d’inscription"
+
+# @ oa_social_login
+#: includes/admin.php:1140
+msgid "No, disable social network buttons in the registration form"
+msgstr "Non, désactiver les boutons de réseaux sociaux dans le formulaire d’inscription"
+
+# @ oa_social_login
+#: includes/admin.php:1145
+msgid "Where should users be redirected to after having registered with Social Login on the registration page?"
+msgstr "Où les utilisateurs doivent être redirigés vers après s’être enregistré avec Social Login sur la page d’inscription?"
+
+# @ oa_social_login
+#: includes/admin.php:1165
+msgid "Widget &amp; Shortcode Settings"
+msgstr "Paramètres Widget et Shortcode"
+
+# @ oa_social_login
+#: includes/admin.php:1170
+msgid "Redirect users to this page after they have logged in with Social Login embedded by Widget/Shortcode:"
+msgstr "Rediriger les utilisateurs vers cette page après avoir connecté avec Social Loginl intégré par Widget / Shortcode:"
+
+# @ oa_social_login
+#: includes/admin.php:1188
+msgid "Redirect users to this page after they have registered with Social Login embedded by Widget/Shortcode:"
+msgstr "Rediriger les utilisateurs vers cette page après s’être enregistré avec Social Login intégré par Widget / Shortcode:"
+
+# @ oa_social_login
+#: includes/user_interface.php:115
+#: includes/user_interface.php:926
+msgid "Please enable at least one social network!"
+msgstr "SVP activer au moins un réseau social!"
+
+# @ oa_social_login
+#: includes/user_interface.php:160
+#: includes/user_interface.php:198
+#, php-format
+msgid "You have successfully linked your %s account."
+msgstr "Vous avez lié votre compte %s."
+
+# @ oa_social_login
+#: includes/user_interface.php:192
+#: includes/user_interface.php:283
+#, php-format
+msgid "This %s account is already used by another user of this website."
+msgstr "Ce compte %s est déjà utilisé par un autre utilisateur de ce site."
+
+# @ oa_social_login
+#: includes/user_interface.php:223
+#, php-format
+msgid "You have successfully unlinked your %s account."
+msgstr "Vous avez dissociées avec succès  votre le compte de %s."
+
+# @ oa_social_login
+#: includes/user_interface.php:271
+msgid "You might no longer be able to login to this website if you don't link at least one social network."
+msgstr "Vous pourriez ne plus être en mesure de vous connecter à ce site si vous ne liez pas au moins un réseau social."
+
+# @ oa_social_login
+#: includes/user_interface.php:347
+msgid "Connect your account to one or more social networks"
+msgstr "Connectez votre compte à un ou plusieurs réseaux sociaux"
+
+# @ oa_social_login
+#: includes/user_interface.php:1028
+#: includes/user_interface.php:1104
+msgid "Please enter your email address"
+msgstr "SVP, entrez votre adresse courriel"
+
+# @ oa_social_login
+#: includes/user_interface.php:1034
+msgid "This email is not valid"
+msgstr "Ce courriel n’est pas valide"
+
+# @ oa_social_login
+#: includes/user_interface.php:1039
+msgid "This email is already used by another account"
+msgstr "Ce courriel est déjà utilisée par un autre compte"
+
+# @ oa_social_login
+#: includes/user_interface.php:1091
+#, php-format
+msgid "You have successfully connected with %s!"
+msgstr "Vous êtes connecté avec succès avec %s!"
+
+# @ oa_social_login
+#: includes/user_interface.php:1116
+msgid "Confirm"
+msgstr "Confirmer"
+
+# @ oa_social_login
+#: includes/user_interface.php:1117
+msgid "Cancel"
+msgstr "Annuler"
+
+# @ oa_social_login
+#: includes/widget.php:14
+msgid "Allow your visitors to login and register with social networks like Twitter, Facebook, LinkedIn, Hyves, Google and Yahoo."
+msgstr "Permettez à vos visiteurs de se connecter et de s’enregistrer avec les réseaux sociaux comme Twitter, Facebook, LinkedIn, Hyves, Google et Yahoo."
+
+# @ oa_social_login
+#: includes/widget.php:62
+msgid "Connect with"
+msgstr "Connectez-vous avec"
+
+# @ oa_social_login
+#: includes/widget.php:77
+msgid "Title"
+msgstr "Titre"
+
+# @ oa_social_login
+#: includes/widget.php:81
+msgid "Insert text/html to add before the widget"
+msgstr "Insérer un texte / html à ajouter avant le widget"
+
+# @ oa_social_login
+#: includes/widget.php:85
+msgid "Insert text/html to add after the widget"
+msgstr "Insérer un texte / html à ajouter, après le widget"
+
+# @ oa_social_login
+#: includes/widget.php:90
+msgid "Tick to hide widget for logged-in users"
+msgstr "Cochez pour cacher un widget pour les utilisateurs connectés"
+
+# @ oa_social_login
+#: includes/widget.php:94
+msgid "Tick to use small buttons"
+msgstr "Cochez pour utiliser de petits boutons"
+
+# @ oa_social_login
+#: includes/toolbox.php:87
+#, php-format
+msgid "[%s] New User Registration"
+msgstr "[%s] Enregistrement d’un nouvel utilisateur"
+
+# @ oa_social_login
+#: includes/toolbox.php:90
+#, php-format
+msgid "New user registration on your site %s:"
+msgstr "Enregistrement d’un nouvel utilisateur sur votre site %s:"
+
+# @ oa_social_login
+#: includes/toolbox.php:91
+#, php-format
+msgid "Username: %s"
+msgstr "Nom d’utilisateur: %s"
+
+# @ oa_social_login
+#: includes/toolbox.php:92
+#, php-format
+msgid "Social Network: %s"
+msgstr "Réseau social: %s"
+

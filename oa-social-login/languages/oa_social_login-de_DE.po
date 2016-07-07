@@ -1,0 +1,734 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Social Login\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-06 11:41+0100\n"
+"PO-Revision-Date: 2014-05-06 11:41+0100\n"
+"Last-Translator: Claude Schlesser <cschlesser@oneall.com>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: oa-social-login.php:24
+#, php-format
+msgid "This plugin requires WordPress %s or newer. Please update your WordPress installation to activate this plugin."
+msgstr "Dieses Plugin benötigt Wordpress %s oder höher. Bitte aktualisieren Sie WordPress, um dieses Plugin zu nutzen."
+
+#: oa-social-login.php:46
+#: includes/admin.php:59
+#: includes/admin.php:70
+#: includes/admin.php:593
+#: includes/admin.php:866
+msgid "Setup"
+msgstr "Einrichten"
+
+#: includes/admin.php:14
+msgid "Registration"
+msgstr "Registriert mit"
+
+#: includes/admin.php:47
+msgid "Registration Form"
+msgstr "Anmeldeformular"
+
+#: includes/admin.php:63
+#: includes/admin.php:594
+#: includes/admin.php:867
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: includes/admin.php:116
+msgid "Thank you for using Social Login!"
+msgstr "Danke, dass Sie Social Login installiert haben!"
+
+#: includes/admin.php:116
+#, php-format
+msgid "Please complete the <strong><a href=\"%s\">Social Login Setup</a></strong> to enable the plugin."
+msgstr "Bitte rufen Sie die Seite <strong><a href=\"%s\">Einstellungen\\Social Login</a></strong> auf, um das Plugin zu konfigurieren."
+
+#: includes/admin.php:308
+msgid "Contacting API - please wait this may take a few minutes ..."
+msgstr "Teste Einstellungen - Dies kann einige Minutern dauern ..."
+
+#: includes/admin.php:309
+msgid "The settings are correct - do not forget to save your changes!"
+msgstr "Die Einstellungen sind korrekt! Vergessen Sie nicht abzuspeichern!"
+
+#: includes/admin.php:310
+msgid "Please fill out each of the fields above."
+msgstr "Bitte füllen Sie alle Felder aus."
+
+#: includes/admin.php:311
+msgid "The subdomain does not exist. Have you filled it out correctly?"
+msgstr "Subdomain wurde nicht gefunden. Haben Sie sie richtig ausgefüllt?"
+
+#: includes/admin.php:312
+msgid "The subdomain has a wrong syntax!"
+msgstr "Die Subdomain ist ungültig!"
+
+#: includes/admin.php:313
+msgid "Could not contact API. Are outbound requests on port 443 allowed?"
+msgstr "Keine Verbindung zur API. Eventuell blockiert Ihre Firewall Anfragen auf Port 443."
+
+#: includes/admin.php:314
+msgid "The API subdomain is correct, but one or both keys are invalid"
+msgstr "Die API-Subdomain ist korrekt, aber die Schlüssel stimmen nicht."
+
+#: includes/admin.php:315
+msgid "Connection handler does not work, try using the Autodetection"
+msgstr "Verbindungsfehler! Bitte nutzen Sie die automatische Erkennung"
+
+#: includes/admin.php:316
+msgid "Detected CURL on Port 443 - do not forget to save your changes!"
+msgstr "CURL kann auf Port 443 verwendet werden. Vergessen Sie nicht abzuspeichern!"
+
+#: includes/admin.php:317
+msgid "Detected CURL on Port 80 - do not forget to save your changes!"
+msgstr "CURL kann auf Port 80 verwendet werden. Vergessen Sie nicht abzuspeichern!"
+
+#: includes/admin.php:318
+msgid "CURL is available but both ports (80, 443) are blocked for outbound requests"
+msgstr "CURL wurde gefunden. Die Ports 80 und 443 scheinen aber für ausgehende Verbindungen gesperrt zu sein."
+
+#: includes/admin.php:319
+msgid "Detected FSOCKOPEN on Port 443 - do not forget to save your changes!"
+msgstr "FSOCKOPEN kann auf Port 443 verwendet werden. Vergessen Sie nicht abzuspeichern!"
+
+#: includes/admin.php:320
+msgid "Detected FSOCKOPEN on Port 80 - do not forget to save your changes!"
+msgstr "FSOCKOPEN kann Port 80 verwendet werden. Vergessen Sie nicht abzuspeichern!"
+
+#: includes/admin.php:321
+msgid "FSOCKOPEN is available but both ports (80, 443) are blocked for outbound requests"
+msgstr "FSOCKOPEN wurde gefunden. Die Ports 80 und 443 scheinen aber für ausgehende Verbindungen gesperrt zu sein."
+
+#: includes/admin.php:322
+#, php-format
+msgid "Autodetection Error - our <a href=\"%s\" target=\"_blank\">documentation</a> helps you fix this issue."
+msgstr "Verbindungsfehler - in unserer <a href=\"%s\" target=\"_blank\">Dokumentation</a> finden Sie die Lösung."
+
+#: includes/admin.php:601
+msgid "Allow your visitors to comment, login and register with 20+ Social Networks like for example Twitter, Facebook, LinkedIn, Instagram, VKontakte, Google or Yahoo."
+msgstr "Erlauben Sie Ihren Besuchern, sich mit 20+ Sozialen Netzwerk wie z.B. Twitter, Facebook, LinkedIn, Instagram, Google oder Yahoo anzumelden, und Kommentare zu hinterlassen."
+
+#: includes/admin.php:602
+msgid "Draw a larger audience and increase your user engagement in a  few simple steps."
+msgstr "Steigern Sie die Beteilung Ihrer Nutzer auf einfachste Art und Weise."
+
+#: includes/admin.php:606
+msgid "Get Started!"
+msgstr "Los gehts!"
+
+#: includes/admin.php:609
+#, php-format
+msgid "To be able to use this plugin you first of all need to create a free account at %s and setup a Site."
+msgstr "Um dieses Plugin nutzen zu können, müssen Sie sich zunächst kostenlos ein Konto bei %s anmelden."
+
+#: includes/admin.php:610
+msgid "After having created your account and setup your Site, please enter the Site settings in the form below."
+msgstr "Nachdem Sie Ihr Konto angemeldet haben, müssen Sie die API-Daten in das nachfolgende Formular eintragen."
+
+#: includes/admin.php:611
+msgid "Don't worry the setup takes only a couple of minutes!"
+msgstr "Keine Sorge! Die Einrichtung dauert nur wenige Minuten."
+
+#: includes/admin.php:614
+msgid "Click here to setup your free account"
+msgstr "Kostenloses Konto anmelden"
+
+#: includes/admin.php:617
+#, php-format
+msgid "You are in good company! This plugin is used on more than %s websites!"
+msgstr "Mehr als %s Webseiten nutzen dieses Plugin. Seien Sie mit dabei!"
+
+#: includes/admin.php:628
+msgid "Your API Account is setup correctly"
+msgstr "Die API-Daten sind korrekt"
+
+#: includes/admin.php:631
+msgid "Login to your account to manage your providers and access your Social Insights."
+msgstr "Loggen Sie sich in Ihr Konto ein, um Einstellungen vorzunehmen und Statistiken einzusehen."
+
+#: includes/admin.php:632
+msgid "Determine which social networks are popular amongst your users and tailor your registration experience to increase your users' engagement."
+msgstr "Finden Sie heraus, welche sozialen Netzwerke unter Ihren Besuchern beliebt sind, und steigern Sie die Beteilung Ihrer Besucher."
+
+#: includes/admin.php:635
+msgid "Click here to login to your account"
+msgstr "Klicken Sie hier, um sich in Ihr  Konto einloggen"
+
+#: includes/admin.php:643
+msgid "Help, Updates &amp; Documentation"
+msgstr "Hilfe, Updates &amp; Dokumentation"
+
+#: includes/admin.php:646
+#, php-format
+msgid "<a target=\"_blank\" href=\"%s\">Follow us on Twitter</a> to stay informed about updates"
+msgstr "<a target=\"_blank\" href=\"%s\">Folgen Sie uns auf Twitter</a>, um auf dem Laufenden zu bleiben"
+
+#: includes/admin.php:647
+#, php-format
+msgid "<a target=\"_blank\" href=\"%s\">Read the online documentation</a> for more information about this plugin"
+msgstr "<a target=\"_blank\" href=\"%s\">Lesen Sie unsere Dokumentation</a> für zusätzliche Information"
+
+#: includes/admin.php:648
+#, php-format
+msgid "<a target=\"_blank\" href=\"%s\">Contact us</a> if you have feedback or need assistance"
+msgstr "<a target=\"_blank\" href=\"%s\">Schreiben Sie uns</a>, falls Sie Hilfe benötigen"
+
+#: includes/admin.php:649
+#, php-format
+msgid "We also have <a target=\"_blank\" href=\"%s\">turnkey plugins</a> for Drupal, PrestaShop, Joomla, phpBB andy many others ..."
+msgstr "Wir bieten auch Module für <a target=\"_blank\" href=\"%s\">Drupal, phpBB , Joomla</a> und andere an"
+
+#: includes/admin.php:658
+#: includes/admin.php:891
+msgid "Your modifications have been saved successfully!"
+msgstr "Ihre Einstellungen wurden erfolgreich gespeichert!"
+
+#: includes/admin.php:670
+#: includes/admin.php:678
+msgid "API Connection Handler"
+msgstr "API Kommunikation"
+
+#: includes/admin.php:682
+msgid "Use PHP CURL to communicate with the API"
+msgstr "PHP CURL verwenden"
+
+#: includes/admin.php:682
+#: includes/admin.php:702
+#: includes/admin.php:800
+#: includes/admin.php:925
+#: includes/admin.php:940
+#: includes/admin.php:953
+#: includes/admin.php:974
+#: includes/admin.php:990
+#: includes/admin.php:1004
+#: includes/admin.php:1026
+#: includes/admin.php:1041
+#: includes/admin.php:1056
+#: includes/admin.php:1079
+#: includes/admin.php:1100
+#: includes/admin.php:1116
+#: includes/admin.php:1139
+#: includes/admin.php:1156
+#: includes/admin.php:1179
+#: includes/admin.php:1197
+msgid "Default"
+msgstr "Standard"
+
+#: includes/admin.php:683
+msgid "Using CURL is recommended but it might be disabled on some servers."
+msgstr "Empfohlene Einstellung, auf manchen Serven aber deaktiviert."
+
+#: includes/admin.php:689
+msgid "Use PHP FSOCKOPEN to communicate with the API"
+msgstr "PHP FSOCKOPEN verwenden"
+
+#: includes/admin.php:690
+msgid "Try using FSOCKOPEN if you encounter any problems with CURL."
+msgstr "Verwenden Sie FSOCKEN wenn Probleme mit CURL auftreten sollten."
+
+#: includes/admin.php:698
+msgid "API Connection Port"
+msgstr "API Verbindungs Port"
+
+#: includes/admin.php:702
+msgid "Communication via HTTPS on port 443"
+msgstr "Verbindung auf HTTPS Port 443"
+
+#: includes/admin.php:703
+msgid "Using port 443 is secure but you might need OpenSSL"
+msgstr "Die Verbindung auf Port 443 ist sicherer benötigt aber ggfs. OpenSSL"
+
+#: includes/admin.php:709
+msgid "Communication via HTTP on port 80"
+msgstr "Verbindung auf HTTP Port 80"
+
+#: includes/admin.php:710
+msgid "Using port 80 is a bit faster, doesn't need OpenSSL but is less secure"
+msgstr "Die Verbindung auf Port 80 ist etwas schneller aber nicht ganz so sicher"
+
+#: includes/admin.php:715
+msgid "Autodetect API Connection"
+msgstr "Automatisch erkennen"
+
+#: includes/admin.php:725
+msgid "API Settings"
+msgstr "API Einstellungen"
+
+#: includes/admin.php:727
+msgid "Click here to create and view your API Credentials"
+msgstr "Klicken Sie hier, um Ihre API-Daten einzusehen"
+
+#: includes/admin.php:732
+msgid "API Subdomain"
+msgstr "API Subdomain"
+
+#: includes/admin.php:740
+msgid "API Public Key"
+msgstr "API Public Key"
+
+#: includes/admin.php:748
+msgid "API Private Key"
+msgstr "API Private Key"
+
+#: includes/admin.php:756
+msgid "Verify API Settings"
+msgstr "API-Einstellungen überprüfen"
+
+#: includes/admin.php:766
+msgid "JavaScript Settings"
+msgstr "JavaScript Einstellungen"
+
+#: includes/admin.php:796
+msgid "JavaScript Usage"
+msgstr "JavaScript Kommunikation"
+
+#: includes/admin.php:800
+msgid "Asynchronous JavaScript"
+msgstr "Asynchrones JavaScript"
+
+#: includes/admin.php:801
+msgid "Background loading without interfering with the display and behavior of the existing page."
+msgstr "JavaScript im Hintergrund laden, um dem Seitenaufbau zu beschleunigen."
+
+#: includes/admin.php:807
+msgid "Synchronous JavaScript"
+msgstr "Synchrones JavaScript"
+
+#: includes/admin.php:808
+msgid "Real-time loading when the page is being rendered by the browser."
+msgstr "JavaScript in Echtzeit laden."
+
+#: includes/admin.php:816
+msgid "Enable the social networks/identity providers of your choice"
+msgstr "Wählen Sie die sozialen Netzwerke aus:"
+
+#: includes/admin.php:836
+#, php-format
+msgid "To enable cyrillic usernames, you might need <a target=\"_blank\" href=\"%s\">this plugin</a>"
+msgstr "Um kyrillische Zeichen zu verwenden, brauchen Sie <a target=\"_blank\" href=\"%s\">dieses Plugin</a>"
+
+#: includes/admin.php:847
+#: includes/admin.php:1207
+msgid "Save Changes"
+msgstr "Einstellungen speichern"
+
+#: includes/admin.php:877
+msgid "Logout to see the plugin in action!"
+msgstr "Sie müssen ausloggen, um das Plugin testen zu können."
+
+#: includes/admin.php:881
+msgid "Social Login is a plugin that allows your users to comment, login and register with their existing Social Network accounts. If a user is already logged in, the plugin will not be displayed. There is no need to give the user the possibility to connect with a social network if he is already connected."
+msgstr "Social Login erlaubt es Ihren Benutzern, sich mit dem Konto eines sozialen Netzwerks anzumelden. Bei Benutzern die bereits eingeloggt sind wird das Plugin nicht angezeigt, da der Benutzer bereits angemeldet ist, und keine weitere Anmeldenmöglichkeit benötigt. "
+
+#: includes/admin.php:883
+msgid "You therefore have to logout to see the plugin in action."
+msgstr "Sie müssen Sich aus diesem Grund ausloggen, um das Plugin testen zu können."
+
+#: includes/admin.php:899
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: includes/admin.php:904
+msgid "Enter the description to be displayed above the Social Login buttons (leave empty for none):"
+msgstr "Welcher Text soll über den Icons der sozialen Netzwerke angezeigt werden (ggf. leer lassen) ?"
+
+#: includes/admin.php:910
+msgid "Connect with:"
+msgstr "Einloggen mit:"
+
+#: includes/admin.php:917
+msgid "Do you want to use the default or the small social network buttons?"
+msgstr "Wollen Sie die standard -oder kleinere Icons für soziale Netzwerke verwenden?"
+
+#: includes/admin.php:925
+#, php-format
+msgid "Use the default social network buttons (%s)"
+msgstr "Standard-Icons verwenden (%s)"
+
+#: includes/admin.php:926
+#, php-format
+msgid "Use the small social network buttons (%s)"
+msgstr "Kleine Icons verwenden (%s)"
+
+#: includes/admin.php:931
+msgid "Do you want to display the social networks used to connect in the user list of the administration area ?"
+msgstr "Sollen die verwendeten sozialen Netzwerke in der Benutzerliste angezeigt werden?"
+
+#: includes/admin.php:939
+msgid "Yes, add a new column to the user list and display the social network that the user connected with"
+msgstr "Ja, eine weitere Spalte in der Benutzerliste anzeigen"
+
+#: includes/admin.php:940
+msgid "No, no not display the social networks in the user list"
+msgstr "Nein, soziale Netzwerke nicht anzeigen"
+
+#: includes/admin.php:945
+msgid "Do you want to receive an email whenever a new user registers with Social Login ?"
+msgstr "Wollen Sie per Email benachrichtigt werden, sobald ein Benutzer sich mit Social Login anmeldet?"
+
+#: includes/admin.php:953
+msgid "Yes, send me an email whenever a new user registers with Social Login"
+msgstr "Ja, ich möchte eine Email erhalten, wenn jemand sich mit Social Login anmeldet"
+
+#: includes/admin.php:954
+msgid "No, do not send me any emails"
+msgstr "Nein, keine Benachrichtigung per Email versenden"
+
+#: includes/admin.php:961
+msgid "User Settings"
+msgstr "Benutzer Einstellungen"
+
+#: includes/admin.php:966
+msgid "If the user's social network profile has no email address, should we ask the user to enter it manually?"
+msgstr "Müssen Benutzer Ihre Email Address manuell eingeben falls sie nicht im Sozialen Profil vorhanden ist?"
+
+#: includes/admin.php:974
+msgid "No, simplify the registration by automatically creating a placeholder email"
+msgstr "Nein, in diesem Fall eine Platzhalter-Email anlegen (vereinfach die Registrierung)"
+
+#: includes/admin.php:975
+msgid "Yes, require the user to enter his email address manually and display this message:"
+msgstr "Ja, Benutzer mit folgendem Text auffordern, ihre Email-Adresse einzugeben:"
+
+#: includes/admin.php:976
+#: includes/user_interface.php:1078
+#, php-format
+msgid "<strong>We unfortunately could not retrieve your email address from %s.</strong> Please enter your email address in the form below in order to continue."
+msgstr "<strong>Wir konnten Ihre E-Mail-Adresse leider nicht über Ihr %s Konto ermitteln.</strong> Bitte geben Sie Ihre Email-Adresse nachfolgend an."
+
+#: includes/admin.php:977
+#, php-format
+msgid "HTML is allowed, the placeholder %s is replaced by the name of the social network used to connect."
+msgstr "HTML ist erlaubt, der Platzhalter %s wird durch den Namen des sozialen Netzwerks ersetzt."
+
+#: includes/admin.php:982
+msgid "If the user's social network profile has a verified email, should we try to link it to an existing account?"
+msgstr "Sollen soziale Profile mit überprüfter Email mit vorhandenen Blog-Nutzern verknüpft werden?"
+
+#: includes/admin.php:990
+msgid "Yes, try to link verified social network profiles to existing blog accounts"
+msgstr "Ja, verknüpfe soziale Profile gegebenenfalls mit vorhanden Nutzern"
+
+#: includes/admin.php:991
+msgid "No, disable account linking"
+msgstr "Nein, keine Verknüpfung"
+
+#: includes/admin.php:996
+msgid "If the user's social network profile has an avatar, should this avatar be used as default avatar for the user?"
+msgstr "Sollen die Benutzerbilder der sozialen Netwerke gegebenenfalls als Avatare verwendet werden?"
+
+#: includes/admin.php:1004
+msgid "No, do not use avatars from social networks"
+msgstr "Nein,  keine Benutzerbilder der sozialen Netzwerke verwenden"
+
+#: includes/admin.php:1005
+msgid "Yes, use small avatars from social networks if available"
+msgstr "Ja, verwende Benutzerbilder (kleines Format) der sozialen Netzwerke"
+
+#: includes/admin.php:1006
+msgid "Yes, use large avatars from social networks if available"
+msgstr "Ja, verwende Benutzerbilder (grosses Format) der sozialen Netzwerke"
+
+#: includes/admin.php:1013
+msgid "Comment Settings"
+msgstr "Einstellungen: Kommentare"
+
+#: includes/admin.php:1018
+msgid "Show the Social Login buttons in the comment area?"
+msgstr "Das Plugin über dem Kommentare-Formular anzeigen?"
+
+#: includes/admin.php:1026
+#: includes/admin.php:1041
+msgid "Yes, show the Social Login buttons"
+msgstr "Ja, zeige das Plugin an"
+
+#: includes/admin.php:1027
+#: includes/admin.php:1042
+msgid "No, do not show the Social Login buttons"
+msgstr "Nein, Plugin nicht anzeigen"
+
+#: includes/admin.php:1032
+msgid "Show the Social Login buttons in the comment area if comments are disabled for guests?"
+msgstr "Login mit einem sozialen Netzwerk anbieten falls Kommentare für Gäste deaktiviert sind?"
+
+#: includes/admin.php:1040
+msgid "The buttons will be displayed below the \"You must be logged in to leave a comment\" notice."
+msgstr "Die Icons werden unter \"Du musst angemeldet sein, um einen Kommentar abzugeben\" angezeigt."
+
+#: includes/admin.php:1047
+msgid "Automatically approve comments left by users that connected by using Social Login?"
+msgstr "Kommentare automatisch freischalten, falls dessen Autor sich mit SocialLogin eingeloggt hat?"
+
+#: includes/admin.php:1055
+msgid "Yes, automatically approve comments made by users that connected with Social Login"
+msgstr "Ja, Kommentare automatisch freischalten"
+
+#: includes/admin.php:1056
+msgid "No, do not automatically approve"
+msgstr "Nein, Kommentare nicht automatisch freischalten"
+
+#: includes/admin.php:1065
+msgid "Profile Settings"
+msgstr "Mitgliederprofil Einstellungen"
+
+#: includes/admin.php:1070
+msgid "Show the Social Link buttons in the user profile?"
+msgstr "Social Link im Mitgliederprofil anzeigen?"
+
+#: includes/admin.php:1075
+msgid "Keep this option enabled to allow each user to connect multiple social networks to his own profile."
+msgstr "Aktivieren Sie diese Option, damit Ihre Mitglieder Ihr Konto mit sozialen Netzwerken koppeln können."
+
+#: includes/admin.php:1079
+msgid "Yes, show the Social Link buttons"
+msgstr "Ja, zeige Social Link an"
+
+#: includes/admin.php:1080
+msgid "No, do not show the Social Link buttons"
+msgstr "Nein, Social Link nicht anzeigen"
+
+#: includes/admin.php:1087
+msgid "Login Page Settings"
+msgstr "Einstellungen: Login-Seite"
+
+#: includes/admin.php:1092
+msgid "Do you want to display Social Login on the login form of your blog?"
+msgstr "Das Plugin auf der Login-Seite Ihres Blogs anzeigen?"
+
+#: includes/admin.php:1100
+msgid "Yes, display the social network buttons below the login form"
+msgstr "Ja, die Icons der sozialen Netzwerke auf der Login-Seite anzeigen"
+
+#: includes/admin.php:1101
+msgid "No, disable social network buttons in the login form"
+msgstr "Nein, keine Icons auf der Login-Seite anzeigen"
+
+#: includes/admin.php:1106
+msgid "Where should users be redirected to after having logged in with Social Login on the login page?"
+msgstr "Wohin sollen Nutzer weitergeleitet werden, nachdem Sie sich Social Login auf der Login-Seite eingeloggt haben?"
+
+#: includes/admin.php:1115
+#: includes/admin.php:1154
+#: includes/admin.php:1179
+#: includes/admin.php:1197
+msgid "Redirect users back to the current page"
+msgstr "Weiterleitung zurück zur aktuellen Seite"
+
+#: includes/admin.php:1116
+#: includes/admin.php:1155
+#: includes/admin.php:1180
+#: includes/admin.php:1198
+msgid "Redirect users to the homepage of my blog"
+msgstr "Weiterleitung zur Hauptseite meines Blogs"
+
+#: includes/admin.php:1117
+#: includes/admin.php:1156
+#: includes/admin.php:1181
+#: includes/admin.php:1199
+msgid "Redirect users to their account dashboard"
+msgstr "Weiterleitung zur Profilseite des Nutzers"
+
+#: includes/admin.php:1118
+#: includes/admin.php:1157
+#: includes/admin.php:1182
+#: includes/admin.php:1200
+msgid "Redirect users to the following url"
+msgstr "Weiterleitung zu dieser URL"
+
+#: includes/admin.php:1126
+msgid "Registration Page Settings"
+msgstr "Einstellungen: Anmelden-Seite"
+
+#: includes/admin.php:1131
+msgid "Do you want to display Social Login on the registration form of your blog?"
+msgstr "Das Plugin auf der Anmelden-Seite Ihres Blogs anzeigen?"
+
+#: includes/admin.php:1139
+msgid "Yes, display the social network buttons below the registration form"
+msgstr "Ja, die Icons der sozialen Netzwerke auf der Anmelden-Seite anzeigen"
+
+#: includes/admin.php:1140
+msgid "No, disable social network buttons in the registration form"
+msgstr "Nein, keine Icons auf der Anmelden-Seite anzeigen"
+
+#: includes/admin.php:1145
+msgid "Where should users be redirected to after having registered with Social Login on the registration page?"
+msgstr "Wohin sollen Nutzer weitergeleitet werden, nachdem sie ein Konto mit einem sozialen Netzwerk angelegt haben?"
+
+#: includes/admin.php:1165
+msgid "Widget &amp; Shortcode Settings"
+msgstr "Widget &amp; Shortcode Einstellungen"
+
+#: includes/admin.php:1170
+msgid "Redirect users to this page after they have logged in with Social Login embedded by Widget/Shortcode:"
+msgstr "Benutzer zu dieser Seite weiterleiten nachdem sie im Social Login Widget/Shortcode eingloggt haben:"
+
+#: includes/admin.php:1188
+msgid "Redirect users to this page after they have registered with Social Login embedded by Widget/Shortcode:"
+msgstr "Benutzer zu dieser Seite weiterleiten nachdem sie über das Social Login Widget/Shortcode registriert haben:"
+
+#: includes/user_interface.php:115
+#: includes/user_interface.php:926
+msgid "Please enable at least one social network!"
+msgstr "Bitte aktivieren Sie mindestens ein soziales Netzwerk!"
+
+#: includes/user_interface.php:160
+#: includes/user_interface.php:198
+#, php-format
+msgid "You have successfully linked your %s account."
+msgstr "Sie haben Ihr %s Konto erfolgreich hinzugefügt."
+
+#: includes/user_interface.php:192
+#: includes/user_interface.php:283
+#, php-format
+msgid "This %s account is already used by another user of this website."
+msgstr "Dieses %s Konto wird bereit von einem anderen Nutzer verwendet."
+
+#: includes/user_interface.php:223
+#, php-format
+msgid "You have successfully unlinked your %s account."
+msgstr "Sie haben die Verbindung mit %s Konto getrennt."
+
+#: includes/user_interface.php:271
+msgid "You might no longer be able to login to this website if you don't link at least one social network."
+msgstr "Sie können sich womöglich nicht mehr einloggen, falls Sie nicht mindestens ein soziales Netzerk koppeln."
+
+#: includes/user_interface.php:347
+msgid "Connect your account to one or more social networks"
+msgstr "Verbinden Sie Ihr Konto mit einem oder mehreren sozialen Netzwerken"
+
+#: includes/user_interface.php:1028
+#: includes/user_interface.php:1104
+msgid "Please enter your email address"
+msgstr "Bitte geben Sie Ihre E-Mail-Adresse ein"
+
+#: includes/user_interface.php:1034
+msgid "This email is not valid"
+msgstr "Diese E-Mail-Adresse ist ungültig"
+
+#: includes/user_interface.php:1039
+msgid "This email is already used by another account"
+msgstr "Diese E-Mail-Adresse wird bereits verwendet"
+
+#: includes/user_interface.php:1091
+#, php-format
+msgid "You have successfully connected with %s!"
+msgstr "Sie haben Sich erfolgreicht mit %s angemeldet!"
+
+#: includes/user_interface.php:1116
+msgid "Confirm"
+msgstr "Bestätigen"
+
+#: includes/user_interface.php:1117
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: includes/widget.php:14
+msgid "Allow your visitors to login and register with social networks like Twitter, Facebook, LinkedIn, Hyves, Google and Yahoo."
+msgstr "Erlauben Sie Ihren Nutzern, sich mit sozialen Netwerken wie z.B. Twitter, Facebook, LinkedIn, Hyves, Google und Yahoo anzumelden, und Kommentare zu schreiben"
+
+#: includes/widget.php:62
+msgid "Connect with"
+msgstr "Einloggen mit"
+
+#: includes/widget.php:77
+msgid "Title"
+msgstr "Titel"
+
+#: includes/widget.php:81
+msgid "Insert text/html to add before the widget"
+msgstr "Text/Html vor dem Widget einfügen"
+
+#: includes/widget.php:85
+msgid "Insert text/html to add after the widget"
+msgstr "Text/Html nach  dem Widget einfügen"
+
+#: includes/widget.php:90
+msgid "Tick to hide widget for logged-in users"
+msgstr "Widget verstecken bei eingeloggten Nutzern"
+
+#: includes/widget.php:94
+msgid "Tick to use small buttons"
+msgstr "Kleine Icons verwenden"
+
+#: includes/toolbox.php:87
+#, php-format
+msgid "[%s] New User Registration"
+msgstr "[%s] Neue Benutzeranmeldung"
+
+#: includes/toolbox.php:90
+#, php-format
+msgid "New user registration on your site %s:"
+msgstr "Neue Benutzeranmeldung auf Ihrer Seite %s:"
+
+#: includes/toolbox.php:91
+#, php-format
+msgid "Username: %s"
+msgstr "Benutzername: %s"
+
+#: includes/toolbox.php:92
+#, php-format
+msgid "Social Network: %s"
+msgstr "Soziales Netzwerk: %s"
+
+#~ msgid "This Social Network account may not be used to register"
+#~ msgstr "Dieses Konto kann nicht zur Anmeldung genutzt werden"
+
+#, fuzzy
+#~ msgid "Pleasen enter your email address"
+#~ msgstr "Bitte geben Sie Ihre E-Mail-Adresse ein"
+
+#~ msgid "Your email address"
+#~ msgstr "Ihre E-Mail-Adresse"
+
+#~ msgid "Confirm my email address"
+#~ msgstr "Bitte bestätigen Sie Ihre E-Mail-Adresse"
+
+#~ msgid "No, display the default avatars"
+#~ msgstr "Nein, zeige die Standard-Avatare"
+
+#~ msgid "Social Networks"
+#~ msgstr "Soziale Netzwerke"
+
+#~ msgid ""
+#~ "Some social networks do not provide their user's email. Ask the user to "
+#~ "enter it manually in this case?"
+#~ msgstr ""
+#~ "Müssen Benutzer Ihre Email-Adresse angeben, falls diese nicht über das "
+#~ "soziale Netzwerk ermittelt werden kann?"
+
+#~ msgid "Administration Settings"
+#~ msgstr "Einstellungen: Administrationsmenü"
+
+#~ msgid "The API credentials are wrong"
+#~ msgstr "Die API-Nutzerdaten sind ungültig"
+
+#~ msgid "Social Login Settings"
+#~ msgstr "Social Login Einstellungen"
+
+#~ msgid "Make your blog social!"
+#~ msgstr "Verbinden Sie Ihren Blog mit den sozialen Netzwerken!"
+
+#~ msgid "Keep in mind when testing the plugin"
+#~ msgstr "Bitte beim Testen beachten"
+
+#~ msgid "Comment Form"
+#~ msgstr "Kommentar Formular"
+
+#~ msgid ""
+#~ "This plugin requires the PHP libcurl extension be installed. Please "
+#~ "contact your web host and request libcurl be <a href='http://www.php.net/"
+#~ "manual/en/intro.curl.php'>installed</a>."
+#~ msgstr ""
+#~ "Im dieses Plugin zu nutzen benötigen Sie die PHP libcurl Erweiterung. "
+#~ "Bitte kontaktieren Sie Ihren Server-Administrator um PHP libcurl zu <a "
+#~ "href='http://www.php.net/manual/en/intro.curl.php'>installieren</a>."

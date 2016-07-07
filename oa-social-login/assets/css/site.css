@@ -1,0 +1,104 @@
+#oa_social_login_overlay {
+	background-color: transparent;
+	background-image: url("../img/overlay.png");
+	background-position: 0 0;
+	background-repeat: repeat;
+	height: 100%;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 999995;
+}
+
+#oa_social_login_modal {
+	left: 50%;
+	margin-left: -200px;
+	position: fixed;
+	text-align: left;
+	top: 25%;
+	width: 450px;
+	z-index: 999996;
+}
+
+.oa_social_login_modal_outer {
+	border-radius: 4px;
+	overflow: auto;
+	background-color: #eee;
+	z-index: 999998;
+	box-shadow: 10px 10px 12px -11px rgba(0,0,0,0.75);
+}
+
+.oa_social_login_modal_inner {
+	overflow: auto;
+	background: #fff;
+	margin: 5px;
+	padding: 0;
+	z-index: 999997;
+}
+
+.oa_social_login_modal_inner input.oa_social_login_confirm_text {
+	margin: 0;
+	width: 96%;
+	color: #000;
+}
+
+.oa_social_login_input {
+	text-align: center;
+}
+
+.oa_social_login_buttons {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.oa_social_login_button {
+	font-size: 13px;
+}
+
+.oa_social_login_modal_notice {
+	background-color: #FFEF8F;
+	color: #222;
+	font-size: 12px;
+	padding: 10px 15px;
+	text-align: justify;
+	border: 1px solid #F9DD34;
+	margin: 10px 15px 0 15px;
+	border-radius: 5px;
+	line-height: 16px;
+}
+
+.oa_social_login_modal_body {
+	padding: 10px 20px;
+}
+
+.oa_social_login_modal_body fieldset {
+	border:0 none;
+	margin:0 ;
+	padding: 0;
+}
+
+.oa_social_login_modal_title {
+	color: #222;
+	background-color: #eee;
+	padding: 5px 0 8px;
+	border-bottom: 1px solid #ccc;
+	font-size: 16px;
+	text-align: center;
+}
+
+.oa_social_login_modal_subtitle {
+	color: #55;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 5px 0;
+}
+
+.oa_social_login_modal_error {
+	color: red;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 5px 0 20px;
+}
