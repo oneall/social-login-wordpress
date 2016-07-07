@@ -513,14 +513,8 @@ function oa_social_login_bp_custom_fetch_avatar ($text, $args)
 					//Retrieve user
 					if (($user_data = get_userdata ($args ['item_id'])) !== false)
 					{
-						//Fetch the BuddyPress avatar for this user
-						$bp_user_avatar = strtolower (trim (strval (bp_core_fetch_avatar (array ('item_id' => $args ['item_id'], 'no_grav' => true, 'html' => false)))));
-
-						//Fetch the default BuddyPress avatar
-						$bp_default_avatar = strtolower (trim (strval (bp_core_avatar_default ('local'))));
-
 						//Only replace if the user has the default avatar (this will keep uploaded avatars)
-						if (empty ($bp_user_avatar) OR empty ($bp_default_avatar) OR ($bp_user_avatar == $bp_default_avatar))
+						if (false === bp_get_user_has_avatar ($args ['item_id']))
 						{
 							//Read the avatar
 							$user_meta_thumbnail = get_user_meta ($args ['item_id'], 'oa_social_login_user_thumbnail', true);
@@ -601,25 +595,8 @@ function oa_social_login_custom_avatar ($avatar, $mixed, $size, $default, $alt =
 		//User found?
 		if (!empty ($user_id))
 		{
-			//Override current avatar ?
-			$override_avatar = true;
-
-			//BuddyPress (Thumbnails in the default WordPress toolbar)
-			if (function_exists ('bp_core_fetch_avatar') AND function_exists ('bp_core_avatar_default'))
-			{
-				//Fetch the BuddyPress user avatar
-				$bp_user_avatar = bp_core_fetch_avatar (array ('item_id' => $user_id, 'no_grav' => true, 'html' => false));
-
-				//Do not override if it's not the default avatar
-				if (!empty ($bp_user_avatar) AND $bp_user_avatar <> bp_core_avatar_default ())
-				{
-					//User has probably upladed an avatar
-					$override_avatar = false;
-				}
-			}
-
-			//Show avatar?
-			if ($override_avatar)
+			//Override if no avatar, from Buddypress:
+			if (! function_exists ('bp_get_user_has_avatar') OR false === bp_get_user_has_avatar ($user_id))
 			{
 				//Read the avatar
 				$user_meta_thumbnail = get_user_meta ($user_id, 'oa_social_login_user_thumbnail', true);
@@ -1016,6 +993,35 @@ function oa_social_login_render_login_form ($source, $args = array ())
 	}
 }
 
+/**
+ * Request email from user: delete user if he cancelled email entry.
+ * This hook is to redirect before any output is sent.
+ */
+add_action ('wp_loaded', 'oa_social_login_request_email_cancel');
+function oa_social_login_request_email_cancel ()
+{
+	if (isset ($_POST ['oa_social_login_cancel_btn']))
+	{
+		$user = wp_get_current_user ();
+		$user_id = $user->ID;
+		// Extra checks:
+		if (!is_super_admin ($user_id) 
+				AND !empty (get_user_meta ($user_id, 'oa_social_login_request_email', true))) 
+		{
+			require_once (ABSPATH .'wp-admin/includes/user.php');
+			if (wp_delete_user ($user_id) === false)
+			{
+				@error_log ('Could not delete user ID '. print_r ($user_id, true));
+			}
+			wp_redirect (home_url ()); 
+			exit;
+		}
+		else
+		{
+			@error_log ('Requested to delete an incorrect user ID '. print_r ($user_id, true));
+		}
+	}
+}
 
 /**
  * Request email from user
@@ -1054,51 +1060,51 @@ function oa_social_login_request_email ()
 				delete_user_meta ($user_id, 'oa_social_login_request_email');
 			}
 
-			//Form submitted
-			if (isset ($_POST) AND !empty ($_POST ['oa_social_login_action']))
+			//Form submitted with confirm button (if cancelled, wp_loaded handled it):
+			if (isset ($_POST) 
+					AND	!empty ($_POST ['oa_social_login_action']) 
+					AND $_POST ['oa_social_login_action'] == 'confirm_email' 
+					AND isset ($_POST ['oa_social_login_confirm_btn']))
 			{
-				if ($_POST ['oa_social_login_action'] == 'confirm_email')
-				{
-					$user_email = (empty ($_POST ['oa_social_login_email']) ? '' : trim ($_POST ['oa_social_login_email']));
-					$user_email = apply_filters ('oa_social_login_filter_user_request_email', $user_email, $user_id);
+				$user_email = (empty ($_POST ['oa_social_login_email']) ? '' : trim ($_POST ['oa_social_login_email']));
+				$user_email = apply_filters ('oa_social_login_filter_user_request_email', $user_email, $user_id);
 
-					if (empty ($user_email))
+				if (empty ($user_email))
+				{
+					$message = __ ('Please enter your email address', 'oa_social_login');
+				}
+				else
+				{
+					if (!is_email ($user_email))
 					{
-						$message = __ ('Please enter your email address', 'oa_social_login');
+						$message = __ ('This email is not valid', 'oa_social_login');
+					}
+					elseif (email_exists ($user_email))
+					{
+
+						$message = __ ('This email is already used by another account', 'oa_social_login');
 					}
 					else
 					{
-						if (!is_email ($user_email))
+						//Read user
+						$user_data = get_userdata ($user_id);
+						if ($user_data !== false)
 						{
-							$message = __ ('This email is not valid', 'oa_social_login');
-						}
-						elseif (email_exists ($user_email))
-						{
+							//Store old email
+							$old_user_email = $user_data->user_email;
 
-							$message = __ ('This email is already used by another account', 'oa_social_login');
-						}
-						else
-						{
-							//Read user
-							$user_data = get_userdata ($user_id);
-							if ($user_data !== false)
-							{
-								//Store old email
-								$old_user_email = $user_data->user_email;
+							//Update user
+							wp_update_user (array ('ID' => $user_data->ID, 'user_email' => $user_email));
+							delete_user_meta ($user_data->ID, 'oa_social_login_request_email');
 
-								//Update user
-								wp_update_user (array ('ID' => $user_data->ID, 'user_email' => $user_email));
-								delete_user_meta ($user_data->ID, 'oa_social_login_request_email');
+							//Set new email for hook
+							$user_data->user_email = $user_email;
 
-								//Set new email for hook
-								$user_data->user_email = $user_email;
+							//Hook after having updated the email
+							do_action ('oa_social_login_action_on_user_enter_email', $user_id, $user_data, $old_user_email);
 
-								//Hook after having updated the email
-								do_action ('oa_social_login_action_on_user_enter_email', $user_id, $user_data, $old_user_email);
-
-								//No longer needed
-								$display_modal = false;
-							}
+							//No longer needed
+							$display_modal = false;
 						}
 					}
 				}
@@ -1127,17 +1133,17 @@ function oa_social_login_request_email ()
 							<div class="oa_social_login_modal_inner">
 			 					<div class="oa_social_login_modal_title">
 			 						<?php
-													 printf (__ ('You have successfully connected with %s!', 'oa_social_login'), '<strong>' . $oa_social_login_identity_provider . '</strong>');
+										 printf (__ ('You have successfully connected with %s!', 'oa_social_login'), '<strong>' . $oa_social_login_identity_provider . '</strong>');
 									 ?>
 			 					</div>
 			 					<?php
-												 if (strlen (trim ($caption)) > 0)
-												 {
+									 if (strlen (trim ($caption)) > 0)
+									 {
 								 ?>
-			 									<div class="oa_social_login_modal_notice"><?php echo str_replace ('%s', $oa_social_login_identity_provider, $caption); ?></div>
-			 								<?php
-															 }
-											 ?>
+			 							<div class="oa_social_login_modal_notice"><?php echo str_replace ('%s', $oa_social_login_identity_provider, $caption); ?></div>
+			 							<?php
+											 }
+										?>
 			 					<div class="oa_social_login_modal_body">
 				 					<div class="oa_social_login_modal_subtitle">
 				 						<?php _e ('Please enter your email address', 'oa_social_login'); ?>:
@@ -1152,8 +1158,8 @@ function oa_social_login_request_email ()
 												<?php echo $message; ?>
 											</div>
 											<div class="oa_social_login_buttons">
-												<input class="oa_social_login_button" id="oa_social_login_button_confirm" type="submit" value="<?php _e ('Confirm', 'oa_social_login'); ?>" />
-												<input class="oa_social_login_button" id="oa_social_login_button_cancel" type="button" value="<?php _e ('Cancel', 'oa_social_login'); ?>" onclick="window.location.href='<?php echo esc_url (wp_logout_url (oa_social_login_get_current_url ())); ?>'" />
+												<input class="oa_social_login_button" id="oa_social_login_button_confirm" name="oa_social_login_confirm_btn" type="submit" value="<?php _e ('Confirm', 'oa_social_login'); ?>" />
+												<input class="oa_social_login_button" id="oa_social_login_button_cancel" name="oa_social_login_cancel_btn" type="submit" value="<?php _e ('Cancel', 'oa_social_login'); ?>" />
 											</div>
 										</fieldset>
 									</form>
