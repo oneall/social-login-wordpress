@@ -138,6 +138,8 @@ http://docs.oneall.com/plugins/guide/social-login-wordpress/
 == Changelog ==
 
 = 5.0 =
+* Buddypress avatar bugfix
+* Do not create users without email addresses when plugin set to request emails
 * Social Network "Battle.net" added
 * Social Link Hooks/Nonce added
 * WooCommerce Actions added
