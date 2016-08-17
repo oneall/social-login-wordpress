@@ -2,8 +2,8 @@
 Contributors: ClaudeSchlesser
 Tags: social login, social connect, facebook, linkedin, livejournal, google, yahoo, twitter, openid, pinterest, paypal, google, instagram, widget, plugin, social network login, comments
 Requires at least: 3.0
-Tested up to: 4.5
-Stable tag: 5.0
+Tested up to: 4.6
+Stable tag: 5.2
 
 Allow your visitors to comment and login with social networks like Twitter, Facebook, Paypal, LinkedIn, Instagram, OpenID, VKontakte, Google, Pinterest 
 
@@ -137,9 +137,14 @@ http://docs.oneall.com/plugins/guide/social-login-wordpress/
 
 == Changelog ==
 
-= 5.0 =
+= 5.2 =
 * Buddypress avatar bugfix
 * Do not create users without email addresses when plugin set to request emails
+* Support for WP_PROXY_HOST added
+* Filter for callback uri added
+* More pannel added
+
+= 5.0 =
 * Social Network "Battle.net" added
 * Social Link Hooks/Nonce added
 * WooCommerce Actions added

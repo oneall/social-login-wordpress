@@ -28,7 +28,7 @@
 	overflow: auto;
 	background-color: #eee;
 	z-index: 999998;
-	box-shadow: 10px 10px 12px -11px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 12px -11px rgba(0, 0, 0, 0.75);
 }
 
 .oa_social_login_modal_inner {
@@ -56,6 +56,11 @@
 
 .oa_social_login_button {
 	font-size: 13px;
+	padding: 0 20px;
+}
+
+.oa_social_login_button#oa_social_login_button_cancel {
+	color: #aaa;
 }
 
 .oa_social_login_modal_notice {
@@ -75,8 +80,8 @@
 }
 
 .oa_social_login_modal_body fieldset {
-	border:0 none;
-	margin:0 ;
+	border: 0 none;
+	margin: 0;
 	padding: 0;
 }
 

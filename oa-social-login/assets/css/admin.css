@@ -6,7 +6,7 @@
 /* ********************* Boxes */
 .oa_social_login_box {
   border: 1px solid #CCCCCC;
-  margin-bottom: 10px;
+  margin-bottom: 35px;
   padding: 10px 15px;
 }
 
@@ -15,6 +15,45 @@
   font-size: 15px;
   font-weight: bold;
   padding-bottom: 5px;
+}
+
+.oa_social_login_box .oa_social_login_button_wrap{
+	text-align:center;
+	padding: 10px 0 20px;
+}
+
+.oa_social_login_box .oa_social_login_button_wrap a{
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 33px;	
+	margin:0 10px;
+}
+
+
+
+#oa_social_login_box_started{
+  background-color: #dff0d8;
+  border-color: #c4d7b4;
+  color: #3c763d;
+}
+
+#oa_social_login_box_started a {
+	color: #1a541b;
+}
+
+#oa_social_login_box_started a:hover{
+	text-decoration:none;
+	color: #111;
+}
+
+#oa_social_login_box_started a.button-secondary{
+	color: #555;
+}
+
+#oa_social_login_box_started h3{
+	text-align:center;
+	color: #4a844b;
 }
 
 #oa_social_login_box_status {
@@ -89,10 +128,16 @@
   border-bottom: 1px dotted #BBBBBB;
 }
 
-.oa_social_login_table tr.row_even,.oa_social_login_table tr.row_even td {
+.oa_social_login_table tr.row_even,
+.oa_social_login_table tr.row_even td {
   color: #333;
   background-color: #fff;
   border-bottom: 1px dotted #bbb;
+}
+
+
+.oa_social_login_table td.col_unpadded{
+	padding:0;
 }
 
 .oa_social_login_table tr td.row_multi {
@@ -131,6 +176,15 @@
   background: url("../img/status_ok.png") no-repeat scroll 0 50% #ddd;
   padding-left: 25px;
   font-weight: bold;
+}
+
+
+.oa_social_login_table a.social-sharing{
+	background-image: url("../img/social_sharing.png");
+	background-repeat:no-repeat;
+    display: block;
+    height: 250px;
+    width:772px;
 }
 
 /* ********************* Providers */

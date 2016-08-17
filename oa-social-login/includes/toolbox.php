@@ -247,3 +247,39 @@ function oa_social_login_create_rand_email ()
 	//Done
 	return $email;
 }
+
+
+/**
+ * Check if a BuddyPress user has uploaded an avatar
+ */
+function oa_social_login_has_bp_user_uploaded_avatar ($user_id)
+{
+	$has_bp_user_uploaded_avatar = false;
+	
+	// Use build-in function
+	if (function_exists ('bp_get_user_has_avatar'))
+	{
+		$has_bp_user_uploaded_avatar = bp_get_user_has_avatar ($user_id);
+	}
+	// Do custom processing
+	else
+	{
+		// Make sure we can actually do this	
+		if (function_exists ('bp_core_fetch_avatar') && function_exists ('bp_core_avatar_default'))
+		{
+			// Fetch the custom BuddyPress avatar for this user
+			$bp_user_avatar = strtolower (trim (strval (bp_core_fetch_avatar (array ('item_id' => $user_id, 'no_grav' => true, 'html' => false, 'type' => 'full')))));
+	
+			// Fetch the default BuddyPress avatar
+			$bp_default_avatar = strtolower (trim (strval (bp_core_avatar_default ('local'))));
+	
+			// Custom Avatar?
+			$has_bp_user_uploaded_avatar = (($bp_user_avatar == $bp_default_avatar) ? false : true);
+	
+			// Done
+			$has_bp_user_uploaded_avatar = apply_filters('bp_get_user_has_avatar', $has_bp_user_uploaded_avatar, $user_id);
+		}
+	}
+	
+	return $has_bp_user_uploaded_avatar;
+}
