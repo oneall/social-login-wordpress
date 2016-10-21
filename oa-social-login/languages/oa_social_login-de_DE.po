@@ -368,7 +368,7 @@ msgid "Yes, add a new column to the user list and display the social network tha
 msgstr "Ja, eine weitere Spalte in der Benutzerliste anzeigen"
 
 #: includes/admin.php:940
-msgid "No, no not display the social networks in the user list"
+msgid "No, do not display the social networks in the user list"
 msgstr "Nein, soziale Netzwerke nicht anzeigen"
 
 #: includes/admin.php:945

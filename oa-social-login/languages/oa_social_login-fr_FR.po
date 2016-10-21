@@ -444,7 +444,7 @@ msgstr "Oui, ajouter une nouvelle colonne à la liste des utilisateurs et affich
 
 # @ oa_social_login
 #: includes/admin.php:940
-msgid "No, no not display the social networks in the user list"
+msgid "No, do not display the social networks in the user list"
 msgstr "Non, ne pas afficher les réseaux sociaux dans la liste des utilisateurs"
 
 # @ oa_social_login

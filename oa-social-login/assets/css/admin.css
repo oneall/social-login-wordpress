@@ -1,6 +1,42 @@
 /* ********************* Page Wrapper */
 #oa_social_login_page {
-  width: 800px;
+  max-width: 900px;
+}
+
+#oa_social_login_page.oa_social_login_more{
+	width:774px;
+}
+
+
+/* ********************* Plugins */
+.oa_social_login_plugin{
+	border: 1px solid #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+	margin: 10px 0 25px;
+}
+
+.oa_social_login_plugin .oa_social_login_plugin_img img{
+    float: left;
+    height: 250px;
+    width: 772px;
+}
+
+.oa_social_login_plugin a.button-primary{
+	height: 21px;
+	line-height: 19px;
+	padding: 0 10px;
+	vertical-align: top;
+}
+
+.oa_social_login_plugin .oa_social_login_plugin_desc {
+ background: #eee none repeat scroll 0 0;
+    border-top: 1px solid #fcfcfc;
+    box-shadow: 0 0 42px 0 rgba(100, 100, 100, 0.1) inset;
+    font-size: 16px;
+    line-height: 24px;
+    overflow: hidden;
+    padding: 15px;
+    text-shadow: 0 1px 1px #fff;
 }
 
 /* ********************* Boxes */
@@ -122,10 +158,12 @@
   text-decoration: none;
 }
 
-.oa_social_login_table tr.row_odd,.oa_social_login_table tr.row_odd td {
+.oa_social_login_table tr.row_odd,
+.oa_social_login_table tr.row_odd td {
   color: #222;
   background-color: #ddd;
   border-bottom: 1px dotted #BBBBBB;
+  line-height: 23px
 }
 
 .oa_social_login_table tr.row_even,
@@ -133,6 +171,7 @@
   color: #333;
   background-color: #fff;
   border-bottom: 1px dotted #bbb;
+  line-height: 23px
 }
 
 

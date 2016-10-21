@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
 		
 		var data = {
 				_ajax_nonce: objectL10n.oa_social_login_ajax_nonce,
-				action: 'autodetect_api_connection_handler'
+				action: 'oa_social_login_autodetect_api_connection_handler'
 			};
 		
 		message_container = jQuery('#oa_social_login_api_connection_handler_result');	
@@ -112,7 +112,7 @@ jQuery(document).ready(function($) {
 	
 		var data = {
 			_ajax_nonce: objectL10n.oa_social_login_ajax_nonce,
-			action: 'check_api_settings',
+			action: 'oa_social_login_check_api_settings',
 			api_connection_handler: handler,
 			api_connection_use_https: use_https,
 			api_subdomain: subdomain,

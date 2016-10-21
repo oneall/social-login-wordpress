@@ -1,5 +1,5 @@
 === Social Login ===
-Contributors: ClaudeSchlesser
+Contributors: ClaudeSchlesser, OneAll.com
 Tags: social login, social connect, facebook, linkedin, livejournal, google, yahoo, twitter, openid, pinterest, paypal, google, instagram, widget, plugin, social network login, comments
 Requires at least: 3.0
 Tested up to: 4.6
