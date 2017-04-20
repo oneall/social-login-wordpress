@@ -176,6 +176,48 @@ function oa_social_login_get_disabled_functions ()
 	return $disabled_functions;
 }
 
+/**
+ * Return the URL of the CSS theme
+ */
+function oa_social_login_get_theme_css_url ($theme_id = 0)
+{
+    // Themes are served from the CDN
+    $cdn_uri = (oa_social_login_https_on () ? 'https://secure.oneallcdn.com' : 'http://public.oneallcdn.com');
+
+    // Build Theme
+    switch ($theme_id)
+    {
+        case '1':
+            return ($cdn_uri . '/css/api/socialize/themes/wordpress/modern.css');
+
+        case '2':
+            return ($cdn_uri . '/css/api/socialize/themes/wordpress/small.css');
+
+        default:
+            return ($cdn_uri . '/css/api/socialize/themes/wordpress/default.css');
+    }
+}
+
+/**
+ * Return the current WordPress Version
+ */
+function oa_social_login_get_wp_version ()
+{
+    GLOBAL $wp_version;
+
+    // Version
+    $version = (isset ($wp_version) ? trim ($wp_version) : '');
+    if (empty ($wp_version))
+    {
+        if (function_exists ('get_bloginfo'))
+        {
+            $version = get_bloginfo('version');
+        }
+    }
+
+    return (empty ($version) ? '?' : $version);
+}
+
 
 /**
  * Escape an attribute
@@ -201,7 +243,7 @@ function oa_social_login_esc_attr ($string)
  */
 function oa_social_login_get_userid_by_token ($token)
 {
-	global $wpdb;
+	GLOBAL $wpdb;
 
 	// Sanitize token.
 	$token = trim (strval ($token));
@@ -223,7 +265,7 @@ function oa_social_login_get_userid_by_token ($token)
  */
 function oa_social_login_get_token_by_userid ($userid)
 {
-	global $wpdb;
+	GLOBAL $wpdb;
 	$sql = "SELECT um.meta_value FROM " . $wpdb->usermeta . " AS um	INNER JOIN " . $wpdb->users . " AS u ON (um.user_id=u.ID)	WHERE um.meta_key = 'oa_social_login_user_token' AND u.ID=%d";
 	return $wpdb->get_var ($wpdb->prepare ($sql, $userid));
 }
@@ -255,7 +297,7 @@ function oa_social_login_create_rand_email ()
 function oa_social_login_has_bp_user_uploaded_avatar ($user_id)
 {
 	$has_bp_user_uploaded_avatar = false;
-	
+
 	// Use build-in function
 	if (function_exists ('bp_get_user_has_avatar'))
 	{
@@ -264,22 +306,22 @@ function oa_social_login_has_bp_user_uploaded_avatar ($user_id)
 	// Do custom processing
 	else
 	{
-		// Make sure we can actually do this	
+		// Make sure we can actually do this
 		if (function_exists ('bp_core_fetch_avatar') && function_exists ('bp_core_avatar_default'))
 		{
 			// Fetch the custom BuddyPress avatar for this user
 			$bp_user_avatar = strtolower (trim (strval (bp_core_fetch_avatar (array ('item_id' => $user_id, 'no_grav' => true, 'html' => false, 'type' => 'full')))));
-	
+
 			// Fetch the default BuddyPress avatar
 			$bp_default_avatar = strtolower (trim (strval (bp_core_avatar_default ('local'))));
-	
+
 			// Custom Avatar?
 			$has_bp_user_uploaded_avatar = (($bp_user_avatar == $bp_default_avatar) ? false : true);
-	
+
 			// Done
 			$has_bp_user_uploaded_avatar = apply_filters('bp_get_user_has_avatar', $has_bp_user_uploaded_avatar, $user_id);
 		}
 	}
-	
+
 	return $has_bp_user_uploaded_avatar;
 }

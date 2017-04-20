@@ -2,10 +2,10 @@
 Contributors: ClaudeSchlesser, OneAll.com
 Tags: social login, social connect, facebook, linkedin, livejournal, google, yahoo, twitter, openid, pinterest, paypal, google, instagram, widget, plugin, social network login, comments
 Requires at least: 3.0
-Tested up to: 4.6
-Stable tag: 5.2
+Tested up to: 4.7
+Stable tag: 5.3
 
-Allow your visitors to comment and login with social networks like Twitter, Facebook, Paypal, LinkedIn, Instagram, OpenID, VKontakte, Google, Pinterest 
+Social Login allows your users to comment, register and login with 30+ Social Networks like Twitter, Facebook, Paypal, LinkedIn, Instagram, OpenID, VKontakte, Google, Pinterest ... 
 
 == Description ==
 
@@ -88,17 +88,17 @@ In order to enable the plugin you must connect with the OneAll API and create a 
 = Do I have to add template tags to my theme? =
 
 You should not have to change your templates. 
-The Social Login seamlessly integrates into your blog by using predefined hooks.
+The Social Login plugin seamlessly integrates into your blog by using standard WordPress hooks.
 
 = Can Social Login be embedded through a shortcode? =
 
-The Social Login shortcode `[oa_social_login]` can be used in any page or post within your blog.
+The Social Login shortcode `[oa_social_login]` can be used in any page or post within your WordPress blog.
 The shortcode will automatically be replaced by the icons of the social networks that you have
 enabled in the Social Login settings in your WordPress administration area.
 
 = I have a custom template and the plugin is not displayed correctly =
 
-The plugin uses predefined hooks. If your theme does not support these hooks,
+Social Login uses standard WordPress hooks. If your theme does not support these hooks,
 you can add the Social Login form manually to your theme by inserting the following code 
 in your template (at the location where it should be displayed, i.e. above the comments).
 
@@ -115,7 +115,7 @@ usernames, please consider installing the following plugin to fix the problem:
 
 = Do I have to change my Rewrite Settings? =
 
-The plugins does not rely on mod_rewrite and does not need any additional rules.
+Social Login does not rely on mod_rewrite and does not need any additional rules.
 It should work out of the box.
 
 
@@ -136,6 +136,13 @@ http://docs.oneall.com/plugins/guide/social-login-wordpress/
 5. **Login** - Login formular with small buttons (Social Network Buttons are included)
 
 == Changelog ==
+
+= 5.3 =
+* New icon set added
+* Social Login interface improved
+* Social Network avatar removed when unlinking account
+* Social Link reviewed and improved
+* Undefined index fixed
 
 = 5.2 =
 * Buddypress avatar bugfix

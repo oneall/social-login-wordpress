@@ -46,6 +46,10 @@
   padding: 10px 15px;
 }
 
+.oa_social_login_box p{
+  font-size:14px;    
+}
+
 .oa_social_login_box .oa_social_login_box_title {
   border-bottom: 1px solid #ccc;
   font-size: 15px;
@@ -94,6 +98,12 @@
 
 #oa_social_login_box_status {
   background-color: #E1EDFF;
+  margin-bottom: 10px;
+}
+
+#oa_social_login_box_status p{
+    text-align:center;
+    font-size: 15px;
 }
 
 #oa_social_login_box_notice {
@@ -141,12 +151,16 @@
 }
 
 .oa_social_login_table tr.row_head th {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   background-color: #3E687B;
   color: #fff;
   text-shadow: 0 1px 0 #333;
-  padding-left: 10px;
+  padding: 15px 10px;
+}
+
+.oa_social_login_table tr td img{
+    vertical-align:middle;
 }
 
 .oa_social_login_table tr.row_head th a {

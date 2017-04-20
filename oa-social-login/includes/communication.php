@@ -30,7 +30,7 @@ function oa_social_login_callback ()
 			$api_opts = array ();
 			$api_opts['api_key'] = (!empty ($settings ['api_key']) ? $settings ['api_key'] : '');
 			$api_opts['api_secret'] = (!empty ($settings ['api_secret']) ? $settings ['api_secret'] : '');
-						
+
 			//Retrieve connection details
 			$result = oa_social_login_do_api_request ($api_connection_handler, $api_resource_url, $api_opts);
 
@@ -40,7 +40,7 @@ function oa_social_login_callback ()
 				//Decode result
 				$decoded_result = @json_decode ($result->http_data);
 				if (is_object ($decoded_result) AND isset ($decoded_result->response->result->data->user))
-				{	
+				{
 					//User data
 					$user_data = $decoded_result->response->result->data->user;
 
@@ -476,12 +476,12 @@ function oa_social_login_callback ()
 						// New User (Registration)
 						if ($new_registration === true)
 						{
-							// Apply the WordPress filters						
+							// Apply the WordPress filters
 							if (empty ($settings['plugin_protect_registration_redirect_url']))
-							{														
+							{
 								$redirect_to = apply_filters ('registration_redirect', $redirect_to);
 							}
-							
+
 							// Apply our filters
 							$redirect_to = apply_filters ('oa_social_login_filter_registration_redirect_url', $redirect_to, $user_data);
 						}
@@ -532,7 +532,7 @@ function oa_social_login_do_api_request ($handler, $url, $opts = array (), $time
 		$opts['proxy_username'] = (defined('WP_PROXY_USERNAME') ? WP_PROXY_USERNAME : '');
 		$opts['proxy_password'] = (defined('WP_PROXY_PASSWORD') ? WP_PROXY_PASSWORD : '');
 	}
-	
+
 	//FSOCKOPEN
 	if ($handler == 'fsockopen')
 	{
@@ -610,7 +610,7 @@ function oa_social_login_fsockopen_request ($url, $options = array (), $timeout 
     {
         $result->http_error = 'invalid_uri';
         return $result;
-    }	
+    }
 
     //Check the scheme
     if ($uri ['scheme'] == 'https')
@@ -627,85 +627,85 @@ function oa_social_login_fsockopen_request ($url, $options = array (), $timeout 
         $url_protocol = 'http://';
         $url_prefix = '';
     }
-    
+
     //Construct the path to act on
     $path = (isset ($uri ['path']) ? $uri ['path'] : '/').( ! empty ($uri ['query']) ? ('?'.$uri ['query']) : '');
-    
+
 	//HTTP Headers
     $headers = array();
-     
+
     // We are using a proxy
     if (! empty ($options ['proxy_url']) && ! empty ($options ['proxy_port']))
     {
     	// Open Socket
     	$fp = @fsockopen ($options ['proxy_url'], $options ['proxy_port'], $errno, $errstr, $timeout);
-    
+
     	//Make sure that the socket has been opened properly
     	if (!$fp)
     	{
     		$result->http_error = trim ($errstr);
     		return $result;
     	}
-    
+
     	// HTTP Headers
     	$headers[] = "GET " . $url_protocol . $url . $path . " HTTP/1.0";
     	$headers[] = "Host: " . $url . ":" . $port;
-    
+
     	// Proxy Authentication
     	if ( ! empty ($options ['proxy_username']) && ! empty ($options ['proxy_password']))
     	{
     		$headers [] = 'Proxy-Authorization: Basic ' . base64_encode ($options ['proxy_username'] . ":" . $options ['proxy_password']);
     	}
-    
+
     }
     // We are not using a proxy
     else
     {
     	// Open Socket
     	$fp = @fsockopen ($url_prefix . $url, $port, $errno, $errstr, $timeout);
-    
+
     	//Make sure that the socket has been opened properly
     	if (!$fp)
     	{
     		$result->http_error = trim ($errstr);
     		return $result;
     	}
-    
+
     	// HTTP Headers
     	$headers[] = "GET " . $path." HTTP/1.0";
     	$headers[] = "Host: " . $url;
     }
-    
+
     //Enable basic authentication
     if (isset ($options ['api_key']) AND isset ($options ['api_secret']))
     {
     	$headers [] = 'Authorization: Basic ' . base64_encode ($options ['api_key'] . ":" . $options ['api_secret']);
     }
-    
+
     //Build and send request
     fwrite ($fp, (implode ("\r\n", $headers). "\r\n\r\n"));
-    
+
     //Fetch response
     $response = '';
     while (!feof ($fp))
     {
     	$response .= fread ($fp, 1024);
     }
-    
+
     //Close connection
     fclose ($fp);
-    
+
     //Parse response
     list($response_header, $response_body) = explode ("\r\n\r\n", $response, 2);
-    
+
     //Parse header
     $response_header = preg_split ("/\r\n|\n|\r/", $response_header);
     list($header_protocol, $header_code, $header_status_message) = explode (' ', trim (array_shift ($response_header)), 3);
-    
+
     //Build result
     $result->http_code = $header_code;
     $result->http_data = $response_body;
-    
+
     //Done
     return $result;
 }
@@ -779,24 +779,24 @@ function oa_social_login_curl_request ($url, $options = array (), $timeout = 15)
 	curl_setopt ($curl, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt ($curl, CURLOPT_SSL_VERIFYPEER, 0);
 	curl_setopt ($curl, CURLOPT_SSL_VERIFYHOST, 0);
-	curl_setopt ($curl, CURLOPT_USERAGENT, 'SocialLogin ' . OA_SOCIAL_LOGIN_VERSION . 'WP (+http://www.oneall.com/)');
-	
+	curl_setopt ($curl, CURLOPT_USERAGENT, 'SocialLogin/' . OA_SOCIAL_LOGIN_VERSION . ' WordPress/' . oa_social_login_get_wp_version() . ' (+http://www.oneall.com/)');
+
 	// BASIC AUTH?
 	if (isset ($options ['api_key']) AND isset ($options ['api_secret']))
 	{
 		curl_setopt ($curl, CURLOPT_USERPWD, $options ['api_key'] . ":" . $options ['api_secret']);
 	}
-	
+
 	// Proxy Settings
 	if ( ! empty ($options ['proxy_url']) && ! empty ($options ['proxy_port']))
 	{
 		// Proxy Location
 		curl_setopt ($curl, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
 		curl_setopt ($curl, CURLOPT_PROXY, $options ['proxy_url']);
-			
+
 		// Proxy Port
-		curl_setopt ($curl, CURLOPT_PROXYPORT, $options ['proxy_port']);		
-	
+		curl_setopt ($curl, CURLOPT_PROXYPORT, $options ['proxy_port']);
+
 		// Proxy Authentication
 		if ( ! empty ($options ['proxy_username']) && ! empty ($options ['proxy_password']))
 		{
