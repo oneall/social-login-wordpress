@@ -16,6 +16,7 @@ https://wordpress.org/plugins/oa-social-login/
 * Amazon
 * Battle.net
 * Blogger
+* Discord
 * Disqus
 * Draugiem
 * Dribbble
@@ -24,9 +25,11 @@ https://wordpress.org/plugins/oa-social-login/
 * Github.com
 * Google
 * Instagram
+* Line
 * LinkedIn
 * LiveJournal
 * Mail.ru
+* Meetup
 * Odnoklassniki
 * OpenID
 * PayPal
@@ -34,6 +37,7 @@ https://wordpress.org/plugins/oa-social-login/
 * PixelPin
 * Reddit
 * Skyrock.com
+* SoundCloud
 * StackExchange
 * Steam
 * Twitch.tv
