@@ -388,3 +388,19 @@
 .oa_social_login_provider_pixelpin {
 	background-position: -1334px -1px;
 }
+
+.oa_social_login_provider_meetup {
+  background-position: -1408px -1px;
+}
+
+.oa_social_login_provider_line {
+  background-position: -1445px -1px;
+}
+
+.oa_social_login_provider_soundcloud {
+  background-position: -1482px -1px;
+}
+
+.oa_social_login_provider_discord {
+  background-position: -1519px -1px;
+}

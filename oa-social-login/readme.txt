@@ -32,6 +32,7 @@ login and register with 30+ Social Networks like for example Facebook, Twitter, 
  <li>Amazon</li>
  <li>Battle.net</li>
  <li>Blogger</li>
+ <li>Discord</li>
  <li>Disqus</li>
  <li>Dribbble</li>
  <li>Facebook</li>
@@ -39,9 +40,11 @@ login and register with 30+ Social Networks like for example Facebook, Twitter, 
  <li>Github.com</li>
  <li>Google</li>
  <li>Instagram</li>
+ <li>Line</li>
  <li>LinkedIn</li>
  <li>LiveJournal</li>
  <li>Mail.ru</li>
+ <li>Meetup</li>
  <li>Odnoklassniki</li>
  <li>OpenID</li>
  <li>PayPal</li>
@@ -49,6 +52,7 @@ login and register with 30+ Social Networks like for example Facebook, Twitter, 
  <li>PixelPin</li> 
  <li>Reddit</li>
  <li>Skyrock.com</li>		
+ <li>SoundCloud</li>
  <li>StackExchange</li>
  <li>Steam</li>
  <li>Twitch.tv</li>
