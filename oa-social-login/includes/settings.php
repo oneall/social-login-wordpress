@@ -94,6 +94,9 @@ $oa_social_login_providers = array(
     'vkontakte' => array(
         'name' => 'VKontakte'
     ),
+    'weibo' => array(
+        'name' => 'Weibo'
+    ),
     'windowslive' => array(
         'name' => 'Windows Live'
     ),

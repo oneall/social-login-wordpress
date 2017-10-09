@@ -59,6 +59,7 @@ login and register with 30+ Social Networks like for example Facebook, Twitter, 
  <li>Twitter</li>
  <li>Vimeo</li>
  <li>VKontakte</li>
+ <li>Weibo</li>
  <li>Windows Live</li>
  <li>WordPress.com</li>
  <li>Yahoo</li>

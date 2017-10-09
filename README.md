@@ -44,6 +44,7 @@ https://wordpress.org/plugins/oa-social-login/
 * Twitter
 * Vimeo
 * VKontakte
+* Weibo
 * Windows Live
 * WordPress.com
 * Yahoo
