@@ -262,6 +262,8 @@
   display: inline-block;
 }
 
+
+/* Buttons */
 .oa_social_login_provider_vimeo {
   background-position: -2px -1px;
 }
@@ -304,6 +306,10 @@
 
 .oa_social_login_provider_openid {
   background-position: -409px -1px;
+}
+
+.oa_social_login_provider_draugiem {
+  background-position: -446px -1px;
 }
 
 .oa_social_login_provider_twitter {
@@ -365,6 +371,7 @@
 .oa_social_login_provider_twitch {
   background-position: -1112px -1px;
 }
+
 .oa_social_login_provider_amazon {
   background-position: -1149px -1px;
 }
@@ -374,23 +381,31 @@
 }
 
 .oa_social_login_provider_battlenet {
-    background-position: -1223px -1px;
+  background-position: -1223px -1px;
 }
 
 .oa_social_login_provider_dribbble {
-	background-position: -1260px -1px;
+  background-position: -1260px -1px;
 }
 
 .oa_social_login_provider_pinterest {
-	background-position: -1297px -1px;
+  background-position: -1297px -1px;
 }
 
 .oa_social_login_provider_pixelpin {
-	background-position: -1334px -1px;
+  background-position: -1334px -1px;
+}
+
+.oa_social_login_provider_storage {
+  background-position: -1371px -1px;
 }
 
 .oa_social_login_provider_meetup {
   background-position: -1408px -1px;
+}
+
+.oa_social_login_provider_xing {
+    background-position: -372px -1px;
 }
 
 .oa_social_login_provider_line {
@@ -406,5 +421,9 @@
 }
 
 .oa_social_login_provider_weibo {
-    background-position: -1556px -1px;
+  background-position: -1556px -1px;
+}
+
+.oa_social_login_provider_tumblr {
+  background-position: -1593px -1px;
 }

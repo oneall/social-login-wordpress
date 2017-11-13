@@ -3,7 +3,7 @@ Contributors: ClaudeSchlesser, OneAll.com
 Tags: social login, social connect, facebook, linkedin, livejournal, google, yahoo, twitter, openid, pinterest, paypal, google, instagram, widget, plugin, social network login, comments
 Requires at least: 3.0
 Tested up to: 4.7
-Stable tag: 5.3
+Stable tag: 5.3.0
 
 Social Login allows your users to comment, register and login with 30+ Social Networks like Twitter, Facebook, Paypal, LinkedIn, Instagram, OpenID, VKontakte, Google, Pinterest ... 
 
