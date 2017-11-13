@@ -82,6 +82,9 @@ $oa_social_login_providers = array(
     'steam' => array(
         'name' => 'Steam'
     ),
+    'tumblr' => array(
+        'name' => 'Tumblr'
+    ),
     'twitch' => array(
         'name' => 'Twitch.tv'
     ),
@@ -102,6 +105,9 @@ $oa_social_login_providers = array(
     ),
     'wordpress' => array(
         'name' => 'WordPress.com'
+    ),
+    'xing' => array(
+        'name' => 'Xing'
     ),
     'yahoo' => array(
         'name' => 'Yahoo'
