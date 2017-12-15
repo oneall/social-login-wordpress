@@ -1,4 +1,4 @@
-# Social Login 5.4.0 for WordPress 3.0+
+# Social Login 5.4.1 for WordPress 3.0+
 Social Login for WordPress allows your users to login and register with 35+ social networks. 
 It increases your user registration rate by simplifying the registration process for 
 new users and provides permission-based social data retrieved from the social network profiles.
