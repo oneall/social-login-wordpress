@@ -1,80 +1,84 @@
 === Social Login ===
-Contributors: ClaudeSchlesser, OneAll.com
-Tags: social login, social connect, facebook, linkedin, livejournal, google, yahoo, twitter, openid, pinterest, paypal, google, instagram, widget, plugin, social network login, comments
+Contributors: OneAll.com, ClaudeSchlesser
+Tags: social login, social network login, social connect, facebook login, twitter login, linkedin login
 Requires at least: 3.0
-Tested up to: 4.7
-Stable tag: 5.4.0
+Tested up to: 4.9.7
+Stable tag: 5.4.3
+License: GPLv2 or later
 
-Social Login allows your users to comment, register and login with 30+ Social Networks like Twitter, Facebook, Paypal, LinkedIn, Instagram, OpenID, VKontakte, Google, Pinterest ... 
+Social Login is fully GDPR compliant and allows your users to login, register and comment with 35+ Social Networks.
 
 == Description ==
 
-Social Login is a professionally developed and free Wordpress (BuddyPress compatible) plugin that allows your visitors to comment, 
-login and register with 30+ Social Networks like for example Facebook, Twitter, Google, LinkedIn, PayPal, LiveJournal, Instagram, Вконтакте and Yahoo.<br /><br />
-<strong>Make your blog social!</strong><br />
+= Social Login Plugin =
 
-<strong>Choose where to add the Social Login Plugin:</strong>
-<ul>
- <li>On the comment formular</li>
- <li>On the login page</li>
- <li>On the registration page</li>
- <li>In your sidebar</li>
- <li>With a shortcode</li>
-</ul>
+Social Login is a **professionally developed** and free Wordpress plugin that allows your visitors to **comment, login and register with 30+ Social Networks** like for example Facebook, Twitter, Google, LinkedIn, PayPal, LiveJournal, Instagram, Вконтакте or Yahoo amongst other.
 
-<strong>Optionally add the Social Login widget:</strong>
-<ul>
- <li>A login widget that you can easily attach to your sidebar is provided</li>
-</ul>
+**Data Protection Guarantee**<br />
+Social Login is fully compliant with all European and U.S. data protection laws. As required by the General Data Protection Regulation (GDPR) the OneAll Terms of Service include a Data Processing Agreement that we can countersign on request.
 
-<strong>30+ Social Networks Availabe!</strong>
-<ul>
- <li>Amazon</li>
- <li>Battle.net</li>
- <li>Blogger</li>
- <li>Discord</li>
- <li>Disqus</li>
- <li>Dribbble</li>
- <li>Facebook</li>
- <li>Foursquare</li>
- <li>Github.com</li>
- <li>Google</li>
- <li>Instagram</li>
- <li>Line</li>
- <li>LinkedIn</li>
- <li>LiveJournal</li>
- <li>Mail.ru</li>
- <li>Meetup</li>
- <li>Odnoklassniki</li>
- <li>OpenID</li>
- <li>PayPal</li>
- <li>Pinterest</li>
- <li>PixelPin</li> 
- <li>Reddit</li>
- <li>Skyrock.com</li>		
- <li>SoundCloud</li>
- <li>StackExchange</li>
- <li>Steam</li>
- <li>Tumblr</li>
- <li>Twitch.tv</li>
- <li>Twitter</li>
- <li>Vimeo</li>
- <li>VKontakte</li>
- <li>Weibo</li>
- <li>Windows Live</li>
- <li>WordPress.com</li>
- <li>Xing</li>
- <li>Yahoo</li>
- <li>YouTube</li>
-</ul>
- 
+**Seamless Integration**<br />
+Social Login is fully customizable and seamlessly integrates with your existing login/registration system so that your users don't have to start from scratch. Existing existing accounts can add/remove their social network accounts in their WordPress profile settings and then also use the linked social networks to login.
 
-<strong>Increase your wordpress/buddypress user engagement in a few simple steps with the Social Login Plugin!</strong>
-Our users love it! Check out the <a href="http://wordpress.org/extend/plugins/oa-social-login/other_notes/">testimonials</a>!<br />
+**Eliminates Spam and Bot Registrations**<br />
+Get rid of long and complicated forms, improve your data quality and instantly eliminate spam and bot registrations. Social Login increases registration rates by up to 50% and provides permission-based access to users' social network profile data, allowing you to start delivering a personalized experience.
 
-Social Login is maintained by <a href="http://www.oneall.com">OneAll</a>, a technology company offering a set of web-delivered
-tools and services for establishing and optimizing a site's connection with social networks and identity providers such as Facebook, Twitter, 
-Google, Yahoo!, LinkedIn, Paypal, Instagram amongst others.
+**Maintenance Free**<br />
+Do not take the risk of loosing any users or customers due to outdated social network integrations. Unlike other Social Login providers we monitor the APIs and technologies of the different social networks and update our service as soon as changes arise.
+
+By using OneAll you can be sure that your social media integration will always run smoothly and with the most up-to-date calls.
+
+**Fully Customizable**<br />
+You can easily configure which social accounts to enable/disable for login and on which areas of the website social login should be displayed:
+* On the comment formular
+* On the login page
+* On the registration page
+* In your sidebar
+* With a shortcode
+
+**35+ Social Networks**
+* Amazon
+* Battle.net
+* Blogger
+* Discord 
+* Disqus
+* Dribbble
+* Facebook
+* Foursquare
+* Github.com
+* Google
+* Instagram
+* Line
+* LinkedIn
+* LiveJournal
+* Mail.ru
+* Meetup
+* Odnoklassniki
+* OpenID
+* PayPal
+* Pinterest
+* PixelPin 
+* Reddit
+* Skyrock.com
+* SoundCloud		
+* StackExchange
+* Steam
+* Tumblr
+* Twitch.tv
+* Twitter
+* Vimeo
+* VKontakte
+* Weibo
+* Windows Live
+* WordPress.com
+* XING
+* Yahoo
+* YouTube
+
+**Professionally Developed and Maintained**
+Social Login is maintained by [OneAll](http://www.oneall.com), a technology company offering a set of web-delivered tools to simplify the integration of 30+ social networks into business and personal websites and apps. 
+
+The OneAll API unifies 30+ Social Networks and consolidates the most powerful social network features in a single solution. You can work with multiple social networks at once and you will obtain a standardized field structure for data received from any of the social networks. Save time and development resources and focus on your core business. 
 
 == Installation ==
 
@@ -143,6 +147,24 @@ http://docs.oneall.com/plugins/guide/social-login-wordpress/
 5. **Login** - Login formular with small buttons (Social Network Buttons are included)
 
 == Changelog ==
+
+= 5.4.3 =
+* Warning missing quotes fixed
+
+= 5.4.2 =
+* PHP 7.2+ compatibility fixes.
+
+= 5.4.1 =
+* User website URL truncated (WordPress restriction)
+
+= 5.4.0 =
+* Social Network "Discord" added
+* Social Network "Line" added
+* Social Network "Meetup" added
+* Social Network "SoundCloud" added
+* Social Network "Tumblr" added
+* Social Network "Weibo" added
+* Social Network "XING" added
 
 = 5.3 =
 * New icon set added

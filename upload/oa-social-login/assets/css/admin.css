@@ -4,15 +4,34 @@
 }
 
 #oa_social_login_page.oa_social_login_more{
-	width:774px;
+    width:774px;
 }
 
 
+#oa_social_login_page .nav-tab-wrapper{
+    border-bottom: 3px solid #0073aa;
+}
+
+#oa_social_login_page .nav-tab {
+    padding: 5px 30px;
+    text-align: center;
+    width: 150px
+}
+
+#oa_social_login_page .nav-tab-active, 
+#oa_social_login_page .nav-tab-active:focus, 
+#oa_social_login_page .nav-tab-active:focus:active, 
+#oa_social_login_page.nav-tab-active:hover {
+    background-color: #0073aa;
+    border-bottom: 1px solid #0073aa;
+    color: #fff;
+}
+
 /* ********************* Plugins */
 .oa_social_login_plugin{
-	border: 1px solid #ccc;
+    border: 1px solid #ccc;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
-	margin: 10px 0 25px;
+    margin: 10px 0 25px;
 }
 
 .oa_social_login_plugin .oa_social_login_plugin_img img{
@@ -22,10 +41,10 @@
 }
 
 .oa_social_login_plugin a.button-primary{
-	height: 21px;
-	line-height: 19px;
-	padding: 0 10px;
-	vertical-align: top;
+    height: 21px;
+    line-height: 19px;
+    padding: 0 10px;
+    vertical-align: top;
 }
 
 .oa_social_login_plugin .oa_social_login_plugin_desc {
@@ -58,19 +77,17 @@
 }
 
 .oa_social_login_box .oa_social_login_button_wrap{
-	text-align:center;
-	padding: 10px 0 20px;
+    text-align:center;
+    padding: 10px 0 20px;
 }
 
 .oa_social_login_box .oa_social_login_button_wrap a{
-	font-size: 14px;
-	height: 40px;
-	line-height: 40px;
-	padding: 0 33px;	
-	margin:0 10px;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 33px;    
+    margin:0 10px;
 }
-
-
 
 #oa_social_login_box_started{
   background-color: #dff0d8;
@@ -79,21 +96,21 @@
 }
 
 #oa_social_login_box_started a {
-	color: #1a541b;
+    color: #1a541b;
 }
 
 #oa_social_login_box_started a:hover{
-	text-decoration:none;
-	color: #111;
+    text-decoration:none;
+    color: #111;
 }
 
 #oa_social_login_box_started a.button-secondary{
-	color: #555;
+    color: #555;
 }
 
 #oa_social_login_box_started h3{
-	text-align:center;
-	color: #4a844b;
+    text-align:center;
+    color: #4a844b;
 }
 
 #oa_social_login_box_status {
@@ -190,7 +207,7 @@
 
 
 .oa_social_login_table td.col_unpadded{
-	padding:0;
+    padding:0;
 }
 
 .oa_social_login_table tr td.row_multi {
@@ -233,8 +250,8 @@
 
 
 .oa_social_login_table a.social-sharing{
-	background-image: url("../img/social_sharing.png");
-	background-repeat:no-repeat;
+    background-image: url("../img/social_sharing.png");
+    background-repeat:no-repeat;
     display: block;
     height: 250px;
     width:772px;

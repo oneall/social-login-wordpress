@@ -239,7 +239,7 @@ function oa_social_login_render_link_form ($source, $user)
     												//Was connected to this user
     												if ($userid_by_token == $userid)
     												{
-    													$success_message = __ ('You have successfully unlinked your social network account.', 'oa_social_login');
+    													$success_message = sprintf (__ ('You have successfully unlinked your %s account.', 'oa_social_login'), $data->user->identity->source->name);
 
     													//Remove avatar
     													delete_user_meta ($userid, 'oa_social_login_user_thumbnail');

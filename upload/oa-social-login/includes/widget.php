@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Social Login Widget
+ * Social Login \ Widget
  */
 class oa_social_login_widget extends WP_Widget
 {
 	/**
-	 * Constructor
+	 * Constructor.
 	 */
 	public function __construct ()
 	{
@@ -16,7 +16,7 @@ class oa_social_login_widget extends WP_Widget
 	}
 
 	/**
-	 *  Display the widget
+	 *  Display the widget itself.
 	 */
 	public function widget ($args, $instance)
 	{
@@ -53,7 +53,7 @@ class oa_social_login_widget extends WP_Widget
 	}
 
 	/**
-	 * Show Widget Settings
+	 * Display the widget settings.
 	 */
 	public function form ($instance)
 	{
@@ -102,7 +102,7 @@ class oa_social_login_widget extends WP_Widget
 
 
 	/**
-	 * Update Widget Settings
+	 * Update the widget settings.
 	 */
 	public function update ($new_instance, $old_instance)
 	{
@@ -116,4 +116,11 @@ class oa_social_login_widget extends WP_Widget
 	}
 }
 
-add_action ('widgets_init', create_function ('', 'return register_widget( "oa_social_login_widget" );'));
+/**
+ * Social Login \ Initialise widget.
+ */
+function oa_social_login_init_widget ()
+{
+    return register_widget('oa_social_login_widget');
+}
+add_action ('widgets_init', 'oa_social_login_init_widget');
