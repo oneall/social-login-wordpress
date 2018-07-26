@@ -14,6 +14,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - User website, too long URL
 
+## [5.4.1] - 2017-12-15
+### Added
+New filter added in JS library :
+- oa_social_link_library_end
+- oa_social_login_library_end
+
 ## [5.4.0] - 2017-11-13
 ### Added
 - Tumblr, XING
