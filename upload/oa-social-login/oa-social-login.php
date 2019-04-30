@@ -2,8 +2,8 @@
 /*
 Plugin Name: Social Login
 Plugin URI: http://www.oneall.com/
-Description: Social Login allows your users to <strong>comment, login and register with 35+ social networks</strong> like Twitter, Facebook, LinkedIn, Instagram, Вконтакте, Google or Yahoo.
-Version: 5.4.3
+Description: Social Login allows your users to <strong>comment, login and register with 40+ social networks</strong> like Twitter, Facebook, LinkedIn, Instagram, Вконтакте, Google or Yahoo.
+Version: 5.4.4
 Author: OneAll - Social Network Integration <support@oneall.com>
 Author URI: http://www.oneall.com/
 License: GPL2
@@ -11,7 +11,7 @@ License: GPL2
 
 define ('OA_SOCIAL_LOGIN_PLUGIN_URL', plugins_url () . '/' . basename (dirname (__FILE__)));
 define ('OA_SOCIAL_LOGIN_BASE_PATH', dirname (plugin_basename (__FILE__)));
-define ('OA_SOCIAL_LOGIN_VERSION', '5.4.3');
+define ('OA_SOCIAL_LOGIN_VERSION', '5.4.4');
 
 /**
  * Check technical requirements before activating the plugin (Wordpress 3.0 or newer required)
@@ -52,6 +52,17 @@ add_filter ('plugin_action_links', 'oa_social_login_add_setup_link', 10, 2);
 
 
 /**
+ * Log
+ */
+function oa_social_login_log ($message)
+{
+    if (defined ('WP_DEBUG_LOG') && WP_DEBUG_LOG)
+    {
+        error_log('[OneAll Social Login] '.date("d.m.Y G:i").' : '.print_r( $message, true ));
+    }
+}
+
+/**
  * This file only has to be included for versions before 3.1.
  * Deprecated since version 3.1, the functions are included by default
  */
@@ -64,6 +75,7 @@ if (!function_exists ('email_exists'))
 /**
  * Include required files
  */
+
 require_once(dirname (__FILE__) . '/includes/settings.php');
 require_once(dirname (__FILE__) . '/includes/communication.php');
 require_once(dirname (__FILE__) . '/includes/toolbox.php');
@@ -74,5 +86,6 @@ require_once(dirname (__FILE__) . '/includes/widget.php');
 
 /**
  * Initialise
+ * Load Social Login > 10 for BuddyPress compatibility (bp_init=10).
  */
-add_action ('init', 'oa_social_login_init', 9);
+add_action ('init', 'oa_social_login_init', 11);

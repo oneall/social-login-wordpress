@@ -3,16 +3,16 @@ Contributors: OneAll.com, ClaudeSchlesser
 Tags: social login, social network login, social connect, facebook login, twitter login, linkedin login
 Requires at least: 3.0
 Tested up to: 5.1
-Stable tag: 5.4.3
+Stable tag: 5.4.4
 License: GPLv2 or later
 
-Social Login allows your users to login, register and comment with 35+ Social Networks. Professional development and support included.
+Social Login allows your users to login, register and comment with 40+ Social Networks. Professional development and support included.
 
 == Description ==
 
 = Social Login Plugin =
 
-Social Login is a **professionally developed** and free Wordpress plugin that allows your visitors to **comment, login and register with 30+ Social Networks** like for example Facebook, Twitter, Google, LinkedIn, PayPal, LiveJournal, Instagram, Вконтакте or Yahoo amongst other.
+Social Login is a **professionally developed** and free Wordpress plugin that allows your visitors to **comment, login and register with 40+ Social Networks** like for example Facebook, Twitter, Google, LinkedIn, PayPal, LiveJournal, Instagram, Вконтакте or Yahoo amongst other.
 
 **Data Protection Guarantee**<br />
 Social Login is fully compliant with all European and U.S. data protection laws. As required by the General Data Protection Regulation (GDPR) the OneAll Terms of Service include a Data Processing Agreement that we can countersign on request.
@@ -42,6 +42,7 @@ You can easily configure which social accounts to enable/disable for login and o
 * Blogger
 * Discord 
 * Disqus
+* Draugiem
 * Dribbble
 * Facebook
 * Foursquare
@@ -53,6 +54,7 @@ You can easily configure which social accounts to enable/disable for login and o
 * LiveJournal
 * Mail.ru
 * Meetup
+* Mixer
 * Odnoklassniki
 * OpenID
 * PayPal
@@ -76,9 +78,9 @@ You can easily configure which social accounts to enable/disable for login and o
 * YouTube
 
 **Professionally Developed and Maintained**
-Social Login is maintained by [OneAll](http://www.oneall.com), a technology company offering a set of web-delivered tools to simplify the integration of 30+ social networks into business and personal websites and apps. 
+Social Login is maintained by [OneAll](http://www.oneall.com), a technology company offering a set of web-delivered tools to simplify the integration of 40+ social networks into business and personal websites and apps. 
 
-The OneAll API unifies 30+ Social Networks and consolidates the most powerful social network features in a single solution. You can work with multiple social networks at once and you will obtain a standardized field structure for data received from any of the social networks. Save time and development resources and focus on your core business. 
+The OneAll API unifies 40+ Social Networks and consolidates the most powerful social network features in a single solution. You can work with multiple social networks at once and you will obtain a standardized field structure for data received from any of the social networks. Save time and development resources and focus on your core business. 
 
 == Installation ==
 
@@ -147,6 +149,13 @@ http://docs.oneall.com/plugins/guide/social-login-wordpress/
 5. **Login** - Login formular with small buttons (Social Network Buttons are included)
 
 == Changelog ==
+
+= 5.4.4 =
+* Social Network "Draugiem" added
+* Social Network "Mixer" added
+* Comment approval fixed
+* New hooks added
+* PHP 7.2 fixes
 
 = 5.4.3 =
 * Warning missing quotes fixed

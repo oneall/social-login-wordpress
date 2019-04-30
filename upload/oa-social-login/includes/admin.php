@@ -94,19 +94,24 @@ add_action ('admin_menu', 'oa_social_login_admin_menu');
  **/
 function oa_social_login_admin_pre_comment_approved ($approved)
 {
-	// No need to do the check if the comment has already been approved
+	// No need to do the check if the comment has already been approved.
 	if (empty ($approved))
 	{
-		//Read settings
+		// Read settings.
 		$settings = get_option ('oa_social_login_settings');
 
-		//Check if enabled
+		// Check if pre approval is enabled.
 		if (!empty ($settings ['plugin_comment_auto_approve']))
 		{
+		    // Read comment user.
 			$user_id = get_current_user_id ();
 			if (is_numeric ($user_id))
 			{
-				if (get_user_meta ($user_id, 'oa_social_login_user_token', true) !== false)
+			    // Read user token.
+			    $user_token = trim (get_user_meta ($user_id, 'oa_social_login_user_token', true));
+
+			    // If not empty, it's a social login user.
+				if ( ! empty ($user_token))
 				{
 					$approved = 1;
 				}
@@ -631,7 +636,7 @@ function oa_display_social_login_more ()
 						<a href="<?php echo $more_url; ?>"><img src="<?php echo plugin_dir_url( __FILE__ ) . '../assets/img/social_sharing.png' ?>" alt="<?php _e ('Social Login', 'oa_social_login') ?>" /></a>
 					</div>
 					<div class="oa_social_login_plugin_desc">
-						<?php _e ('Allow your visitors to comment, login and register with 30+ social networks like for example Twitter, Facebook, Pinterest, Instagram, Paypal, LinkedIn, OpenID, VKontakte or Google+. Easy to use and 100% FREE.', 'oa_social_login'); ?>
+						<?php _e ('Allow your visitors to comment, login and register with 40+ social networks like for example Twitter, Facebook, Pinterest, Instagram, Paypal, LinkedIn, OpenID, VKontakte or Google+. Easy to use and 100% FREE.', 'oa_social_login'); ?>
 						<a href="<?php echo $more_url; ?>" class="button-primary"><?php _e ('More Info', 'oa_social_login'); ?></a>
 					</div>
 				</div>
@@ -644,7 +649,20 @@ function oa_display_social_login_more ()
 						<a href="<?php echo $more_url; ?>"><img src="<?php echo plugin_dir_url( __FILE__ ) . '../assets/img/loudvoice.png' ?>" alt="<?php _e ('LoudVoice Comment System', 'oa_social_login') ?>" /></a>
 					</div>
 					<div class="oa_social_login_plugin_desc">
-						<?php _e ('LoudVoice replaces the basic WordPress comments by a powerful comment system that includes logging in with 30+ social networks, spam filters and more. Easy to use and 100% FREE. Existing comments can be imported!', 'oa_social_login'); ?>
+						<?php _e ('LoudVoice replaces the basic WordPress comments by a powerful comment system that includes logging in with 40+ social networks, spam filters and more. Easy to use and 100% FREE. Existing comments can be imported!', 'oa_social_login'); ?>
+						<a href="<?php echo $more_url; ?>" class="button-primary"><?php _e ('More Info', 'oa_social_login'); ?></a>
+					</div>
+				</div>
+
+				<?php
+				    $more_url = admin_url('plugin-install.php?s=sso+oneall&tab=search&type=term');
+				?>
+				<div class="oa_social_login_plugin">
+					<div class="oa_social_login_plugin_img">
+						<a href="<?php echo $more_url; ?>"><img src="<?php echo plugin_dir_url( __FILE__ ) . '../assets/img/single-sign-on.png' ?>" alt="<?php _e ('Single Sign-On', 'oa_social_login') ?>" /></a>
+					</div>
+					<div class="oa_social_login_plugin_desc">
+						<?php _e ('Automatically creates accounts and signs users in as they browse between multiple and independent WordPress blogs or websites in your network. Take away the need for your users to create new accounts or re-enter their authentication credentials on every of your websites.', 'oa_social_login'); ?>
 						<a href="<?php echo $more_url; ?>" class="button-primary"><?php _e ('More Info', 'oa_social_login'); ?></a>
 					</div>
 				</div>
@@ -675,7 +693,7 @@ function oa_display_social_login_setup ()
 					{
 						?>
 							<p>
-								<?php _e ('Allow your visitors to comment, login and register with 30+ Social Networks like for example Twitter, Facebook, LinkedIn, Instagram, VKontakte, Google or Yahoo.', 'oa_social_login'); ?>
+								<?php _e ('Allow your visitors to comment, login and register with 40+ Social Networks like for example Twitter, Facebook, LinkedIn, Instagram, VKontakte, Google or Yahoo.', 'oa_social_login'); ?>
 								<strong><?php _e ('Draw a larger audience and increase your user engagement in a  few simple steps.', 'oa_social_login'); ?> </strong>
 							</p>
 							<div class="oa_social_login_box" id="oa_social_login_box_started">
