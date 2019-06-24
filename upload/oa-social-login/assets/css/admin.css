@@ -1,6 +1,6 @@
 /* ********************* Page Wrapper */
 #oa_social_login_page {
-    max-width: 900px;
+    max-width: 1024px;
 }
 
 #oa_social_login_page.oa_social_login_more {
@@ -162,9 +162,13 @@
     margin: 0 0 25px;
 }
 
-.oa_social_login_table textarea, 
 .oa_social_login_table input {
     border-color: #aaa;
+}
+
+.oa_social_login_table textarea{
+    border-color: #aaa;
+    width: 100%;
 }
 
 .oa_social_login_table tr.row_head th {
@@ -320,7 +324,7 @@
 }
 
 .oa_social_login_provider_google {
-    background-position: -1704px -1px;
+    background-position: -150px -1px;
 }
 
 .oa_social_login_provider_instagram {

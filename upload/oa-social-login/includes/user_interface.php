@@ -112,7 +112,7 @@ function oa_social_login_render_link_form ($source, $user)
 					//No providers have been selected.
 					if (count ($api_providers) == 0)
 					{
-						$output = '<div style="color:white;background-color:red;">[Social Login] ' . __ ('Please enable at least one social network!', 'oa_social_login') . '</div>';
+						$output = '<div style="color:white;background-color:red;">[Social Login] ' . __ ('Please enable at least one social network!', 'oa-social-login') . '</div>';
 					}
 					//At least one providers has been selected.
 					else
@@ -163,7 +163,7 @@ function oa_social_login_render_link_form ($source, $user)
     												//Already connected to this user
     												if ($userid_by_token == $userid)
     												{
-    													$success_message = sprintf (__ ('You have successfully linked your %s account.', 'oa_social_login'), $data->user->identity->source->name);
+    													$success_message = sprintf (__ ('You have successfully linked your %s account.', 'oa-social-login'), $data->user->identity->source->name);
 
     													// Linked Social Network
     													$linked_social_networks = array ();
@@ -182,13 +182,13 @@ function oa_social_login_render_link_form ($source, $user)
     												//Connected to a different user
     												else
     												{
-    													$error_message = sprintf (__ ('This %s account is already used by another user of this website.', 'oa_social_login'), $data->user->identity->source->name);
+    													$error_message = sprintf (__ ('This %s account is already used by another user of this website.', 'oa-social-login'), $data->user->identity->source->name);
     												}
     											}
     											// The user does not have a user_token yet
     											else
     											{
-    												$success_message = sprintf (__ ('You have successfully linked your %s account.', 'oa_social_login'), $data->user->identity->source->name);
+    												$success_message = sprintf (__ ('You have successfully linked your %s account.', 'oa-social-login'), $data->user->identity->source->name);
 
     												//Clean Cache
     												wp_cache_delete ($userid, 'users');
@@ -239,7 +239,7 @@ function oa_social_login_render_link_form ($source, $user)
     												//Was connected to this user
     												if ($userid_by_token == $userid)
     												{
-    													$success_message = sprintf (__ ('You have successfully unlinked your %s account.', 'oa_social_login'), $data->user->identity->source->name);
+    													$success_message = sprintf (__ ('You have successfully unlinked your %s account.', 'oa-social-login'), $data->user->identity->source->name);
 
     													//Remove avatar
     													delete_user_meta ($userid, 'oa_social_login_user_thumbnail');
@@ -260,7 +260,7 @@ function oa_social_login_render_link_form ($source, $user)
     													//No providers linked
     													if (count ($linked_social_networks) == 0)
     													{
-    														$error_message = __ ("You might no longer be able to login to this website if you don't link at least one social network.", 'oa_social_login');
+    														$error_message = __ ("You might no longer be able to login to this website if you don't link at least one social network.", 'oa-social-login');
     														delete_user_meta ($userid, 'oa_social_login_identity_provider');
     													}
     													else
@@ -271,7 +271,7 @@ function oa_social_login_render_link_form ($source, $user)
     												//Connected to a different user
     												else
     												{
-    													$error_message = sprintf (__ ('This %s account is already used by another user of this website.', 'oa_social_login'), $data->user->identity->source->name);
+    													$error_message = sprintf (__ ('This %s account is already used by another user of this website.', 'oa-social-login'), $data->user->identity->source->name);
     												}
     											}
 
@@ -283,7 +283,7 @@ function oa_social_login_render_link_form ($source, $user)
     									{
     									    if ($data->plugin->data->status == 'error' && $data->plugin->data->reason = 'identity_is_linked_to_another_user')
     									    {
-    									        $error_message = __ ('This social network account is already used by another user.', 'oa_social_login');
+    									        $error_message = __ ('This social network account is already used by another user.', 'oa-social-login');
     									    }
     									}
 									}
@@ -347,7 +347,7 @@ function oa_social_login_render_link_form ($source, $user)
 
 
 						//Setup Output
-						$output .= '<h3 id="oa_social_link"> ' . __ ('Connect your account to one or more social networks', 'oa_social_login') . '</h3>';
+						$output .= '<h3 id="oa_social_link"> ' . __ ('Connect your account to one or more social networks', 'oa-social-login') . '</h3>';
 						$output .= '<table class="form-table">';
 						$output .= (empty ($success_message) ? '' : '<tr><td><span style="color:green;font-weight:bold"> ' . $success_message . '</span></td></tr>');
 						$output .= (empty ($error_message) ? '' : '<tr><td><span style="color:red;font-weight:bold">' . $error_message . '</span></td></tr>');
@@ -486,7 +486,7 @@ function oa_social_login_bp_custom_fetch_avatar ($text, $args)
 	if (is_null ($oa_social_login_avatars))
 	{
 		$oa_social_login_settings = get_option ('oa_social_login_settings');
-		$oa_social_login_avatars = (isset ($oa_social_login_settings ['plugin_show_avatars_in_comments']) ? $oa_social_login_settings ['plugin_show_avatars_in_comments'] : 0);
+		$oa_social_login_avatars = (isset ($oa_social_login_settings ['plugin_show_avatars_in_comments']) ? $oa_social_login_settings ['plugin_show_avatars_in_comments'] : 2);
 	}
 
 	//Check if avatars are enabled
@@ -556,7 +556,7 @@ function oa_social_login_custom_avatar ($avatar, $mixed, $size, $default, $alt =
 	if (is_null ($oa_social_login_avatars))
 	{
 		$oa_social_login_settings = get_option ('oa_social_login_settings');
-		$oa_social_login_avatars = (isset ($oa_social_login_settings ['plugin_show_avatars_in_comments']) ? $oa_social_login_settings ['plugin_show_avatars_in_comments'] : 0);
+		$oa_social_login_avatars = (isset ($oa_social_login_settings ['plugin_show_avatars_in_comments']) ? $oa_social_login_settings ['plugin_show_avatars_in_comments'] : 2);
 	}
 
 	//Check if social avatars are enabled
@@ -942,7 +942,7 @@ function oa_social_login_render_login_form ($source, $args = array ())
 		//No providers selected
 		if (count ($providers) == 0)
 		{
-			$output = '<div style="color:white;background-color:red;">[Social Login] ' . __ ('Please enable at least one social network!', 'oa_social_login') . '</div>';
+			$output = '<div style="color:white;background-color:red;">[Social Login] ' . __ ('Please enable at least one social network!', 'oa-social-login') . '</div>';
 		}
 		//Providers selected
 		else
@@ -1044,18 +1044,18 @@ function oa_social_login_request_email ()
 
 					if (empty ($user_email))
 					{
-						$message = __ ('Please enter your email address', 'oa_social_login');
+						$message = __ ('Please enter your email address', 'oa-social-login');
 					}
 					else
 					{
 						if (!is_email ($user_email))
 						{
-							$message = __ ('This email is not valid', 'oa_social_login');
+							$message = __ ('This email is not valid', 'oa-social-login');
 						}
 						elseif (email_exists ($user_email))
 						{
 
-							$message = __ ('This email is already used by another account', 'oa_social_login');
+							$message = __ ('This email is already used by another account', 'oa-social-login');
 						}
 						else
 						{
@@ -1094,7 +1094,7 @@ function oa_social_login_request_email ()
 				$oa_social_login_identity_provider = get_user_meta ($user_id, 'oa_social_login_identity_provider', true);
 
 				//Caption
-				$caption = (isset ($oa_social_login_settings ['plugin_require_email_text']) ? $oa_social_login_settings ['plugin_require_email_text'] : __ ('<strong>We unfortunately could not retrieve your email address from %s.</strong> Please enter your email address in the form below in order to continue.', 'oa_social_login'));
+				$caption = (isset ($oa_social_login_settings ['plugin_require_email_text']) ? $oa_social_login_settings ['plugin_require_email_text'] : __ ('<strong>We unfortunately could not retrieve your email address from %s.</strong> Please enter your email address in the form below in order to continue.', 'oa-social-login'));
 
 				// Create Nonce
 				$oa_nonce = wp_create_nonce ('request_email_cancel-'.$user_id);
@@ -1114,7 +1114,7 @@ function oa_social_login_request_email ()
 							<div class="oa_social_login_modal_inner">
 			 					<div class="oa_social_login_modal_title">
 			 						<?php
-										 printf (__ ('You have successfully connected with %s!', 'oa_social_login'), '<strong>' . $oa_social_login_identity_provider . '</strong>');
+										 printf (__ ('You have successfully connected with %s!', 'oa-social-login'), '<strong>' . $oa_social_login_identity_provider . '</strong>');
 									 ?>
 			 					</div>
 			 					<?php
@@ -1127,7 +1127,7 @@ function oa_social_login_request_email ()
 										?>
 			 					<div class="oa_social_login_modal_body">
 				 					<div class="oa_social_login_modal_subtitle">
-				 						<?php _e ('Please enter your email address', 'oa_social_login'); ?>:
+				 						<?php _e ('Please enter your email address', 'oa-social-login'); ?>:
 				 					</div>
 									<form method="post" action="">
 										<fieldset>
@@ -1139,8 +1139,8 @@ function oa_social_login_request_email ()
 												<?php echo $message; ?>
 											</div>
 											<div class="oa_social_login_buttons">
-												<input class="oa_social_login_button" id="oa_social_login_button_confirm" name="oa_social_login_confirm_btn" type="submit" value="<?php _e ('Confirm', 'oa_social_login'); ?>" />
-												<a href="<?php echo esc_url ($logout_url); ?>" class="oa_social_login_button" id="oa_social_login_button_cancel"><?php _e ('Cancel', 'oa_social_login'); ?></a>
+												<input class="oa_social_login_button" id="oa_social_login_button_confirm" name="oa_social_login_confirm_btn" type="submit" value="<?php _e ('Confirm', 'oa-social-login'); ?>" />
+												<a href="<?php echo esc_url ($logout_url); ?>" class="oa_social_login_button" id="oa_social_login_button_cancel"><?php _e ('Cancel', 'oa-social-login'); ?></a>
 											</div>
 										</fieldset>
 									</form>

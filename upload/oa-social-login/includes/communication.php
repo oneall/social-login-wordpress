@@ -48,7 +48,7 @@ function oa_social_login_callback ()
 					$identity = $user_data->identity;
 
 					// Unique user token provided by OneAll.
-					$user_token = $user_data->user_token;
+					$user_token =  apply_filters ('oa_social_login_filter_get_user_token', $user_data->user_token);
 
 					// Identity Provider.
 					$user_identity_provider = $identity->source->name;
@@ -224,20 +224,25 @@ function oa_social_login_callback ()
 							do
 							{
 								$user_login_tmp = $user_login . ($i++);
+								$user_login_tmp = apply_filters ('oa_social_login_filter_new_user_generic_login', $user_login_tmp);
 							}
 							while (username_exists ($user_login_tmp));
 							$user_login = $user_login_tmp;
 						}
 
 						// Email Filter.
+						$user_login = apply_filters ('oa_social_login_filter_new_user_login', $user_login);
+
+						// Email Filter.
 						$user_email = apply_filters ('oa_social_login_filter_new_user_email', $user_email);
 
 						// Email must be unique.
 						$placeholder_email_used = false;
-						if (!isset ($user_email) OR !is_email ($user_email) OR email_exists ($user_email))
+						if ( !is_email ($user_email) || email_exists ($user_email))
 						{
-							$user_email = oa_social_login_create_rand_email ();
-							$placeholder_email_used = true;
+						    $user_email = oa_social_login_create_rand_email ();
+						    $user_email = apply_filters ('oa_social_login_filter_new_user_random_email', $user_email);
+						    $placeholder_email_used = true;
 						}
 
 						// Setup the user's password.
@@ -553,6 +558,14 @@ function oa_social_login_callback ()
 						exit ();
 					}
 				}
+				else
+				{
+				    oa_social_login_log ('Callback failed, invalid data ' .$result->http_code);
+				}
+			}
+			else
+			{
+			    oa_social_login_log ('Callback failed, HTTP code');
 			}
 		}
 	}

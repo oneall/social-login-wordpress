@@ -1,9 +1,9 @@
 === Social Login ===
-Contributors: OneAll.com, ClaudeSchlesser
+Contributors: OneAll.com, ClaudeSchlesser, socialloginoneall
 Tags: social login, social network login, social connect, facebook login, twitter login, linkedin login
 Requires at least: 3.0
-Tested up to: 5.1
-Stable tag: 5.4.4
+Tested up to: 5.2
+Stable tag: 5.5.4
 License: GPLv2 or later
 
 Social Login allows your users to login, register and comment with 40+ Social Networks. Professional development and support included.
@@ -24,7 +24,7 @@ Social Login is fully customizable and seamlessly integrates with your existing 
 Get rid of long and complicated forms, improve your data quality and instantly eliminate spam and bot registrations. Social Login increases registration rates by up to 50% and provides permission-based access to users' social network profile data, allowing you to start delivering a personalized experience.
 
 **Maintenance Free**<br />
-Do not take the risk of loosing any users or customers due to outdated social network integrations. Unlike other Social Login providers we monitor the APIs and technologies of the different social networks and update our service as soon as changes arise.
+Do not take the risk of losing any users or customers due to outdated social network integrations. Unlike other Social Login providers we monitor the APIs and technologies of the different social networks and update our service as soon as changes arise.
 
 By using OneAll you can be sure that your social media integration will always run smoothly and with the most up-to-date calls.
 
@@ -36,7 +36,16 @@ You can easily configure which social accounts to enable/disable for login and o
 * In your sidebar
 * With a shortcode
 
-**35+ Social Networks**
+**Fully Compatible With Other Plugins**<br />
+Social Login uses standard WordPress hooks and is compatible with all plugins that follow WordPress coding conventions, 
+like per example BuddyPress or WooCommerce amongst others.
+
+**Data Export**<br />
+Easily export your users or automatically push data of users that login using Social Login to Mailchimp or Campaign Monitor.
+This feature is available in the premium version of Social Login and can be enabled in your OneAll account.
+
+
+**40+ Social Networks**
 * Amazon
 * Battle.net
 * Blogger
@@ -76,6 +85,8 @@ You can easily configure which social accounts to enable/disable for login and o
 * XING
 * Yahoo
 * YouTube
+
+
 
 **Professionally Developed and Maintained**
 Social Login is maintained by [OneAll](http://www.oneall.com), a technology company offering a set of web-delivered tools to simplify the integration of 40+ social networks into business and personal websites and apps. 
@@ -149,6 +160,10 @@ http://docs.oneall.com/plugins/guide/social-login-wordpress/
 5. **Login** - Login formular with small buttons (Social Network Buttons are included)
 
 == Changelog ==
+
+= 5.5.4 =
+* Text domain fixed
+* German translations updated
 
 = 5.4.4 =
 * Social Network "Draugiem" added
@@ -385,7 +400,7 @@ to many social networks by your plugin.</em>
 <strong>Deha K.</strong>
 
 <em>Just wanted to let you know how happy i am that i stumbled onto your service. This was the 6 Facebook/Twitter integration 
-i tried and was starting to loose hope that i could actually find one that worked for me.</em>
+i tried and was starting to lose hope that i could actually find one that worked for me.</em>
 <strong>Kyle L.</strong>
 
 <em>I would like to thank YOU! Seriously, the WordPress plugin has been a huge life saver for me.</em>
