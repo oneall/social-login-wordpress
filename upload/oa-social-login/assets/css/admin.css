@@ -155,6 +155,12 @@
     font-weight: bold;
 }
 
+.oa_social_login_box li.oa_social_login_shortcodes{
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 /* ********************* Tables */
 .oa_social_login_table {
     background-color: #efefef;
