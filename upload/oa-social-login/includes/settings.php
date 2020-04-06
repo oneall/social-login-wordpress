@@ -64,6 +64,9 @@ $oa_social_login_providers = array(
     'openid' => array(
         'name' => 'OpenID'
     ),
+    'patreon' => array(
+        'name' => 'Patreon'
+    ),
     'paypal' => array(
         'name' => 'PayPal'
     ),

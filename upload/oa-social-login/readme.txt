@@ -3,7 +3,7 @@ Contributors: OneAll.com, ClaudeSchlesser, socialloginoneall
 Tags: social login, social network login, social connect, facebook login, twitter login, linkedin login
 Requires at least: 3.0
 Tested up to: 5.2
-Stable tag: 5.5.5
+Stable tag: 5.6.0
 License: GPLv2 or later
 
 Social Login allows your users to login, register and comment with 40+ Social Networks. Professional development and support included.
@@ -66,6 +66,7 @@ This feature is available in the premium version of Social Login and can be enab
 * Mixer
 * Odnoklassniki
 * OpenID
+* Patreon
 * PayPal
 * Pinterest
 * PixelPin 
@@ -160,6 +161,9 @@ http://docs.oneall.com/plugins/guide/social-login-wordpress/
 5. **Login** - Login formular with small buttons (Social Network Buttons are included)
 
 == Changelog ==
+
+= 5.6.0 =
+* Patreon added
 
 = 5.5.5 =
 * Hook Buddypress avatar url

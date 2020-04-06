@@ -3,7 +3,7 @@
  * Plugin Name: Social Login
  * Plugin URI: http://www.oneall.com/
  * Description: Social Login allows your users to <strong>comment, login and register with 40+ social networks</strong> like Twitter, Facebook, LinkedIn, Instagram, Вконтакте, Google or Yahoo.
- * Version: 5.5.5
+ * Version: 5.6.0
  * Author: OneAll Social Login <support@oneall.com>
  * Author URI: https://www.oneall.com/services/social-network-integration/social-login/
  * License: GPL2
@@ -12,7 +12,7 @@
 
 define('OA_SOCIAL_LOGIN_PLUGIN_URL', plugins_url() . '/' . basename(dirname(__FILE__)));
 define('OA_SOCIAL_LOGIN_BASE_PATH', dirname(plugin_basename(__FILE__)));
-define('OA_SOCIAL_LOGIN_VERSION', '5.5.5');
+define('OA_SOCIAL_LOGIN_VERSION', '5.6.0');
 
 /**
  * Check technical requirements before activating the plugin (Wordpress 3.0 or newer required)
