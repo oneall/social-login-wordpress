@@ -1,10 +1,12 @@
-/* ********************* Page Wrapper */
+/* ********************* Page */
 #oa_social_login_page {
-    max-width: 1024px;
+    background-color: #fff;
+    padding: 20px;
 }
 
-#oa_social_login_page.oa_social_login_more {
-    width: 774px;
+#oa_social_login_page h2 {
+    margin-top: 0;
+    font-size: 18px;
 }
 
 #oa_social_login_page .nav-tab-wrapper {
@@ -12,18 +14,25 @@
 }
 
 #oa_social_login_page .nav-tab {
-    padding: 5px 30px;
+    padding: 10px 0;
     text-align: center;
-    width: 150px
+    width: 150px;
+    margin: 0 5px -1px 0;
+    border: 0 none;
 }
 
 #oa_social_login_page .nav-tab-active, 
 #oa_social_login_page .nav-tab-active:focus, 
 #oa_social_login_page .nav-tab-active:focus:active, 
 #oa_social_login_page.nav-tab-active:hover {
-    background-color: #0073aa;
+    background-color: #0073aa !important;
     border-bottom: 1px solid #0073aa;
     color: #fff;
+}
+
+#oa_social_login_page .nav-tab:hover {
+    background-color: #eee;
+    box-shadow: none;
 }
 
 /* ********************* Plugins */
@@ -31,158 +40,243 @@
     border: 1px solid #ccc;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
     margin: 10px 0 25px;
+    overflow: hidden;
+    background-color: rgb(238, 238, 238);
 }
 
 .oa_social_login_plugin .oa_social_login_plugin_img img {
     float: left;
-    height: 250px;
-    width: 772px;
-}
-
-.oa_social_login_plugin a.button-primary {
-    height: 21px;
-    line-height: 19px;
-    padding: 0 10px;
-    vertical-align: top;
+    width: 480px;
 }
 
 .oa_social_login_plugin .oa_social_login_plugin_desc {
-    background: #eee none repeat scroll 0 0;
-    border-top: 1px solid #fcfcfc;
-    box-shadow: 0 0 42px 0 rgba(100, 100, 100, 0.1) inset;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 24px;
     overflow: hidden;
-    padding: 15px;
-    text-shadow: 0 1px 1px #fff;
+    display: table-cell;
+    vertical-align: middle;
+    height: 136px;
+    padding: 10px 30px;
+    text-align:justify;
 }
 
-/* ********************* Boxes */
+@media only screen and (max-width: 1200px) {    
+    .oa_social_login_plugin .oa_social_login_plugin_img img{
+        width: 100%;
+    }
+}
+
+/* ********************* Base Button */
+.oa_social_login_btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.oa_social_login_btn.oa_social_login_btn_large{
+    font-size: 19px;
+}
+
+/* ********************* Success Button */
+.oa_social_login_btn_success:focus, 
+.oa_social_login_btn_success:active, 
+.oa_social_login_btn_success {
+    color: #fff;
+    background-color: rgb(92, 184, 92);
+    border-color: rgb(76, 174, 76);
+    box-shadow: none;
+}
+
+.oa_social_login_btn_success:hover {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}
+
+/* ********************* Info Button */
+.oa_social_login_btn_info:focus,
+.oa_social_login_btn_info:active,
+.oa_social_login_btn_info {
+    color: rgb(255, 255, 255);
+    background-color: rgb(66, 126, 155);
+    border-color: rgb(27, 111, 152);
+    box-shadow: none;
+}
+
+.oa_social_login_btn_info:hover {
+    color: #fff;
+    background-color: rgb(44, 90, 113);
+}
+
+/* ********************* Base Box */
 .oa_social_login_box {
-    border: 1px solid #CCCCCC;
-    margin-bottom: 35px;
+    border: 1px solid rgb(228, 228, 228);
+    margin : 20px 0 35px 0;
     padding: 10px 15px;
+    border-radius: 3px;
+    margin: 20px 0 35px 0;
 }
 
 .oa_social_login_box p {
-    font-size: 14px;
+    font-size: 15px;
+}
+
+.oa_social_login_box ul {
+    font-size: 15px;
+    list-style: disc;
+    overflow: hidden;
+    padding-left: 17px;
+}
+
+.oa_social_login_box ul li{
+    padding-left: 5px;
+}
+
+.oa_social_login_box a:hover {
+    text-decoration: none;
 }
 
 .oa_social_login_box .oa_social_login_box_title {
-    border-bottom: 1px solid #ccc;
-    font-size: 15px;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    font-size : 16px;
     font-weight: bold;
-    padding-bottom: 5px;
+    padding-bottom: 12px;
+    padding-top: 4px;
+    font-size: 16px;
 }
 
-.oa_social_login_box .oa_social_login_button_wrap {
-    text-align: center;
-    padding: 10px 0 20px;
-}
-
-.oa_social_login_box .oa_social_login_button_wrap a {
-    font-size: 14px;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 33px;
-    margin: 0 10px;
-}
-
-#oa_social_login_box_started {
-    background-color: #dff0d8;
-    border-color: #c4d7b4;
+/* ********************* Success Box */
+.oa_social_login_box.oa_social_login_box_success {
+    background-color: #ebffe2;
+    border-color: #cef2b1;
     color: #3c763d;
 }
 
-#oa_social_login_box_started a {
-    color: #1a541b;
+.oa_social_login_box.oa_social_login_box_success a:not(.oa_social_login_btn ){
+    color: #3c763d;
 }
 
-#oa_social_login_box_started a:hover {
-    text-decoration: none;
-    color: #111;
+.oa_social_login_box.oa_social_login_box_success .oa_social_login_box_title {
+    border-bottom: 1px solid rgb(206, 242, 177);
 }
 
-#oa_social_login_box_started a.button-secondary {
-    color: #555;
+/* ********************* Warning Box */
+.oa_social_login_box.oa_social_login_box_warning {
+    background-color: rgb(253, 247, 227);
+    border-color: rgb(255, 236, 171);
+    color: rgb(65, 65, 65);
 }
 
-#oa_social_login_box_started h3 {
-    text-align: center;
-    color: #4a844b;
+.oa_social_login_box.oa_social_login_box_warning a:not(.oa_social_login_btn ){
+    color: #3c763d;
 }
 
-#oa_social_login_box_status {
-    background-color: #E1EDFF;
-    margin-bottom: 10px;
+.oa_social_login_box.oa_social_login_box_warning .oa_social_login_box_title {
+    border-bottom: 1px solid rgb(222, 222, 222);
 }
 
-#oa_social_login_box_status p {
-    text-align: center;
-    font-size: 15px;
-}
-
-#oa_social_login_box_notice {
-    background-color: #C4F095;
-}
-
-#oa_social_login_box_help {
-    background-color: #FFFFE0;
-    border-color: #E6DB55;
-    margin-bottom: 35px;
-}
-
-#oa_social_login_box_help ul {
-    padding-left: 20px;
-    list-style-type: disc;
-}
-
-#oa_social_login_box_help .oa_social_login_box_title {
-    border-color: #E6DB55;
-}
-
-#oa_social_login_box_help a {
-    color: #111;
-}
-
-#oa_social_login_box_help a:hover {
-    color: #d54e21;
-}
-
-#oa_social_login_box_updated {
-    background-color: green;
+/* ********************* Notice Box */
+.oa_social_login_box.oa_social_login_box_notice {
+    background-color: rgb(142, 68, 173);
+    border-color: rgb(128, 43, 164);
     color: #fff;
-    font-weight: bold;
 }
 
-.oa_social_login_box li.oa_social_login_shortcodes{
-    margin-top: 8px;
+.oa_social_login_box.oa_social_login_box_warning a:not(.oa_social_login_btn ){
+    color: #fff;
+}
+
+.oa_social_login_box.oa_social_login_box_warning .oa_social_login_box_title {
+    border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+/* ********************* Info Box */
+.oa_social_login_box.oa_social_login_box_info {
+    background-color: rgb(206, 224, 237);
+    border-color: rgb(186, 215, 236);
+    color: rgb(80, 80, 80);
+}
+
+.oa_social_login_box.oa_social_login_box_info a:not(.oa_social_login_btn ){
+    color: #fff;
+}
+
+.oa_social_login_box.oa_social_login_box_info .oa_social_login_box_title {
+    color: rgb(68, 119, 156);
+    text-align: center;
+    border: 0 none;
+    font-size: 18px;
+}
+
+/* ********************* Header Links */
+.oa_social_login_header_links {
+    float: right;
+}
+
+.oa_social_login_header_links a {
+    text-decoration: none;
+    padding: 0 10px;
     font-size: 14px;
-    font-weight: bold;
+    color: rgb(142, 68, 173);
+    text-decoration: none;
+}
+
+.oa_social_login_header_links a:hover {
+    color: rgb(167, 89, 200);
 }
 
 /* ********************* Tables */
 .oa_social_login_table {
     background-color: #efefef;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.08);
     margin: 0 0 25px;
+    table-layout: fixed;
+}
+
+.oa_social_login_table td, 
+.oa_social_login_table th {
+    width: 250px;
+    display: table-cell ! important;
+    padding:15px !important;
+}
+
+.oa_social_login_table td+td, 
+.oa_social_login_table th+th {
+    width: auto;
 }
 
 .oa_social_login_table input {
     border-color: #aaa;
+    max-width: 100%;
 }
 
-.oa_social_login_table textarea{
-    border-color: #aaa;
+.oa_social_login_table input:focus{
+    border: 1px solid rgb(41, 128, 185); 
+    box-shadow: none;   
+}
+
+.oa_social_login_table textarea {
+    border-color: rgb(200, 200, 200);
     width: 100%;
+    margin-top: 10px;
 }
 
 .oa_social_login_table tr.row_head th {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
-    background-color: #3E687B;
+    background-color: rgb(41, 128, 185);
     color: #fff;
-    text-shadow: 0 1px 0 #333;
     padding: 15px 10px;
 }
 
@@ -199,34 +293,39 @@
     text-decoration: none;
 }
 
-.oa_social_login_table tr.row_odd, 
 .oa_social_login_table tr.row_odd td {
     color: #222;
-    background-color: #ddd;
-    border-bottom: 1px dotted #BBBBBB;
+    background-color: #efefef;
     line-height: 23px
 }
 
-.oa_social_login_table tr.row_even, 
 .oa_social_login_table tr.row_even td {
     color: #333;
     background-color: #fff;
-    border-bottom: 1px dotted #bbb;
     line-height: 23px
 }
 
-.oa_social_login_table td.col_unpadded {
-    padding: 0;
+.oa_social_login_table tr td.col_br {
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.oa_social_login_table tr td.row_multi {
-    border-right: 1px dotted #BBBBBB;
+.oa_social_login_table tr td.col_pt_0 {
+    padding-top: 0;
+}
+
+.oa_social_login_table tr td.col_center {
+    text-align: center;
+}
+
+.oa_social_login_table tr td.col_provider {
+    font-size: 15px;
 }
 
 .oa_social_login_table tr.row_foot td {
     background-color: #ddd;
 }
 
+/* ********************* Status Message */
 .oa_social_login_table tr.row_foot .error_message {
     color: red;
     background: url("../img/status_error.png") no-repeat scroll 0 50% #ddd;
@@ -258,28 +357,13 @@
     font-weight: bold;
 }
 
-.oa_social_login_table a.social-sharing {
-    background-image: url("../img/social_sharing.png");
-    background-repeat: no-repeat;
-    display: block;
-    height: 250px;
-    width: 772px;
+/* ********************* Button Container */
+.oa_social_login_buttons {
+    text-align: center;
+    margin: 15px 0 10px 0;
 }
 
 /* ********************* Providers */
-.oa_social_login_table tr.row_provider td {
-    line-height: 35px;
-}
-
-.oa_social_login_table tr.row_provider td.cell_provider_icon {
-    width: 50px;
-    text-align: center !important;
-}
-
-.oa_social_login_table tr.row_provider td.cell_provider_label {
-    text-align: left !important;
-}
-
 .oa_social_login_provider {
     background-image: url("../img/sprite_35_35.png");
     text-indent: -9999px;
@@ -288,7 +372,7 @@
     display: inline-block;
 }
 
-/* Buttons */
+/* ********************* Provider Icons */
 .oa_social_login_provider_amazon {
     background-position: -1149px -1px;
 }
@@ -330,7 +414,7 @@
 }
 
 .oa_social_login_provider_google {
-    background-position: -1704px -1px;
+    background-position: -150px -1px;
 }
 
 .oa_social_login_provider_instagram {
@@ -367,10 +451,6 @@
 
 .oa_social_login_provider_openid {
     background-position: -409px -1px;
-}
-
-.oa_social_login_provider_patreon {
-    background-position: -1630px -1px;
 }
 
 .oa_social_login_provider_paypal {

@@ -26,16 +26,18 @@ $oa_social_login_providers = array(
         'name' => 'Draugiem'
     ),
     'facebook' => array(
-        'name' => 'Facebook'
+        'name' => 'Facebook',
+        'is_default' => 1
     ),
     'foursquare' => array(
         'name' => 'Foursquare'
     ),
     'github' => array(
-        'name' => 'Github.com'
+        'name' => 'Github.com',
     ),
     'google' => array(
-        'name' => 'Google'
+        'name' => 'Google',
+        'is_default' => 1
     ),
     'instagram' => array(
         'name' => 'Instagram'
@@ -44,7 +46,8 @@ $oa_social_login_providers = array(
         'name' => 'Line'
     ),
     'linkedin' => array(
-        'name' => 'LinkedIn'
+        'name' => 'LinkedIn',
+        'is_default' => 1
     ),
     'livejournal' => array(
         'name' => 'LiveJournal'
@@ -63,9 +66,6 @@ $oa_social_login_providers = array(
     ),
     'openid' => array(
         'name' => 'OpenID'
-    ),
-    'patreon' => array(
-        'name' => 'Patreon'
     ),
     'paypal' => array(
         'name' => 'PayPal'
@@ -98,7 +98,8 @@ $oa_social_login_providers = array(
         'name' => 'Twitch.tv'
     ),
     'twitter' => array(
-        'name' => 'Twitter'
+        'name' => 'Twitter',
+        'is_default' => 1
     ),
     'vimeo' => array(
         'name' => 'Vimeo'
