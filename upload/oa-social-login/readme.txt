@@ -196,6 +196,9 @@ http://docs.oneall.com/plugins/guide/social-login-wordpress/
 
 == Changelog ==
 
+= 5.6.1 =
+* Direct Connect compatibily fixed
+
 = 5.6 =
 * Responsive admin interface
 * CSS Tweaks for better integration
