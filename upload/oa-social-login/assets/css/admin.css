@@ -373,6 +373,11 @@
 }
 
 /* ********************* Provider Icons */
+
+.oa_social_login_provider_apple {
+    background-position: -1741px -1px;
+}
+
 .oa_social_login_provider_amazon {
     background-position: -1149px -1px;
 }
@@ -414,7 +419,7 @@
 }
 
 .oa_social_login_provider_google {
-    background-position: -150px -1px;
+    background-position: -1704px -1px;
 }
 
 .oa_social_login_provider_instagram {
@@ -451,6 +456,10 @@
 
 .oa_social_login_provider_openid {
     background-position: -409px -1px;
+}
+
+.oa_social_login_provider_patreon {
+    background-position: -1630px -1px;
 }
 
 .oa_social_login_provider_paypal {

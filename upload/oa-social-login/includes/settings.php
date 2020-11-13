@@ -7,6 +7,9 @@ $oa_social_login_providers = array(
     'amazon' => array(
         'name' => 'Amazon'
     ),
+    'apple' => array(
+        'name' => 'Apple'
+    ),
     'battlenet' => array(
         'name' => 'Battle.net'
     ),
@@ -33,7 +36,7 @@ $oa_social_login_providers = array(
         'name' => 'Foursquare'
     ),
     'github' => array(
-        'name' => 'Github.com',
+        'name' => 'Github.com'
     ),
     'google' => array(
         'name' => 'Google',
@@ -66,6 +69,9 @@ $oa_social_login_providers = array(
     ),
     'openid' => array(
         'name' => 'OpenID'
+    ),
+    'patreon' => array(
+        'name' => 'Patreon'
     ),
     'paypal' => array(
         'name' => 'PayPal'

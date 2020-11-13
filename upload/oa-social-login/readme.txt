@@ -49,6 +49,7 @@ This feature is available in the premium version of Social Login and can be enab
 
 **40+ Social Networks**
 
+* Apple
 * Amazon
 * Battle.net
 * Blogger
@@ -69,6 +70,7 @@ This feature is available in the premium version of Social Login and can be enab
 * Mixer
 * Odnoklassniki
 * OpenID
+* Patreon
 * PayPal
 * Pinterest
 * PixelPin 
@@ -195,6 +197,10 @@ http://docs.oneall.com/plugins/guide/social-login-wordpress/
 5. **Login** - Login formular with small buttons (Social Network Buttons are included)
 
 == Changelog ==
+
+= 5.7.0 =
+* Social Network "Apple" added
+* Social Network "Patreon" added
 
 = 5.6.1 =
 * Direct Connect compatibily fixed

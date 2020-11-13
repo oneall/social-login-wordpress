@@ -1,4 +1,4 @@
-# Social Login 5.6.1 for WordPress 3.0 - 5.2+
+# Social Login 5.7.0 for WordPress 3.0 - 5.2+
 Social Login for WordPress allows your users to login and register with 40+ social networks. 
 It increases your user registration rate by simplifying the registration process for 
 new users and provides permission-based social data retrieved from the social network profiles.
@@ -13,6 +13,7 @@ https://wordpress.org/plugins/oa-social-login/
 
 
 ## Supported Social Networks
+* Apple
 * Amazon
 * Battle.net
 * Blogger
