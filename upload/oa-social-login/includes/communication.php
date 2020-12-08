@@ -164,6 +164,9 @@ function oa_social_login_callback()
                     // Get user by token.
                     $user_id = oa_social_login_get_userid_by_token($user_token);
 
+                    // Allow override of user
+                    $user_id = apply_filters ('oa_social_login_retrieve_userid', $user_id, $identity);
+
                     // Try to link to existing account.
                     if (!is_numeric($user_id))
                     {
