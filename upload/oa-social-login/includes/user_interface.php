@@ -90,6 +90,8 @@ function oa_social_login_render_link_form ($source, $user)
 {
 	//Store the data being returned.
 	$output = '';
+	$errorOccured = false;
+	$errorCode = 0;
 
 	if (is_object ($user) AND property_exists ($user, 'data') AND !empty ($user->data->ID))
 	{
@@ -308,9 +310,21 @@ function oa_social_login_render_link_form ($source, $user)
     									        $error_message = __ ('This social network account is already used by another user.', 'oa-social-login');
     									    }
     									}
+									} else {
+										$errorOccured = true;
+										$errorCode = 1;
 									}
+								} else {
+									$errorOccured = true;
+									$errorCode = 2;
 								}
+							} else {
+								$errorOccured = true;
+								$errorCode = 4;
 							}
+						} else {
+							$errorOccured = true;
+							$errorCode = 5;
 						}
 
 						//Button Theme
@@ -376,9 +390,35 @@ function oa_social_login_render_link_form ($source, $user)
 						$output .= '<tr><td>' . $social_link . '</td></tr>';
 						$output .= '</table>';
 					}
+				} else {
+					$errorOccured = true;
+					$errorCode = 6;
 				}
+			} else {
+				$errorOccured = true;
+				$errorCode = 7;
 			}
+		} else {
+			$errorOccured = true;
+			$errorCode = 8;
 		}
+	} else {
+		$errorOccured = true;
+		$errorCode = 9;
+	}
+
+	if($errorOccured){
+		$settings = get_option('oa_social_login_settings');
+		$locale = get_locale();
+		if(substr($locale, 0, 2) == 'fr'){
+			$output = $settings['plugin_error_message_fr'];
+		} else {
+			$output = $settings['plugin_error_message_de'];
+		}
+		$emailSubject = sprintf("ErrorCode %d: An Error Occured while linking a Social User", $errorCode);
+		$emailText = sprintf("ErrorCode: %d <br> Wordpressuser-ID: %d", $errorCode, get_current_user_id());
+		$headers = array('Content-Type: text/html; charset=UTF-8');
+		wp_mail($settings['plugin_error_admin_address'], $emailSubject, $emailText, $headers);
 	}
 	return $output;
 }
