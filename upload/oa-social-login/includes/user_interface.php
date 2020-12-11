@@ -322,10 +322,11 @@ function oa_social_login_render_link_form ($source, $user)
 								$errorOccured = true;
 								$errorCode = 4;
 							}
-						} else {
-							$errorOccured = true;
+						} /*else {
+							// User button should be shown
+							/*$errorOccured = true;
 							$errorCode = 5;
-						}
+						}*/
 
 						//Button Theme
 						$theme_id = (array_key_exists ('plugin_icon_theme', $settings) ? $settings['plugin_icon_theme'] : null);
