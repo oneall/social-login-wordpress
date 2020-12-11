@@ -412,9 +412,9 @@ function oa_social_login_render_link_form ($source, $user)
 		$settings = get_option('oa_social_login_settings');
 		$locale = get_locale();
 		if(substr($locale, 0, 2) == 'fr'){
-			$output = $settings['plugin_error_message_fr'];
+			$output = sprintf("<p stlye='color:red;'>%s</p>", $settings['plugin_error_message_fr']);
 		} else {
-			$output = $settings['plugin_error_message_de'];
+			$output = sprintf("<p stlye='color:red;'>%s</p>", $settings['plugin_error_message_de']);
 		}
 		$emailSubject = sprintf("ErrorCode %d: An Error Occured while linking a Social User", $errorCode);
 		$emailText = sprintf("ErrorCode: %d <br> Wordpressuser-ID: %d", $errorCode, get_current_user_id());
