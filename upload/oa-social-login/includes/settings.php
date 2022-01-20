@@ -28,6 +28,9 @@ $oa_social_login_providers = array(
     'draugiem' => array(
         'name' => 'Draugiem'
     ),
+    'epicgames' => array(
+        'name' => 'Epic Games'
+    ),
     'facebook' => array(
         'name' => 'Facebook',
         'is_default' => 1
@@ -91,11 +94,17 @@ $oa_social_login_providers = array(
     'soundcloud' => array(
         'name' => 'SoundCloud'
     ),
+    'spotify' => array(
+        'name' => 'Spotify'
+    ),
     'stackexchange' => array(
         'name' => 'StackExchange'
     ),
     'steam' => array(
         'name' => 'Steam'
+    ),
+    'strava' => array(
+        'name' => 'Strava'
     ),
     'tumblr' => array(
         'name' => 'Tumblr'
@@ -127,6 +136,9 @@ $oa_social_login_providers = array(
     ),
     'yahoo' => array(
         'name' => 'Yahoo'
+    ),
+    'yandex' => array(
+        'name' => 'Yandex'
     ),
     'youtube' => array(
         'name' => 'YouTube'

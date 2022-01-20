@@ -47,7 +47,7 @@ Easily export your users or automatically push data of users that login using So
 This feature is available in the premium version of Social Login and can be enabled in your OneAll account.
 
 
-**40+ Social Networks**
+**45+ Social Networks**
 
 * Apple
 * Amazon
@@ -57,6 +57,7 @@ This feature is available in the premium version of Social Login and can be enab
 * Disqus
 * Draugiem
 * Dribbble
+* Epic Games
 * Facebook
 * Foursquare
 * Github.com
@@ -77,8 +78,10 @@ This feature is available in the premium version of Social Login and can be enab
 * Reddit
 * Skyrock.com
 * SoundCloud        
+* Spotify
 * StackExchange
 * Steam
+* Strava
 * Tumblr
 * Twitch.tv
 * Twitter
@@ -89,6 +92,7 @@ This feature is available in the premium version of Social Login and can be enab
 * WordPress.com
 * XING
 * Yahoo
+* Yandex
 * YouTube
 
 **Social Login Features**
@@ -197,6 +201,12 @@ http://docs.oneall.com/plugins/guide/social-login-wordpress/
 5. **Login** - Login formular with small buttons (Social Network Buttons are included)
 
 == Changelog ==
+
+= 5.8.0 =
+* Social Network "Epic Games" added
+* Social Network "Spotify" added
+* Social Network "Strava" added
+* Social Network "Yandex" added
 
 = 5.7.0 =
 * Social Network "Apple" added

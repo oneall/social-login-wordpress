@@ -12,7 +12,7 @@
 
 define('OA_SOCIAL_LOGIN_PLUGIN_URL', plugins_url() . '/' . basename(dirname(__FILE__)));
 define('OA_SOCIAL_LOGIN_BASE_PATH', dirname(plugin_basename(__FILE__)));
-define('OA_SOCIAL_LOGIN_VERSION', '5.7.0');
+define('OA_SOCIAL_LOGIN_VERSION', '5.8.0');
 define('OA_SOCIAL_LOGIN_DEFAULT_THEME', 1);
 
 /**
