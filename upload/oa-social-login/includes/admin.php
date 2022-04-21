@@ -597,7 +597,10 @@ function oa_social_login_settings_validate ($settings)
 			'plugin_shortcode_login_redirect_url',
 			'plugin_shortcode_register_redirect',
 			'plugin_shortcode_register_redirect_url',
-			'plugin_notify_admin'
+			'plugin_notify_admin',
+			'plugin_error_admin_address',
+			'plugin_error_message_fr',
+			'plugin_error_message_de'
 		) AS $key)
 		{
 			if (isset ($settings [$key]))
@@ -1510,6 +1513,54 @@ function oa_display_social_login_settings ()
 							</td>
 						</tr>
 					</table>
+
+					<table class="form-table oa_social_login_table">
+						<tr class="row_head">
+							<th>
+								<?php _e ('Error handling if linking a account fails', 'oa-social-login'); ?>
+							</th>
+						</tr>
+						<tr class="row_odd">
+							<td>
+								<strong><?php _e ('Error Message which should be shown for the user in german:', 'oa-social-login'); ?></strong>
+							</td>
+						</tr>
+						<tr class="row_even">
+							<td>
+							<?php 
+								$plugin_error_message_de = (isset ($settings['plugin_error_message_de']) ? $settings['plugin_error_message_de'] : '');
+							?>
+								<input type="text" name="oa_social_login_settings[plugin_error_message_de]" size="90" value="<?php echo htmlspecialchars ($plugin_error_message_de); ?>" />
+							</td>
+						</tr>
+						<tr class="row_odd">
+							<td>
+								<strong><?php _e ('Error Message which should be shown for the user in french:', 'oa-social-login'); ?></strong>
+							</td>
+						</tr>
+						<tr class="row_even">
+							<td>
+							<?php 
+								$plugin_error_message_fr = (isset ($settings['plugin_error_message_fr']) ? $settings['plugin_error_message_fr'] : '');
+							?>
+								<input type="text" name="oa_social_login_settings[plugin_error_message_fr]" size="90" value="<?php echo htmlspecialchars($plugin_error_message_fr); ?>" />
+							</td>
+						</tr>
+						<tr class="row_odd">
+							<td>
+								<strong><?php _e ('Administrator E-Mail address to send error:', 'oa-social-login'); ?></strong>
+							</td>
+						</tr>
+						<tr class="row_even">
+							<td>
+							<?php 
+								$plugin_error_admin_address = (isset ($settings['plugin_error_admin_address']) ? $settings['plugin_error_admin_address'] : '');
+							?>
+								<input type="text" name="oa_social_login_settings[plugin_error_admin_address]" size="90" value="<?php echo htmlspecialchars($plugin_error_admin_address); ?>" />
+							</td>
+						</tr>
+					</table>
+
 					<p class="oa_social_login_buttons">
 						<input type="hidden" name="page" value="settings" />
 						<input type="submit" class="oa_social_login_btn oa_social_login_btn_success oa_social_login_btn_large" value="<?php _e ('Save Changes', 'oa-social-login') ?>" />
