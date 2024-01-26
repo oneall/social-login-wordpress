@@ -314,7 +314,7 @@ function oa_social_login_callback()
                             wp_cache_delete($user_login, 'userlogins');
 
                             // Native WordPress hook.
-                            do_action('user_register', $user_id);
+                            do_action('user_register', $user_id, $user_fields);
 
                             // Social Login Hook.
                             do_action('oa_social_login_action_after_user_insert', $user_data, $identity);

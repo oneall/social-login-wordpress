@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.8.1] - 2024-01-26
+### Fixed
+- User register hook fixed
+
+## [5.4.3] - 2018-07-26
+### Fixed
+- Missing quotes
+
 ## [5.4.3] - 2018-07-26
 ### Fixed
 - Missing quotes

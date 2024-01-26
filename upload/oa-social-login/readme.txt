@@ -202,6 +202,9 @@ http://docs.oneall.com/plugins/guide/social-login-wordpress/
 
 == Changelog ==
 
+= 5.8.1 =
+* User Register hook fixed
+
 = 5.8.0 =
 * Social Network "Epic Games" added
 * Social Network "Spotify" added

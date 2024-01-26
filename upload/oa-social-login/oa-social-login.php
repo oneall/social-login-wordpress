@@ -3,7 +3,7 @@
  * Plugin Name: Social Login
  * Plugin URI: http://www.oneall.com/
  * Description: Social Login allows your users to <strong>comment, login and register with 40+ social networks</strong> like Twitter, Facebook, LinkedIn, Instagram, Вконтакте, Google or Yahoo.
- * Version: 5.8.0
+ * Version: 5.8.1
  * Author: OneAll Social Login <support@oneall.com>
  * Author URI: https://www.oneall.com/services/social-network-integration/social-login/
  * License: GPL2
@@ -12,7 +12,7 @@
 
 define('OA_SOCIAL_LOGIN_PLUGIN_URL', plugins_url() . '/' . basename(dirname(__FILE__)));
 define('OA_SOCIAL_LOGIN_BASE_PATH', dirname(plugin_basename(__FILE__)));
-define('OA_SOCIAL_LOGIN_VERSION', '5.8.0');
+define('OA_SOCIAL_LOGIN_VERSION', '5.8.1');
 define('OA_SOCIAL_LOGIN_DEFAULT_THEME', 1);
 
 /**
@@ -28,6 +28,7 @@ function oa_social_login_activate()
     }
     update_option('oa_social_login_activation_message', 0);
 }
+
 register_activation_hook(__FILE__, 'oa_social_login_activate');
 
 /**
@@ -50,6 +51,7 @@ function oa_social_login_add_setup_link($links, $file)
 
     return $links;
 }
+
 add_filter('plugin_action_links', 'oa_social_login_add_setup_link', 10, 2);
 
 /**
