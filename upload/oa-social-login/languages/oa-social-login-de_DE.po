@@ -292,10 +292,10 @@ msgstr ""
 #: includes/admin.php:685
 #, php-format
 msgid ""
-"<a target=\"_blank\" href=\"%s\">Follow us on Twitter</a> to stay informed "
+"<a target=\"_blank\" href=\"%s\">Follow us on X</a> to stay informed "
 "about updates"
 msgstr ""
-"<a target=\"_blank\" href=\"%s\">Folgen Sie uns auf Twitter</a>, um auf dem "
+"<a target=\"_blank\" href=\"%s\">Folgen Sie uns auf X</a>, um auf dem "
 "Laufenden zu bleiben"
 
 #: includes/admin.php:686
@@ -336,11 +336,11 @@ msgstr "Social Login"
 #: includes/admin.php:702
 msgid ""
 "Allow your visitors to comment, login and register with 40+ social networks "
-"like for example Twitter, Facebook, Pinterest, Instagram, Paypal, LinkedIn, "
+"like for example Twitter, X, TikTok, Facebook, Pinterest, Instagram, Paypal, LinkedIn, "
 "OpenID, VKontakte or Google+. Easy to use and 100% FREE."
 msgstr ""
 "Erlauben Sie Ihren Besuchern, sich mit 40+ Sozialen Netzwerk wie z.B. "
-"Twitter, Facebook, LinkedIn, Instagram, Google oder Yahoo anzumelden, und "
+"Twitter, X, TikTok, Facebook, LinkedIn, Instagram, Google oder Yahoo anzumelden, und "
 "Kommentare zu hinterlassen."
 
 #: includes/admin.php:703 includes/admin.php:716 includes/admin.php:729
@@ -381,11 +381,11 @@ msgstr ""
 #: includes/admin.php:759
 msgid ""
 "Allow your visitors to comment, login and register with 40+ Social Networks "
-"like for example Twitter, Facebook, LinkedIn, Instagram, VKontakte, Google "
+"like for example Twitter, X, TikTok, Facebook, LinkedIn, Instagram, VKontakte, Google "
 "or Yahoo."
 msgstr ""
 "Erlauben Sie Ihren Besuchern, sich mit 40+ Sozialen Netzwerk wie z.B. "
-"Twitter, Facebook, LinkedIn, Instagram, Google oder Yahoo anzumelden, und "
+"Twitter, X, TikTok, Facebook, LinkedIn, Instagram, Google oder Yahoo anzumelden, und "
 "Kommentare zu hinterlassen."
 
 #: includes/admin.php:760

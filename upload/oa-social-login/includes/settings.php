@@ -109,11 +109,14 @@ $oa_social_login_providers = array(
     'tumblr' => array(
         'name' => 'Tumblr'
     ),
+    'tiktok' => array(
+        'name' => 'TikTok'
+    ),
     'twitch' => array(
         'name' => 'Twitch.tv'
     ),
     'twitter' => array(
-        'name' => 'Twitter',
+        'name' => 'X',
         'is_default' => 1
     ),
     'vimeo' => array(

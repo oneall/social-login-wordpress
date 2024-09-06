@@ -720,7 +720,7 @@ function oa_display_social_login_more ()
 
 				<div class="oa_social_login_box oa_social_login_box_success">
 					<ul>
-						<li><?php printf (__ ('<a target="_blank" href="%s">Follow us on Twitter</a> to stay informed about updates', 'oa-social-login'), 'http://www.twitter.com/oneall'); ?></li>
+						<li><?php printf (__ ('<a target="_blank" href="%s">Follow us on X</a> to stay informed about updates', 'oa-social-login'), 'https://x.com/oneall'); ?></li>
 						<li><?php printf (__ ('<a target="_blank" href="%s">Read the online documentation</a> for more information about this plugin', 'oa-social-login'), 'http://docs.oneall.com/plugins/guide/social-login-wordpress/'); ?></li>
 						<li><?php printf (__ ('<a target="_blank" href="%s">Contact us</a> if you have feedback or need assistance', 'oa-social-login'), 'http://www.oneall.com/company/contact-us/'); ?>
 						<li><?php printf (__ ('We also have <a target="_blank" href="%s">turnkey plugins</a> for Drupal, PrestaShop, Joomla, phpBB andy many others ...', 'oa-social-login'), 'http://docs.oneall.com/plugins/'); ?>

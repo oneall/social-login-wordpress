@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file. 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.9.0] - 2024-09-06
+### Added
+- TikTok has been added
+- Twitter becomes X
+
 ## [5.8.1] - 2024-01-26
 ### Fixed
 - User register hook fixed

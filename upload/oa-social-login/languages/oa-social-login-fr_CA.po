@@ -139,8 +139,8 @@ msgstr "Auto-détection d’erreur - notre <a href=\"%s\" target=\"_blank\">docu
 
 # @ oa_social_login
 #: includes/admin.php:601
-msgid "Allow your visitors to comment, login and register with 20+ Social Networks like for example Twitter, Facebook, LinkedIn, Instagram, VKontakte, Google or Yahoo."
-msgstr "Permettez à vos visiteurs de commenter, de s’identifier et de s’enregistrer avec plus de 20 réseaux sociaux comme par exemple Twitter, Facebook, LinkedIn, Instagram, Google ou Yahoo."
+msgid "Allow your visitors to comment, login and register with 20+ Social Networks like for example Twitter, X, TikTok, Facebook, LinkedIn, Instagram, VKontakte, Google or Yahoo."
+msgstr "Permettez à vos visiteurs de commenter, de s’identifier et de s’enregistrer avec plus de 20 réseaux sociaux comme par exemple Twitter, X, TikTok, Facebook, LinkedIn, Instagram, Google ou Yahoo."
 
 # @ oa_social_login
 #: includes/admin.php:602
@@ -207,8 +207,8 @@ msgstr "Aide, Mises à jour et documentation"
 # @ oa_social_login
 #: includes/admin.php:646
 #, php-format
-msgid "<a target=\"_blank\" href=\"%s\">Follow us on Twitter</a> to stay informed about updates"
-msgstr "<a target=\"_blank\" href=\"%s\">Suivez-nous sur Twitter</a> pour rester informé des mises à jour"
+msgid "<a target=\"_blank\" href=\"%s\">Follow us on X</a> to stay informed about updates"
+msgstr "<a target=\"_blank\" href=\"%s\">Suivez-nous sur X</a> pour rester informé des mises à jour"
 
 # @ oa_social_login
 #: includes/admin.php:647
@@ -769,8 +769,8 @@ msgstr "Annuler"
 
 # @ oa_social_login
 #: includes/widget.php:14
-msgid "Allow your visitors to login and register with social networks like Twitter, Facebook, LinkedIn, Hyves, Google and Yahoo."
-msgstr "Permettez à vos visiteurs de se connecter et de s’enregistrer avec les réseaux sociaux comme Twitter, Facebook, LinkedIn, Hyves, Google et Yahoo."
+msgid "Allow your visitors to login and register with social networks like Twitter, X, TikTok, Facebook, LinkedIn, Hyves, Google and Yahoo."
+msgstr "Permettez à vos visiteurs de se connecter et de s’enregistrer avec les réseaux sociaux comme Twitter, X, TikTok, Facebook, LinkedIn, Hyves, Google et Yahoo."
 
 # @ oa_social_login
 #: includes/widget.php:62

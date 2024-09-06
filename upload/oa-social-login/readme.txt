@@ -2,7 +2,7 @@
 Contributors: OneAll.com, ClaudeSchlesser, socialloginoneall
 Tags: social login, social network login, social connect, facebook login, twitter login, linkedin login
 Requires at least: 3.0
-Tested up to: 5.4
+Tested up to: 6.6.1
 Stable tag: 5.6
 Requires PHP: 5.4
 License: GPLv2 or later
@@ -82,9 +82,10 @@ This feature is available in the premium version of Social Login and can be enab
 * StackExchange
 * Steam
 * Strava
+* TikTok
 * Tumblr
 * Twitch.tv
-* Twitter
+* Twitter / X
 * Vimeo
 * VKontakte
 * Weibo
@@ -201,6 +202,10 @@ http://docs.oneall.com/plugins/guide/social-login-wordpress/
 5. **Login** - Login formular with small buttons (Social Network Buttons are included)
 
 == Changelog ==
+
+= 5.9.0 =
+* Social Network "X" added
+* Twitter renamed to X
 
 = 5.8.1 =
 * User Register hook fixed
