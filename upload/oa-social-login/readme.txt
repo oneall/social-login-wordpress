@@ -1,6 +1,6 @@
 === Social Login ===
 Contributors: OneAll.com, ClaudeSchlesser, socialloginoneall
-Tags: social login, social network login, social connect, facebook login, twitter login, linkedin login, tiktok login
+Tags: social login, facebook login, twitter login, linkedin login, tiktok login
 Requires at least: 3.0
 Tested up to: 6.6.1
 Stable tag: 5.9.0
