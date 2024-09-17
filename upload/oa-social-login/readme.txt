@@ -1,9 +1,9 @@
 === Social Login ===
 Contributors: OneAll.com, ClaudeSchlesser, socialloginoneall
-Tags: social login, social network login, social connect, facebook login, twitter login, linkedin login
+Tags: social login, social network login, social connect, facebook login, twitter login, linkedin login, tiktok login
 Requires at least: 3.0
 Tested up to: 6.6.1
-Stable tag: 5.6
+Stable tag: 5.9.0
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -14,7 +14,7 @@ With Social Login your users can login, register and comment with 40+ Social Net
 
 = Social Login Plugin =
 
-Social Login is a **professionally developed** and free Wordpress plugin that allows your visitors to **comment, login and register with 40+ Social Networks** like for example Facebook, Twitter, Google, LinkedIn, PayPal, LiveJournal, Instagram, Вконтакте or Yahoo amongst other.
+Social Login is a **professionally developed** and free Wordpress plugin that allows your visitors to **comment, login and register with 40+ Social Networks** like for example Facebook, Twitter / X, TikTok, Google, LinkedIn, PayPal, LiveJournal, Instagram, Вконтакте or Yahoo amongst other.
 
 **Data Protection Guarantee**<br />
 Social Login is fully compliant with all European and U.S. data protection laws. As required by the General Data Protection Regulation (GDPR) the OneAll Terms of Service include a Data Processing Agreement that we can countersign on request.
