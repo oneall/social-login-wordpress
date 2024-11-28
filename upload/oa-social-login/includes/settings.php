@@ -19,9 +19,6 @@ $oa_social_login_providers = array(
     'discord' => array(
         'name' => 'Discord'
     ),
-    'disqus' => array(
-        'name' => 'Disqus'
-    ),
     'dribbble' => array(
         'name' => 'Dribbble'
     ),

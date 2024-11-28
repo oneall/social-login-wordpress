@@ -3,7 +3,7 @@ Contributors: OneAll.com, ClaudeSchlesser, socialloginoneall
 Tags: social login, facebook login, twitter login, linkedin login, tiktok login
 Requires at least: 3.0
 Tested up to: 6.6.1
-Stable tag: 5.9.0
+Stable tag: 5.10.0
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -53,8 +53,7 @@ This feature is available in the premium version of Social Login and can be enab
 * Amazon
 * Battle.net
 * Blogger
-* Discord 
-* Disqus
+* Discord
 * Draugiem
 * Dribbble
 * Epic Games
@@ -202,6 +201,9 @@ http://docs.oneall.com/plugins/guide/social-login-wordpress/
 5. **Login** - Login formular with small buttons (Social Network Buttons are included)
 
 == Changelog ==
+
+= 5.10.0 =
+* Fix vulnerability
 
 = 5.9.0 =
 * Social Network "X" added
