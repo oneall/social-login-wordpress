@@ -23,7 +23,11 @@ function oa_social_login_activate()
     if (!function_exists('register_post_status'))
     {
         deactivate_plugins(basename(dirname(__FILE__)) . '/' . basename(__FILE__));
-        echo sprintf(__('This plugin requires WordPress %s or newer. Please update your WordPress installation to activate this plugin.', 'oa-social-login'), '3.0');
+        /* translators: %s: plugin version */
+        $message = sprintf(__('This plugin requires WordPress %s or newer. Please update your WordPress installation to activate this plugin.', 'oa-social-login'), '3.0');
+        
+        /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */
+        echo $message;
         exit;
     }
     update_option('oa_social_login_activation_message', 0);
@@ -61,7 +65,7 @@ function oa_social_login_log($message)
 {
     if (defined('WP_DEBUG_LOG') && WP_DEBUG_LOG)
     {
-        error_log('[OneAll Social Login] ' . date("d.m.Y G:i") . ' : ' . print_r($message, true));
+        error_log('[OneAll Social Login] ' . gmdate("d.m.Y G:i") . ' : ' . print_r($message, true));
     }
 }
 

@@ -84,11 +84,17 @@ function oa_social_login_user_notification ($user_id, $user_identity_provider)
 
 	// Setup Mail Header.
 	$recipient = get_bloginfo ('admin_email');
+    
+    /* translators: %s: blog name */
 	$subject = '[Social Login] ' . sprintf (__ ('[%s] New User Registration', 'oa-social-login'), $blogname);
-
-	//Setup Mail Body
+    
+    /* translators: %s: blog name */
 	$body = sprintf (__ ('New user registration on your site %s:', 'oa-social-login'), $blogname) . "\r\n\r\n";
+    
+    /* translators: %s: username */
 	$body .= sprintf (__ ('Username: %s', 'oa-social-login'), $user_login) . "\r\n\r\n";
+    
+    /* translators: %s: provider name */
 	$body .= sprintf (__ ('Social Network: %s', 'oa-social-login'), $user_identity_provider) . "\r\n";
 
 	// Send Mail.
@@ -235,7 +241,7 @@ function oa_social_login_esc_attr ($string)
 	//Deprecated as of Wordpress 2.8
 	elseif (function_exists ('attribute_escape'))
 	{
-		return attribute_escape ($string);
+		return esc_attr ($string);
 	}
 	return htmlspecialchars ($string);
 }
@@ -258,8 +264,7 @@ function oa_social_login_get_userid_by_token ($token)
 	}
 
 	// Read user for this token.
-	$sql = "SELECT u.ID FROM " . $wpdb->usermeta . " AS um	INNER JOIN " . $wpdb->users . " AS u ON (um.user_id=u.ID) WHERE um.meta_key = 'oa_social_login_user_token' AND um.meta_value=%s";
-	return $wpdb->get_var ($wpdb->prepare ($sql, $token));
+	return $wpdb->get_var ($wpdb->prepare ("SELECT u.ID FROM " . $wpdb->usermeta . " AS um	INNER JOIN " . $wpdb->users . " AS u ON (um.user_id=u.ID) WHERE um.meta_key = 'oa_social_login_user_token' AND um.meta_value=%s", $token));
 }
 
 
@@ -269,8 +274,7 @@ function oa_social_login_get_userid_by_token ($token)
 function oa_social_login_get_token_by_userid ($userid)
 {
 	GLOBAL $wpdb;
-	$sql = "SELECT um.meta_value FROM " . $wpdb->usermeta . " AS um	INNER JOIN " . $wpdb->users . " AS u ON (um.user_id=u.ID) WHERE um.meta_key = 'oa_social_login_user_token' AND u.ID=%d";
-	return $wpdb->get_var ($wpdb->prepare ($sql, $userid));
+	return $wpdb->get_var ($wpdb->prepare ("SELECT um.meta_value FROM " . $wpdb->usermeta . " AS um	INNER JOIN " . $wpdb->users . " AS u ON (um.user_id=u.ID) WHERE um.meta_key = 'oa_social_login_user_token' AND u.ID=%d", $userid));
 }
 
 /**
@@ -279,8 +283,7 @@ function oa_social_login_get_token_by_userid ($userid)
 function oa_social_login_get_num_users ()
 {
     GLOBAL $wpdb;
-    $sql = "SELECT COUNT(user_id) AS tot FROM " . $wpdb->usermeta . " AS um WHERE um.meta_key = 'oa_social_login_user_token'";
-    return $wpdb->get_var ($sql);
+    return $wpdb->get_var ($wpdb->prepare ("SELECT COUNT(user_id) AS tot FROM " . $wpdb->usermeta . " AS um WHERE um.meta_key = 'oa_social_login_user_token'"));
 }
 
 

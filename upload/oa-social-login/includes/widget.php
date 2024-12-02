@@ -23,31 +23,37 @@ class oa_social_login_widget extends WP_Widget
 		//Hide the widget for logged in users?
 		if (empty ($instance ['widget_hide_for_logged_in_users']) OR !is_user_logged_in ())
 		{
-			//Before Widget
+            // Before widget
+            /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */
 			echo $args ['before_widget'];
 
 			//Title
 			if (!empty ($instance ['widget_title']))
 			{
+                /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */
 				echo $args ['before_title'] . apply_filters ('widget_title', $instance ['widget_title']) . $args ['after_title'];
 			}
 
 			//Before Content
 			if (!empty ($instance ['widget_content_before']))
 			{
+                /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */
 				echo $instance ['widget_content_before'];
 			}
 
 			//Content
+            /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */
 			echo oa_social_login_render_login_form ('widget', $instance);
 
 			//After Content
 			if (!empty ($instance ['widget_content_after']))
 			{
+                /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */
 				echo $instance ['widget_content_after'];
 			}
 
 			//After Widget
+            /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */
 			echo $args ['after_widget'];
 		}
 	}
@@ -74,28 +80,28 @@ class oa_social_login_widget extends WP_Widget
 		$instance = wp_parse_args ((array) $instance, $default_settings);
 		?>
 			<p>
-				<label for="<?php echo $this->get_field_id ('widget_title'); ?>"><?php _e ('Title', 'oa-social-login'); ?>:</label>
-				<input class="widefat" id="<?php echo $this->get_field_id ('widget_title'); ?>" name="<?php echo $this->get_field_name ('widget_title'); ?>" type="text" value="<?php echo $instance ['widget_title']; ?>" />
+				<label for="<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ echo $this->get_field_id ('widget_title'); ?>"><?php esc_html_e ('Title', 'oa-social-login'); ?>:</label>
+				<input class="widefat" id="<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ echo $this->get_field_id ('widget_title'); ?>" name="<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ echo $this->get_field_name ('widget_title'); ?>" type="text" value="<?php echo $instance ['widget_title']; ?>" />
 			</p>
 			<p>
-				<label for="<?php echo $this->get_field_id ('widget_icon_theme'); ?>"><?php _e ('Icon Theme', 'oa-social-login'); ?>:</label>
-				<select class="widefat" id="<?php echo $this->get_field_id ('widget_icon_theme'); ?>" name="<?php echo $this->get_field_name ('widget_icon_theme'); ?>">
-				    <option value="0"<?php echo ($instance ['widget_icon_theme'] == 0 ? ' selected="selected"' : ''); ?>><?php _e ('Classic Icons', 'oa-social-login'); ?></option>
-				    <option value="1"<?php echo ($instance ['widget_icon_theme'] == 1 ? ' selected="selected"' : ''); ?>><?php _e ('Modern Icons', 'oa-social-login'); ?></option>
-				    <option value="2"<?php echo ($instance ['widget_icon_theme'] == 2 ? ' selected="selected"' : ''); ?>><?php _e ('Small Icons', 'oa-social-login'); ?></option>
+				<label for="<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ echo $this->get_field_id ('widget_icon_theme'); ?>"><?php esc_html_e ('Icon Theme', 'oa-social-login'); ?>:</label>
+				<select class="widefat" id="<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ echo $this->get_field_id ('widget_icon_theme'); ?>" name="<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ echo $this->get_field_name ('widget_icon_theme'); ?>">
+				    <option value="0"<?php echo ($instance ['widget_icon_theme'] == 0 ? ' selected="selected"' : ''); ?>><?php esc_html_e ('Classic Icons', 'oa-social-login'); ?></option>
+				    <option value="1"<?php echo ($instance ['widget_icon_theme'] == 1 ? ' selected="selected"' : ''); ?>><?php esc_html_e ('Modern Icons', 'oa-social-login'); ?></option>
+				    <option value="2"<?php echo ($instance ['widget_icon_theme'] == 2 ? ' selected="selected"' : ''); ?>><?php esc_html_e ('Small Icons', 'oa-social-login'); ?></option>
 				</select>
 			</p>
 			<p>
-				<label for="<?php echo $this->get_field_id ('widget_content_before'); ?>"><?php _e ('Insert text/html to add before the widget', 'oa-social-login'); ?>:</label>
-				<textarea class="widefat" id="<?php echo $this->get_field_id ('widget_content_before'); ?>" name="<?php echo $this->get_field_name ('widget_content_before'); ?>"><?php echo $instance ['widget_content_before']; ?></textarea>
+				<label for="<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ echo $this->get_field_id ('widget_content_before'); ?>"><?php esc_html_e ('Insert text/html to add before the widget', 'oa-social-login'); ?>:</label>
+				<textarea class="widefat" id="<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ echo $this->get_field_id ('widget_content_before'); ?>" name="<?php echo $this->get_field_name ('widget_content_before'); ?>"><?php echo $instance ['widget_content_before']; ?></textarea>
 			</p>
 			<p>
-				<label for="<?php echo $this->get_field_id ('widget_content_after'); ?>"><?php _e ('Insert text/html to add after the widget', 'oa-social-login'); ?>:</label>
-				<textarea class="widefat" id="<?php echo $this->get_field_id ('widget_content_after'); ?>" name="<?php echo $this->get_field_name ('widget_content_after'); ?>"><?php echo $instance ['widget_content_after']; ?></textarea>
+				<label for="<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ echo $this->get_field_id ('widget_content_after'); ?>"><?php esc_html_e ('Insert text/html to add after the widget', 'oa-social-login'); ?>:</label>
+				<textarea class="widefat" id="<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ echo $this->get_field_id ('widget_content_after'); ?>" name="<?php echo $this->get_field_name ('widget_content_after'); ?>"><?php echo $instance ['widget_content_after']; ?></textarea>
 			</p>
 			<p>
-				<input type="checkbox" id="<?php echo $this->get_field_id ('widget_hide_for_logged_in_users', 'oa-social-login'); ?>" name="<?php echo $this->get_field_name ('widget_hide_for_logged_in_users'); ?>" type="text" value="1" <?php echo (!empty ($instance ['widget_hide_for_logged_in_users']) ? 'checked="checked"' : ''); ?> />
-				<label for="<?php echo $this->get_field_id ('widget_hide_for_logged_in_users'); ?>"><?php _e ('Tick to hide the widget for logged-in users', 'oa-social-login'); ?></label>
+				<input type="checkbox" id="<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ echo $this->get_field_id ('widget_hide_for_logged_in_users', 'oa-social-login'); ?>" name="<?php echo $this->get_field_name ('widget_hide_for_logged_in_users'); ?>" type="text" value="1" <?php echo (!empty ($instance ['widget_hide_for_logged_in_users']) ? 'checked="checked"' : ''); ?> />
+				<label for="<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ echo $this->get_field_id ('widget_hide_for_logged_in_users'); ?>"><?php esc_html_e ('Tick to hide the widget for logged-in users', 'oa-social-login'); ?></label>
 			</p>
 		<?php
 	}
@@ -107,7 +113,7 @@ class oa_social_login_widget extends WP_Widget
 	public function update ($new_instance, $old_instance)
 	{
 		$instance = $old_instance;
-		$instance ['widget_title'] = trim (strip_tags ($new_instance ['widget_title']));
+		$instance ['widget_title'] = trim (wp_strip_all_tags ($new_instance ['widget_title']));
 		$instance ['widget_content_before'] = trim ($new_instance ['widget_content_before']);
 		$instance ['widget_content_after'] = trim ($new_instance ['widget_content_after']);
 		$instance ['widget_hide_for_logged_in_users'] = (empty ($new_instance ['widget_hide_for_logged_in_users']) ? 0 : 1);

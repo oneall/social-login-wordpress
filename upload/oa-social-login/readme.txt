@@ -2,7 +2,7 @@
 Contributors: OneAll.com, ClaudeSchlesser, socialloginoneall
 Tags: social login, facebook login, twitter login, linkedin login, tiktok login
 Requires at least: 3.0
-Tested up to: 6.6.1
+Tested up to: 6.7
 Stable tag: 5.10.0
 Requires PHP: 5.4
 License: GPLv2 or later

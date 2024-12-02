@@ -679,81 +679,47 @@ function oa_social_login_fsockopen_request($url, $options = array(), $timeout = 
 
     //HTTP Headers
     $headers = array();
-
-    // We are using a proxy
-    if (!empty($options['proxy_url']) && !empty($options['proxy_port']))
-    {
-        // Open Socket
-        $fp = @fsockopen($options['proxy_url'], $options['proxy_port'], $errno, $errstr, $timeout);
-
-        //Make sure that the socket has been opened properly
-        if (!$fp)
-        {
-            $result->http_error = trim($errstr);
-
-            return $result;
-        }
-
-        // HTTP Headers
-        $headers[] = "GET " . $url_protocol . $url . $path . " HTTP/1.0";
-        $headers[] = "Host: " . $url . ":" . $port;
-
-        // Proxy Authentication
-        if (!empty($options['proxy_username']) && !empty($options['proxy_password']))
-        {
-            $headers[] = 'Proxy-Authorization: Basic ' . base64_encode($options['proxy_username'] . ":" . $options['proxy_password']);
+    
+    // Build the arguments for the request
+    $args = [
+        'timeout' => $timeout,
+        'headers' => [],
+        'sslverify' => false, // Disable SSL verification if needed
+    ];
+    
+    // Proxy settings
+    if (!empty($options['proxy_url']) && !empty($options['proxy_port'])) {
+        // Set proxy location
+        $args['proxy'] = $options['proxy_url'] . ':' . $options['proxy_port'];
+        
+        // Proxy authentication
+        if (!empty($options['proxy_username']) && !empty($options['proxy_password'])) {
+            $args['headers']['Proxy-Authorization'] = 'Basic ' . base64_encode($options['proxy_username'] . ':' . $options['proxy_password']);
         }
     }
-    // We are not using a proxy
-    else
-    {
-        // Open Socket
-        $fp = @fsockopen($url_prefix . $url, $port, $errno, $errstr, $timeout);
-
-        //Make sure that the socket has been opened properly
-        if (!$fp)
-        {
-            $result->http_error = trim($errstr);
-
-            return $result;
-        }
-
-        // HTTP Headers
-        $headers[] = "GET " . $path . " HTTP/1.0";
-        $headers[] = "Host: " . $url;
+    
+    // Enable basic authentication
+    if (!empty($options['api_key']) && !empty($options['api_secret'])) {
+        $args['headers']['Authorization'] = 'Basic ' . base64_encode($options['api_key'] . ':' . $options['api_secret']);
     }
-
-    //Enable basic authentication
-    if (isset($options['api_key']) and isset($options['api_secret']))
-    {
-        $headers[] = 'Authorization: Basic ' . base64_encode($options['api_key'] . ":" . $options['api_secret']);
+    
+    // Build the full URL
+    $full_url = $url_protocol . $url . $path;
+    
+    // Make the GET request
+    $response = wp_remote_get($full_url, $args);
+    
+    // Ensure the request was successful
+    if (is_wp_error($response)) {
+        // Capture the error message
+        $result->http_error = $response->get_error_message();
+        return $result;
     }
-
-    //Build and send request
-    fwrite($fp, (implode("\r\n", $headers) . "\r\n\r\n"));
-
-    //Fetch response
-    $response = '';
-    while (!feof($fp))
-    {
-        $response .= fread($fp, 1024);
-    }
-
-    //Close connection
-    fclose($fp);
-
-    //Parse response
-    list($response_header, $response_body) = explode("\r\n\r\n", $response, 2);
-
-    //Parse header
-    $response_header = preg_split("/\r\n|\n|\r/", $response_header);
-    list($header_protocol, $header_code, $header_status_message) = explode(' ', trim(array_shift($response_header)), 3);
-
-    //Build result
-    $result->http_code = $header_code;
-    $result->http_data = $response_body;
-
-    //Done
+    
+    // Retrieve the response data
+    $result->http_code = wp_remote_retrieve_response_code($response); // HTTP status code
+    $result->http_data = wp_remote_retrieve_body($response); // Response body content
+    $result->http_error = null; // No error
 
     return $result;
 }
@@ -817,57 +783,43 @@ function oa_social_login_curl_request($url, $options = array(), $timeout = 15)
 {
     //Store the result
     $result = new stdClass();
-
-    //Send request
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, $url);
-    curl_setopt($curl, CURLOPT_HEADER, 0);
-    curl_setopt($curl, CURLOPT_TIMEOUT, $timeout);
-    curl_setopt($curl, CURLOPT_VERBOSE, 0);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-    curl_setopt($curl, CURLOPT_USERAGENT, 'SocialLogin/' . OA_SOCIAL_LOGIN_VERSION . ' WordPress/' . oa_social_login_get_wp_version() . ' (+http://www.oneall.com/)');
-
+    
+    $args = [
+        'timeout' => $timeout,
+        'sslverify' => false,
+        'user-agent' => 'SocialLogin/' . OA_SOCIAL_LOGIN_VERSION . ' WordPress/' . oa_social_login_get_wp_version() . ' (+http://www.oneall.com/)'
+    ];
+    
     // BASIC AUTH?
-    if (isset($options['api_key']) and isset($options['api_secret']))
-    {
-        curl_setopt($curl, CURLOPT_USERPWD, $options['api_key'] . ":" . $options['api_secret']);
+    if (isset($options['api_key']) && isset($options['api_secret'])) {
+        $args['headers'] = [
+            'Authorization' => 'Basic ' . base64_encode($options['api_key'] . ':' . $options['api_secret']),
+        ];
     }
-
+    
     // Proxy Settings
-    if (!empty($options['proxy_url']) && !empty($options['proxy_port']))
-    {
-        // Proxy Location
-        curl_setopt($curl, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
-        curl_setopt($curl, CURLOPT_PROXY, $options['proxy_url']);
-
-        // Proxy Port
-        curl_setopt($curl, CURLOPT_PROXYPORT, $options['proxy_port']);
-
+    if (!empty($options['proxy_url']) && !empty($options['proxy_port'])) {
+        $args['proxy'] = $options['proxy_url'] . ':' . $options['proxy_port'];
+        
         // Proxy Authentication
-        if (!empty($options['proxy_username']) && !empty($options['proxy_password']))
-        {
-            curl_setopt($curl, CURLOPT_PROXYAUTH, CURLAUTH_ANY);
-            curl_setopt($curl, CURLOPT_PROXYUSERPWD, $options['proxy_username'] . ':' . $options['proxy_password']);
+        if (!empty($options['proxy_username']) && !empty($options['proxy_password'])) {
+            $args['headers']['Proxy-Authorization'] = 'Basic ' . base64_encode($options['proxy_username'] . ':' . $options['proxy_password']);
         }
     }
-
-    //Make request
-    if (($http_data = curl_exec($curl)) !== false)
-    {
-        $result->http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-        $result->http_data = $http_data;
-        $result->http_error = null;
-    }
-    else
-    {
+    
+    // Make the request
+    $response =  wp_remote_get($url, $args);
+    
+    // Process the response
+    if (is_wp_error($response)) {
         $result->http_code = -1;
         $result->http_data = null;
-        $result->http_error = curl_error($curl);
+        $result->http_error = $response->get_error_message();
+    } else {
+        $result->http_code = wp_remote_retrieve_response_code($response);
+        $result->http_data = wp_remote_retrieve_body($response);
+        $result->http_error = null;
     }
-
-    //Done
 
     return $result;
 }
